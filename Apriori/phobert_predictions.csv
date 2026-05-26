@@ -1,0 +1,750 @@
+﻿comment_id,text_segmented,rate,aspect,sentiment
+1,nt thì không trả_lời khách_hàng hàng thì hàng rách lời khuyên thật các bạn không nên mua shop này nhé,1,Giao_Hang,NEG
+1,nt thì không trả_lời khách_hàng hàng thì hàng rách lời khuyên thật các bạn không nên mua shop này nhé,1,CSKH_Hau_Mai,NEG
+1,nt thì không trả_lời khách_hàng hàng thì hàng rách lời khuyên thật các bạn không nên mua shop này nhé,1,Chat_Luong_Chat_Lieu,NEG
+1,nt thì không trả_lời khách_hàng hàng thì hàng rách lời khuyên thật các bạn không nên mua shop này nhé,1,Dong_Goi,NEU
+1,nt thì không trả_lời khách_hàng hàng thì hàng rách lời khuyên thật các bạn không nên mua shop này nhé,1,Gia_Ca,NEG
+1,nt thì không trả_lời khách_hàng hàng thì hàng rách lời khuyên thật các bạn không nên mua shop này nhé,1,Mau_Sac_Mau_Ma,NEG
+1,nt thì không trả_lời khách_hàng hàng thì hàng rách lời khuyên thật các bạn không nên mua shop này nhé,1,Form_Size,NEG
+2,"shop ẩn những đánh_giá k có lợi cko shop giao_đồ thì nhầm_mẫu , vải áo ra màu và bạc cũ từ lần giặt đầu , giao sai cko rất nhiều khách , trog khi đã dặn trước đừng giao_nhầm nhưng shop vẫn cố_tình hàng k nên mua nha mọi người",1,Giao_Hang,NEG
+2,"shop ẩn những đánh_giá k có lợi cko shop giao_đồ thì nhầm_mẫu , vải áo ra màu và bạc cũ từ lần giặt đầu , giao sai cko rất nhiều khách , trog khi đã dặn trước đừng giao_nhầm nhưng shop vẫn cố_tình hàng k nên mua nha mọi người",1,CSKH_Hau_Mai,NEG
+2,"shop ẩn những đánh_giá k có lợi cko shop giao_đồ thì nhầm_mẫu , vải áo ra màu và bạc cũ từ lần giặt đầu , giao sai cko rất nhiều khách , trog khi đã dặn trước đừng giao_nhầm nhưng shop vẫn cố_tình hàng k nên mua nha mọi người",1,Chat_Luong_Chat_Lieu,NEG
+2,"shop ẩn những đánh_giá k có lợi cko shop giao_đồ thì nhầm_mẫu , vải áo ra màu và bạc cũ từ lần giặt đầu , giao sai cko rất nhiều khách , trog khi đã dặn trước đừng giao_nhầm nhưng shop vẫn cố_tình hàng k nên mua nha mọi người",1,Dong_Goi,NEG
+2,"shop ẩn những đánh_giá k có lợi cko shop giao_đồ thì nhầm_mẫu , vải áo ra màu và bạc cũ từ lần giặt đầu , giao sai cko rất nhiều khách , trog khi đã dặn trước đừng giao_nhầm nhưng shop vẫn cố_tình hàng k nên mua nha mọi người",1,Gia_Ca,NEG
+2,"shop ẩn những đánh_giá k có lợi cko shop giao_đồ thì nhầm_mẫu , vải áo ra màu và bạc cũ từ lần giặt đầu , giao sai cko rất nhiều khách , trog khi đã dặn trước đừng giao_nhầm nhưng shop vẫn cố_tình hàng k nên mua nha mọi người",1,Mau_Sac_Mau_Ma,NEG
+2,"shop ẩn những đánh_giá k có lợi cko shop giao_đồ thì nhầm_mẫu , vải áo ra màu và bạc cũ từ lần giặt đầu , giao sai cko rất nhiều khách , trog khi đã dặn trước đừng giao_nhầm nhưng shop vẫn cố_tình hàng k nên mua nha mọi người",1,Form_Size,NEG
+3,chỉ thừa nhiều cúc áo thì lệch,1,Giao_Hang,NEG
+3,chỉ thừa nhiều cúc áo thì lệch,1,CSKH_Hau_Mai,NEU
+3,chỉ thừa nhiều cúc áo thì lệch,1,Chat_Luong_Chat_Lieu,NEG
+3,chỉ thừa nhiều cúc áo thì lệch,1,Dong_Goi,NEU
+3,chỉ thừa nhiều cúc áo thì lệch,1,Gia_Ca,NEU
+3,chỉ thừa nhiều cúc áo thì lệch,1,Mau_Sac_Mau_Ma,NEG
+3,chỉ thừa nhiều cúc áo thì lệch,1,Form_Size,NEU
+4,"chất_liệu : vai xâu te vải xấu_tệ , đường may tùm_lum , ko_lẽ hoàn hàng",1,Giao_Hang,NEG
+4,"chất_liệu : vai xâu te vải xấu_tệ , đường may tùm_lum , ko_lẽ hoàn hàng",1,CSKH_Hau_Mai,POS
+4,"chất_liệu : vai xâu te vải xấu_tệ , đường may tùm_lum , ko_lẽ hoàn hàng",1,Chat_Luong_Chat_Lieu,NEG
+4,"chất_liệu : vai xâu te vải xấu_tệ , đường may tùm_lum , ko_lẽ hoàn hàng",1,Dong_Goi,NEU
+4,"chất_liệu : vai xâu te vải xấu_tệ , đường may tùm_lum , ko_lẽ hoàn hàng",1,Gia_Ca,NEG
+4,"chất_liệu : vai xâu te vải xấu_tệ , đường may tùm_lum , ko_lẽ hoàn hàng",1,Mau_Sac_Mau_Ma,NEG
+4,"chất_liệu : vai xâu te vải xấu_tệ , đường may tùm_lum , ko_lẽ hoàn hàng",1,Form_Size,NEU
+5,"màu_sắc : đen đúng với mô_tả : mua màu đen nhưng ship đến thì màu xanh chất vải thì như áo_mưa , nói_chung là shop bán quần_áo rất tệ",1,Giao_Hang,NEG
+5,"màu_sắc : đen đúng với mô_tả : mua màu đen nhưng ship đến thì màu xanh chất vải thì như áo_mưa , nói_chung là shop bán quần_áo rất tệ",1,CSKH_Hau_Mai,NEG
+5,"màu_sắc : đen đúng với mô_tả : mua màu đen nhưng ship đến thì màu xanh chất vải thì như áo_mưa , nói_chung là shop bán quần_áo rất tệ",1,Chat_Luong_Chat_Lieu,NEG
+5,"màu_sắc : đen đúng với mô_tả : mua màu đen nhưng ship đến thì màu xanh chất vải thì như áo_mưa , nói_chung là shop bán quần_áo rất tệ",1,Dong_Goi,NEG
+5,"màu_sắc : đen đúng với mô_tả : mua màu đen nhưng ship đến thì màu xanh chất vải thì như áo_mưa , nói_chung là shop bán quần_áo rất tệ",1,Gia_Ca,NEG
+5,"màu_sắc : đen đúng với mô_tả : mua màu đen nhưng ship đến thì màu xanh chất vải thì như áo_mưa , nói_chung là shop bán quần_áo rất tệ",1,Mau_Sac_Mau_Ma,NEG
+5,"màu_sắc : đen đúng với mô_tả : mua màu đen nhưng ship đến thì màu xanh chất vải thì như áo_mưa , nói_chung là shop bán quần_áo rất tệ",1,Form_Size,NEG
+6,"chất_lượng quá tệ_tệ từ sản_phẩm tới thái_độ của shop .. đặt đúng 3 lần cả 4 lần thông_báo lấy hàng_không thành_công do người bán không cung_cấp được sản_phẩm , lấy hàng_không thành_công do không liên_hệ được người bán why ?_áo thì bẩn_bụi , giặt 5 lần vẫn có nước màu đen xì . 1 sao",1,Giao_Hang,NEG
+6,"chất_lượng quá tệ_tệ từ sản_phẩm tới thái_độ của shop .. đặt đúng 3 lần cả 4 lần thông_báo lấy hàng_không thành_công do người bán không cung_cấp được sản_phẩm , lấy hàng_không thành_công do không liên_hệ được người bán why ?_áo thì bẩn_bụi , giặt 5 lần vẫn có nước màu đen xì . 1 sao",1,CSKH_Hau_Mai,NEG
+6,"chất_lượng quá tệ_tệ từ sản_phẩm tới thái_độ của shop .. đặt đúng 3 lần cả 4 lần thông_báo lấy hàng_không thành_công do người bán không cung_cấp được sản_phẩm , lấy hàng_không thành_công do không liên_hệ được người bán why ?_áo thì bẩn_bụi , giặt 5 lần vẫn có nước màu đen xì . 1 sao",1,Chat_Luong_Chat_Lieu,NEG
+6,"chất_lượng quá tệ_tệ từ sản_phẩm tới thái_độ của shop .. đặt đúng 3 lần cả 4 lần thông_báo lấy hàng_không thành_công do người bán không cung_cấp được sản_phẩm , lấy hàng_không thành_công do không liên_hệ được người bán why ?_áo thì bẩn_bụi , giặt 5 lần vẫn có nước màu đen xì . 1 sao",1,Dong_Goi,NEG
+6,"chất_lượng quá tệ_tệ từ sản_phẩm tới thái_độ của shop .. đặt đúng 3 lần cả 4 lần thông_báo lấy hàng_không thành_công do người bán không cung_cấp được sản_phẩm , lấy hàng_không thành_công do không liên_hệ được người bán why ?_áo thì bẩn_bụi , giặt 5 lần vẫn có nước màu đen xì . 1 sao",1,Gia_Ca,NEG
+6,"chất_lượng quá tệ_tệ từ sản_phẩm tới thái_độ của shop .. đặt đúng 3 lần cả 4 lần thông_báo lấy hàng_không thành_công do người bán không cung_cấp được sản_phẩm , lấy hàng_không thành_công do không liên_hệ được người bán why ?_áo thì bẩn_bụi , giặt 5 lần vẫn có nước màu đen xì . 1 sao",1,Mau_Sac_Mau_Ma,NEG
+6,"chất_lượng quá tệ_tệ từ sản_phẩm tới thái_độ của shop .. đặt đúng 3 lần cả 4 lần thông_báo lấy hàng_không thành_công do người bán không cung_cấp được sản_phẩm , lấy hàng_không thành_công do không liên_hệ được người bán why ?_áo thì bẩn_bụi , giặt 5 lần vẫn có nước màu đen xì . 1 sao",1,Form_Size,NEG
+7,màu_sắc : đc chất_liệu : vải ko đc tốt đúng với mô_tả : y_như trong hình rất tệ,1,Giao_Hang,NEG
+7,màu_sắc : đc chất_liệu : vải ko đc tốt đúng với mô_tả : y_như trong hình rất tệ,1,CSKH_Hau_Mai,NEG
+7,màu_sắc : đc chất_liệu : vải ko đc tốt đúng với mô_tả : y_như trong hình rất tệ,1,Chat_Luong_Chat_Lieu,NEG
+7,màu_sắc : đc chất_liệu : vải ko đc tốt đúng với mô_tả : y_như trong hình rất tệ,1,Dong_Goi,NEU
+7,màu_sắc : đc chất_liệu : vải ko đc tốt đúng với mô_tả : y_như trong hình rất tệ,1,Gia_Ca,NEG
+7,màu_sắc : đc chất_liệu : vải ko đc tốt đúng với mô_tả : y_như trong hình rất tệ,1,Mau_Sac_Mau_Ma,NEG
+7,màu_sắc : đc chất_liệu : vải ko đc tốt đúng với mô_tả : y_như trong hình rất tệ,1,Form_Size,NEG
+8,chất_liệu : ko bt đúng với mô_tả : không màu_sắc : đen giao màu xanh ? giao thì sai màu chất thì chất nóng,1,Giao_Hang,NEG
+8,chất_liệu : ko bt đúng với mô_tả : không màu_sắc : đen giao màu xanh ? giao thì sai màu chất thì chất nóng,1,CSKH_Hau_Mai,NEG
+8,chất_liệu : ko bt đúng với mô_tả : không màu_sắc : đen giao màu xanh ? giao thì sai màu chất thì chất nóng,1,Chat_Luong_Chat_Lieu,NEG
+8,chất_liệu : ko bt đúng với mô_tả : không màu_sắc : đen giao màu xanh ? giao thì sai màu chất thì chất nóng,1,Dong_Goi,NEU
+8,chất_liệu : ko bt đúng với mô_tả : không màu_sắc : đen giao màu xanh ? giao thì sai màu chất thì chất nóng,1,Gia_Ca,NEG
+8,chất_liệu : ko bt đúng với mô_tả : không màu_sắc : đen giao màu xanh ? giao thì sai màu chất thì chất nóng,1,Mau_Sac_Mau_Ma,NEG
+8,chất_liệu : ko bt đúng với mô_tả : không màu_sắc : đen giao màu xanh ? giao thì sai màu chất thì chất nóng,1,Form_Size,NEG
+9,đặt màu đen về mày xanh ?_shop trả_lời một_cách hời hợt_k giải_quyết được vấn_đề gì ? rồi là bán hàng k vậy ?,1,Giao_Hang,NEU
+9,đặt màu đen về mày xanh ?_shop trả_lời một_cách hời hợt_k giải_quyết được vấn_đề gì ? rồi là bán hàng k vậy ?,1,CSKH_Hau_Mai,NEU
+9,đặt màu đen về mày xanh ?_shop trả_lời một_cách hời hợt_k giải_quyết được vấn_đề gì ? rồi là bán hàng k vậy ?,1,Chat_Luong_Chat_Lieu,NEG
+9,đặt màu đen về mày xanh ?_shop trả_lời một_cách hời hợt_k giải_quyết được vấn_đề gì ? rồi là bán hàng k vậy ?,1,Dong_Goi,NEU
+9,đặt màu đen về mày xanh ?_shop trả_lời một_cách hời hợt_k giải_quyết được vấn_đề gì ? rồi là bán hàng k vậy ?,1,Gia_Ca,NEU
+9,đặt màu đen về mày xanh ?_shop trả_lời một_cách hời hợt_k giải_quyết được vấn_đề gì ? rồi là bán hàng k vậy ?,1,Mau_Sac_Mau_Ma,NEG
+9,đặt màu đen về mày xanh ?_shop trả_lời một_cách hời hợt_k giải_quyết được vấn_đề gì ? rồi là bán hàng k vậy ?,1,Form_Size,NEU
+10,"trong phần phân_loại sản_phẩm thì để 2 màu đỏ đen nhưng giao cho khách màu xanh cái màu mình ghét nhất , cạp quần_may qua_loa , đường may lỗi lòi cả chun ra ngoài áo thì tay dài tay ngắn đem bỏ luôn rồi .",1,Giao_Hang,NEG
+10,"trong phần phân_loại sản_phẩm thì để 2 màu đỏ đen nhưng giao cho khách màu xanh cái màu mình ghét nhất , cạp quần_may qua_loa , đường may lỗi lòi cả chun ra ngoài áo thì tay dài tay ngắn đem bỏ luôn rồi .",1,CSKH_Hau_Mai,NEG
+10,"trong phần phân_loại sản_phẩm thì để 2 màu đỏ đen nhưng giao cho khách màu xanh cái màu mình ghét nhất , cạp quần_may qua_loa , đường may lỗi lòi cả chun ra ngoài áo thì tay dài tay ngắn đem bỏ luôn rồi .",1,Chat_Luong_Chat_Lieu,NEG
+10,"trong phần phân_loại sản_phẩm thì để 2 màu đỏ đen nhưng giao cho khách màu xanh cái màu mình ghét nhất , cạp quần_may qua_loa , đường may lỗi lòi cả chun ra ngoài áo thì tay dài tay ngắn đem bỏ luôn rồi .",1,Dong_Goi,NEG
+10,"trong phần phân_loại sản_phẩm thì để 2 màu đỏ đen nhưng giao cho khách màu xanh cái màu mình ghét nhất , cạp quần_may qua_loa , đường may lỗi lòi cả chun ra ngoài áo thì tay dài tay ngắn đem bỏ luôn rồi .",1,Gia_Ca,NEG
+10,"trong phần phân_loại sản_phẩm thì để 2 màu đỏ đen nhưng giao cho khách màu xanh cái màu mình ghét nhất , cạp quần_may qua_loa , đường may lỗi lòi cả chun ra ngoài áo thì tay dài tay ngắn đem bỏ luôn rồi .",1,Mau_Sac_Mau_Ma,NEG
+10,"trong phần phân_loại sản_phẩm thì để 2 màu đỏ đen nhưng giao cho khách màu xanh cái màu mình ghét nhất , cạp quần_may qua_loa , đường may lỗi lòi cả chun ra ngoài áo thì tay dài tay ngắn đem bỏ luôn rồi .",1,Form_Size,NEG
+11,màu_sắc : không đúng màu_sắc đặt màu đen mà ship màu xanh :,1,Giao_Hang,NEG
+11,màu_sắc : không đúng màu_sắc đặt màu đen mà ship màu xanh :,1,CSKH_Hau_Mai,NEU
+11,màu_sắc : không đúng màu_sắc đặt màu đen mà ship màu xanh :,1,Chat_Luong_Chat_Lieu,NEG
+11,màu_sắc : không đúng màu_sắc đặt màu đen mà ship màu xanh :,1,Dong_Goi,NEU
+11,màu_sắc : không đúng màu_sắc đặt màu đen mà ship màu xanh :,1,Gia_Ca,NEU
+11,màu_sắc : không đúng màu_sắc đặt màu đen mà ship màu xanh :,1,Mau_Sac_Mau_Ma,NEG
+11,màu_sắc : không đúng màu_sắc đặt màu đen mà ship màu xanh :,1,Form_Size,NEU
+12,màu_sắc : sai màu_sắc chất_liệu : kém đúng với mô_tả : không đúng mô_tả,1,Giao_Hang,NEG
+12,màu_sắc : sai màu_sắc chất_liệu : kém đúng với mô_tả : không đúng mô_tả,1,CSKH_Hau_Mai,NEG
+12,màu_sắc : sai màu_sắc chất_liệu : kém đúng với mô_tả : không đúng mô_tả,1,Chat_Luong_Chat_Lieu,NEG
+12,màu_sắc : sai màu_sắc chất_liệu : kém đúng với mô_tả : không đúng mô_tả,1,Dong_Goi,NEU
+12,màu_sắc : sai màu_sắc chất_liệu : kém đúng với mô_tả : không đúng mô_tả,1,Gia_Ca,NEG
+12,màu_sắc : sai màu_sắc chất_liệu : kém đúng với mô_tả : không đúng mô_tả,1,Mau_Sac_Mau_Ma,NEG
+12,màu_sắc : sai màu_sắc chất_liệu : kém đúng với mô_tả : không đúng mô_tả,1,Form_Size,NEG
+13,chất_liệu : quá kém màu_sắc : không giống_hình đúng với mô_tả : không hề đúng cới mô_tả khuyên ae không nên mua,1,Giao_Hang,NEG
+13,chất_liệu : quá kém màu_sắc : không giống_hình đúng với mô_tả : không hề đúng cới mô_tả khuyên ae không nên mua,1,CSKH_Hau_Mai,NEG
+13,chất_liệu : quá kém màu_sắc : không giống_hình đúng với mô_tả : không hề đúng cới mô_tả khuyên ae không nên mua,1,Chat_Luong_Chat_Lieu,NEG
+13,chất_liệu : quá kém màu_sắc : không giống_hình đúng với mô_tả : không hề đúng cới mô_tả khuyên ae không nên mua,1,Dong_Goi,NEU
+13,chất_liệu : quá kém màu_sắc : không giống_hình đúng với mô_tả : không hề đúng cới mô_tả khuyên ae không nên mua,1,Gia_Ca,NEU
+13,chất_liệu : quá kém màu_sắc : không giống_hình đúng với mô_tả : không hề đúng cới mô_tả khuyên ae không nên mua,1,Mau_Sac_Mau_Ma,NEG
+13,chất_liệu : quá kém màu_sắc : không giống_hình đúng với mô_tả : không hề đúng cới mô_tả khuyên ae không nên mua,1,Form_Size,NEG
+14,màu_sắc : sai màu tôi đặt 2 bộ đen nhưng lại giao 1 bộ đỏ 1 bộ đen,1,Giao_Hang,NEG
+14,màu_sắc : sai màu tôi đặt 2 bộ đen nhưng lại giao 1 bộ đỏ 1 bộ đen,1,CSKH_Hau_Mai,NEG
+14,màu_sắc : sai màu tôi đặt 2 bộ đen nhưng lại giao 1 bộ đỏ 1 bộ đen,1,Chat_Luong_Chat_Lieu,NEG
+14,màu_sắc : sai màu tôi đặt 2 bộ đen nhưng lại giao 1 bộ đỏ 1 bộ đen,1,Dong_Goi,NEU
+14,màu_sắc : sai màu tôi đặt 2 bộ đen nhưng lại giao 1 bộ đỏ 1 bộ đen,1,Gia_Ca,NEG
+14,màu_sắc : sai màu tôi đặt 2 bộ đen nhưng lại giao 1 bộ đỏ 1 bộ đen,1,Mau_Sac_Mau_Ma,NEG
+14,màu_sắc : sai màu tôi đặt 2 bộ đen nhưng lại giao 1 bộ đỏ 1 bộ đen,1,Form_Size,NEG
+15,màu_sắc : màu đẹp chất_liệu : quần bị rách,1,Giao_Hang,POS
+15,màu_sắc : màu đẹp chất_liệu : quần bị rách,1,CSKH_Hau_Mai,POS
+15,màu_sắc : màu đẹp chất_liệu : quần bị rách,1,Chat_Luong_Chat_Lieu,POS
+15,màu_sắc : màu đẹp chất_liệu : quần bị rách,1,Dong_Goi,NEU
+15,màu_sắc : màu đẹp chất_liệu : quần bị rách,1,Gia_Ca,NEU
+15,màu_sắc : màu đẹp chất_liệu : quần bị rách,1,Mau_Sac_Mau_Ma,POS
+15,màu_sắc : màu đẹp chất_liệu : quần bị rách,1,Form_Size,NEU
+16,rách tùm lum,1,Giao_Hang,NEG
+16,rách tùm lum,1,CSKH_Hau_Mai,NEU
+16,rách tùm lum,1,Chat_Luong_Chat_Lieu,NEG
+16,rách tùm lum,1,Dong_Goi,NEU
+16,rách tùm lum,1,Gia_Ca,NEU
+16,rách tùm lum,1,Mau_Sac_Mau_Ma,NEG
+16,rách tùm lum,1,Form_Size,NEU
+17,vải như cái bạt ấy : quá đắt cho 1 cái giẻ lau,1,Giao_Hang,NEG
+17,vải như cái bạt ấy : quá đắt cho 1 cái giẻ lau,1,CSKH_Hau_Mai,POS
+17,vải như cái bạt ấy : quá đắt cho 1 cái giẻ lau,1,Chat_Luong_Chat_Lieu,NEG
+17,vải như cái bạt ấy : quá đắt cho 1 cái giẻ lau,1,Dong_Goi,NEU
+17,vải như cái bạt ấy : quá đắt cho 1 cái giẻ lau,1,Gia_Ca,NEG
+17,vải như cái bạt ấy : quá đắt cho 1 cái giẻ lau,1,Mau_Sac_Mau_Ma,POS
+17,vải như cái bạt ấy : quá đắt cho 1 cái giẻ lau,1,Form_Size,NEU
+18,mua màu đen mà giao về màu xanh ?,1,Giao_Hang,NEG
+18,mua màu đen mà giao về màu xanh ?,1,CSKH_Hau_Mai,NEG
+18,mua màu đen mà giao về màu xanh ?,1,Chat_Luong_Chat_Lieu,NEG
+18,mua màu đen mà giao về màu xanh ?,1,Dong_Goi,NEU
+18,mua màu đen mà giao về màu xanh ?,1,Gia_Ca,NEU
+18,mua màu đen mà giao về màu xanh ?,1,Mau_Sac_Mau_Ma,NEG
+18,mua màu đen mà giao về màu xanh ?,1,Form_Size,NEU
+19,sản_phẩm : sản_phẩm không như mô_tả đặt màu đen mà giao màu gì á,1,Giao_Hang,NEG
+19,sản_phẩm : sản_phẩm không như mô_tả đặt màu đen mà giao màu gì á,1,CSKH_Hau_Mai,NEG
+19,sản_phẩm : sản_phẩm không như mô_tả đặt màu đen mà giao màu gì á,1,Chat_Luong_Chat_Lieu,NEG
+19,sản_phẩm : sản_phẩm không như mô_tả đặt màu đen mà giao màu gì á,1,Dong_Goi,NEU
+19,sản_phẩm : sản_phẩm không như mô_tả đặt màu đen mà giao màu gì á,1,Gia_Ca,NEG
+19,sản_phẩm : sản_phẩm không như mô_tả đặt màu đen mà giao màu gì á,1,Mau_Sac_Mau_Ma,NEG
+19,sản_phẩm : sản_phẩm không như mô_tả đặt màu đen mà giao màu gì á,1,Form_Size,NEU
+20,làm_ăn cái kiểu đó mà coi đc đặt màu đen đi giao màu xanh_đồ như cái bao_bố làm_ăn vậy_mà coi được,1,Giao_Hang,POS
+20,làm_ăn cái kiểu đó mà coi đc đặt màu đen đi giao màu xanh_đồ như cái bao_bố làm_ăn vậy_mà coi được,1,CSKH_Hau_Mai,POS
+20,làm_ăn cái kiểu đó mà coi đc đặt màu đen đi giao màu xanh_đồ như cái bao_bố làm_ăn vậy_mà coi được,1,Chat_Luong_Chat_Lieu,POS
+20,làm_ăn cái kiểu đó mà coi đc đặt màu đen đi giao màu xanh_đồ như cái bao_bố làm_ăn vậy_mà coi được,1,Dong_Goi,NEU
+20,làm_ăn cái kiểu đó mà coi đc đặt màu đen đi giao màu xanh_đồ như cái bao_bố làm_ăn vậy_mà coi được,1,Gia_Ca,NEU
+20,làm_ăn cái kiểu đó mà coi đc đặt màu đen đi giao màu xanh_đồ như cái bao_bố làm_ăn vậy_mà coi được,1,Mau_Sac_Mau_Ma,NEG
+20,làm_ăn cái kiểu đó mà coi đc đặt màu đen đi giao màu xanh_đồ như cái bao_bố làm_ăn vậy_mà coi được,1,Form_Size,NEU
+21,gửi sai mẫu chất vải xấu,1,Giao_Hang,NEG
+21,gửi sai mẫu chất vải xấu,1,CSKH_Hau_Mai,NEG
+21,gửi sai mẫu chất vải xấu,1,Chat_Luong_Chat_Lieu,NEG
+21,gửi sai mẫu chất vải xấu,1,Dong_Goi,NEU
+21,gửi sai mẫu chất vải xấu,1,Gia_Ca,NEG
+21,gửi sai mẫu chất vải xấu,1,Mau_Sac_Mau_Ma,NEG
+21,gửi sai mẫu chất vải xấu,1,Form_Size,NEG
+22,cực kém,1,Giao_Hang,NEG
+22,cực kém,1,CSKH_Hau_Mai,NEG
+22,cực kém,1,Chat_Luong_Chat_Lieu,NEG
+22,cực kém,1,Dong_Goi,NEG
+22,cực kém,1,Gia_Ca,NEG
+22,cực kém,1,Mau_Sac_Mau_Ma,NEG
+22,cực kém,1,Form_Size,NEG
+23,giao size nhỏ,1,Giao_Hang,NEG
+23,giao size nhỏ,1,CSKH_Hau_Mai,NEG
+23,giao size nhỏ,1,Chat_Luong_Chat_Lieu,NEG
+23,giao size nhỏ,1,Dong_Goi,NEG
+23,giao size nhỏ,1,Gia_Ca,NEG
+23,giao size nhỏ,1,Mau_Sac_Mau_Ma,NEG
+23,giao size nhỏ,1,Form_Size,NEG
+24,sản_phẩm : sản_phẩm không như mô_tả,1,Giao_Hang,NEG
+24,sản_phẩm : sản_phẩm không như mô_tả,1,CSKH_Hau_Mai,NEU
+24,sản_phẩm : sản_phẩm không như mô_tả,1,Chat_Luong_Chat_Lieu,NEG
+24,sản_phẩm : sản_phẩm không như mô_tả,1,Dong_Goi,NEU
+24,sản_phẩm : sản_phẩm không như mô_tả,1,Gia_Ca,NEU
+24,sản_phẩm : sản_phẩm không như mô_tả,1,Mau_Sac_Mau_Ma,NEG
+24,sản_phẩm : sản_phẩm không như mô_tả,1,Form_Size,NEG
+25,"vaid mát_mỏng rất mát_lun , nhưng nút cài rất tệ , chưa gì đã bung chỉ bay tùm_lum",2,Giao_Hang,NEG
+25,"vaid mát_mỏng rất mát_lun , nhưng nút cài rất tệ , chưa gì đã bung chỉ bay tùm_lum",2,CSKH_Hau_Mai,NEG
+25,"vaid mát_mỏng rất mát_lun , nhưng nút cài rất tệ , chưa gì đã bung chỉ bay tùm_lum",2,Chat_Luong_Chat_Lieu,NEG
+25,"vaid mát_mỏng rất mát_lun , nhưng nút cài rất tệ , chưa gì đã bung chỉ bay tùm_lum",2,Dong_Goi,NEG
+25,"vaid mát_mỏng rất mát_lun , nhưng nút cài rất tệ , chưa gì đã bung chỉ bay tùm_lum",2,Gia_Ca,NEU
+25,"vaid mát_mỏng rất mát_lun , nhưng nút cài rất tệ , chưa gì đã bung chỉ bay tùm_lum",2,Mau_Sac_Mau_Ma,NEG
+25,"vaid mát_mỏng rất mát_lun , nhưng nút cài rất tệ , chưa gì đã bung chỉ bay tùm_lum",2,Form_Size,NEU
+26,chất_liệu : tạm ổn màu_sắc : đỏ đúng với mô_tả : đặt đen giao lại màu đỏ đặt màu đen mà cho màu đỏ,2,Giao_Hang,POS
+26,chất_liệu : tạm ổn màu_sắc : đỏ đúng với mô_tả : đặt đen giao lại màu đỏ đặt màu đen mà cho màu đỏ,2,CSKH_Hau_Mai,POS
+26,chất_liệu : tạm ổn màu_sắc : đỏ đúng với mô_tả : đặt đen giao lại màu đỏ đặt màu đen mà cho màu đỏ,2,Chat_Luong_Chat_Lieu,POS
+26,chất_liệu : tạm ổn màu_sắc : đỏ đúng với mô_tả : đặt đen giao lại màu đỏ đặt màu đen mà cho màu đỏ,2,Dong_Goi,NEU
+26,chất_liệu : tạm ổn màu_sắc : đỏ đúng với mô_tả : đặt đen giao lại màu đỏ đặt màu đen mà cho màu đỏ,2,Gia_Ca,POS
+26,chất_liệu : tạm ổn màu_sắc : đỏ đúng với mô_tả : đặt đen giao lại màu đỏ đặt màu đen mà cho màu đỏ,2,Mau_Sac_Mau_Ma,POS
+26,chất_liệu : tạm ổn màu_sắc : đỏ đúng với mô_tả : đặt đen giao lại màu đỏ đặt màu đen mà cho màu đỏ,2,Form_Size,NEU
+27,đặt màu tím mà ra màu đỏ quần_áo mỏng như túi bóng hôm,2,Giao_Hang,NEG
+27,đặt màu tím mà ra màu đỏ quần_áo mỏng như túi bóng hôm,2,CSKH_Hau_Mai,NEU
+27,đặt màu tím mà ra màu đỏ quần_áo mỏng như túi bóng hôm,2,Chat_Luong_Chat_Lieu,NEG
+27,đặt màu tím mà ra màu đỏ quần_áo mỏng như túi bóng hôm,2,Dong_Goi,NEU
+27,đặt màu tím mà ra màu đỏ quần_áo mỏng như túi bóng hôm,2,Gia_Ca,NEU
+27,đặt màu tím mà ra màu đỏ quần_áo mỏng như túi bóng hôm,2,Mau_Sac_Mau_Ma,NEG
+27,đặt màu tím mà ra màu đỏ quần_áo mỏng như túi bóng hôm,2,Form_Size,NEU
+28,đặt màu đen mà giao màu xanh . và chỉ thừa khá nhiều,2,Giao_Hang,NEG
+28,đặt màu đen mà giao màu xanh . và chỉ thừa khá nhiều,2,CSKH_Hau_Mai,NEG
+28,đặt màu đen mà giao màu xanh . và chỉ thừa khá nhiều,2,Chat_Luong_Chat_Lieu,NEG
+28,đặt màu đen mà giao màu xanh . và chỉ thừa khá nhiều,2,Dong_Goi,NEG
+28,đặt màu đen mà giao màu xanh . và chỉ thừa khá nhiều,2,Gia_Ca,NEU
+28,đặt màu đen mà giao màu xanh . và chỉ thừa khá nhiều,2,Mau_Sac_Mau_Ma,NEG
+28,đặt màu đen mà giao màu xanh . và chỉ thừa khá nhiều,2,Form_Size,NEG
+29,"chất_liệu : vải mặc khá thoáng , nhưng chất_liệu tổng_hợp nhựa nhiều thì phải màu_sắc : giong hinh đường may_điêu , chỉ thừa nhiều nhưng lại không chắc_chắn . vải mặc khá thoáng , nhưng cảm_giác giống nhựa tổng_hợp hơi đốt sợi vải là biết , mà theo nghiên_cứu gần đây thì da dễ hấp_thụ hạt nhựa từ quần_áo khi tập_thể_dục và ngủ",2,Giao_Hang,POS
+29,"chất_liệu : vải mặc khá thoáng , nhưng chất_liệu tổng_hợp nhựa nhiều thì phải màu_sắc : giong hinh đường may_điêu , chỉ thừa nhiều nhưng lại không chắc_chắn . vải mặc khá thoáng , nhưng cảm_giác giống nhựa tổng_hợp hơi đốt sợi vải là biết , mà theo nghiên_cứu gần đây thì da dễ hấp_thụ hạt nhựa từ quần_áo khi tập_thể_dục và ngủ",2,CSKH_Hau_Mai,POS
+29,"chất_liệu : vải mặc khá thoáng , nhưng chất_liệu tổng_hợp nhựa nhiều thì phải màu_sắc : giong hinh đường may_điêu , chỉ thừa nhiều nhưng lại không chắc_chắn . vải mặc khá thoáng , nhưng cảm_giác giống nhựa tổng_hợp hơi đốt sợi vải là biết , mà theo nghiên_cứu gần đây thì da dễ hấp_thụ hạt nhựa từ quần_áo khi tập_thể_dục và ngủ",2,Chat_Luong_Chat_Lieu,POS
+29,"chất_liệu : vải mặc khá thoáng , nhưng chất_liệu tổng_hợp nhựa nhiều thì phải màu_sắc : giong hinh đường may_điêu , chỉ thừa nhiều nhưng lại không chắc_chắn . vải mặc khá thoáng , nhưng cảm_giác giống nhựa tổng_hợp hơi đốt sợi vải là biết , mà theo nghiên_cứu gần đây thì da dễ hấp_thụ hạt nhựa từ quần_áo khi tập_thể_dục và ngủ",2,Dong_Goi,NEG
+29,"chất_liệu : vải mặc khá thoáng , nhưng chất_liệu tổng_hợp nhựa nhiều thì phải màu_sắc : giong hinh đường may_điêu , chỉ thừa nhiều nhưng lại không chắc_chắn . vải mặc khá thoáng , nhưng cảm_giác giống nhựa tổng_hợp hơi đốt sợi vải là biết , mà theo nghiên_cứu gần đây thì da dễ hấp_thụ hạt nhựa từ quần_áo khi tập_thể_dục và ngủ",2,Gia_Ca,NEG
+29,"chất_liệu : vải mặc khá thoáng , nhưng chất_liệu tổng_hợp nhựa nhiều thì phải màu_sắc : giong hinh đường may_điêu , chỉ thừa nhiều nhưng lại không chắc_chắn . vải mặc khá thoáng , nhưng cảm_giác giống nhựa tổng_hợp hơi đốt sợi vải là biết , mà theo nghiên_cứu gần đây thì da dễ hấp_thụ hạt nhựa từ quần_áo khi tập_thể_dục và ngủ",2,Mau_Sac_Mau_Ma,NEG
+29,"chất_liệu : vải mặc khá thoáng , nhưng chất_liệu tổng_hợp nhựa nhiều thì phải màu_sắc : giong hinh đường may_điêu , chỉ thừa nhiều nhưng lại không chắc_chắn . vải mặc khá thoáng , nhưng cảm_giác giống nhựa tổng_hợp hơi đốt sợi vải là biết , mà theo nghiên_cứu gần đây thì da dễ hấp_thụ hạt nhựa từ quần_áo khi tập_thể_dục và ngủ",2,Form_Size,NEU
+30,"bảng hướng_dẫn chọn size không đúng . tôi đã chọn dư rồi mà vẫn không vừa . tôi 70 kg cao 170 cm đã chọn xxl . mặc vẫn bị bó_sát , quần thì ngắn .",2,Giao_Hang,NEG
+30,"bảng hướng_dẫn chọn size không đúng . tôi đã chọn dư rồi mà vẫn không vừa . tôi 70 kg cao 170 cm đã chọn xxl . mặc vẫn bị bó_sát , quần thì ngắn .",2,CSKH_Hau_Mai,NEG
+30,"bảng hướng_dẫn chọn size không đúng . tôi đã chọn dư rồi mà vẫn không vừa . tôi 70 kg cao 170 cm đã chọn xxl . mặc vẫn bị bó_sát , quần thì ngắn .",2,Chat_Luong_Chat_Lieu,NEG
+30,"bảng hướng_dẫn chọn size không đúng . tôi đã chọn dư rồi mà vẫn không vừa . tôi 70 kg cao 170 cm đã chọn xxl . mặc vẫn bị bó_sát , quần thì ngắn .",2,Dong_Goi,NEG
+30,"bảng hướng_dẫn chọn size không đúng . tôi đã chọn dư rồi mà vẫn không vừa . tôi 70 kg cao 170 cm đã chọn xxl . mặc vẫn bị bó_sát , quần thì ngắn .",2,Gia_Ca,NEG
+30,"bảng hướng_dẫn chọn size không đúng . tôi đã chọn dư rồi mà vẫn không vừa . tôi 70 kg cao 170 cm đã chọn xxl . mặc vẫn bị bó_sát , quần thì ngắn .",2,Mau_Sac_Mau_Ma,NEG
+30,"bảng hướng_dẫn chọn size không đúng . tôi đã chọn dư rồi mà vẫn không vừa . tôi 70 kg cao 170 cm đã chọn xxl . mặc vẫn bị bó_sát , quần thì ngắn .",2,Form_Size,NEG
+31,"sản_phẩm : sản_phẩm không như mô_tả , sản_phẩm chất_lượng kém kh bao_h mua lại",2,Giao_Hang,NEG
+31,"sản_phẩm : sản_phẩm không như mô_tả , sản_phẩm chất_lượng kém kh bao_h mua lại",2,CSKH_Hau_Mai,NEU
+31,"sản_phẩm : sản_phẩm không như mô_tả , sản_phẩm chất_lượng kém kh bao_h mua lại",2,Chat_Luong_Chat_Lieu,NEG
+31,"sản_phẩm : sản_phẩm không như mô_tả , sản_phẩm chất_lượng kém kh bao_h mua lại",2,Dong_Goi,NEU
+31,"sản_phẩm : sản_phẩm không như mô_tả , sản_phẩm chất_lượng kém kh bao_h mua lại",2,Gia_Ca,NEU
+31,"sản_phẩm : sản_phẩm không như mô_tả , sản_phẩm chất_lượng kém kh bao_h mua lại",2,Mau_Sac_Mau_Ma,NEG
+31,"sản_phẩm : sản_phẩm không như mô_tả , sản_phẩm chất_lượng kém kh bao_h mua lại",2,Form_Size,NEU
+32,chất_liệu : bung chỉ rồi,2,Giao_Hang,POS
+32,chất_liệu : bung chỉ rồi,2,CSKH_Hau_Mai,NEU
+32,chất_liệu : bung chỉ rồi,2,Chat_Luong_Chat_Lieu,POS
+32,chất_liệu : bung chỉ rồi,2,Dong_Goi,NEU
+32,chất_liệu : bung chỉ rồi,2,Gia_Ca,NEU
+32,chất_liệu : bung chỉ rồi,2,Mau_Sac_Mau_Ma,POS
+32,chất_liệu : bung chỉ rồi,2,Form_Size,NEU
+33,"mặc đc 3 lần và đây là kết_quả , quần_áo cứ bị bung chỉ dần , quá thất_vọng , màu đen nhìn khó thấy chứ nhiều chỗ như ảnh lắm",2,Giao_Hang,NEG
+33,"mặc đc 3 lần và đây là kết_quả , quần_áo cứ bị bung chỉ dần , quá thất_vọng , màu đen nhìn khó thấy chứ nhiều chỗ như ảnh lắm",2,CSKH_Hau_Mai,NEU
+33,"mặc đc 3 lần và đây là kết_quả , quần_áo cứ bị bung chỉ dần , quá thất_vọng , màu đen nhìn khó thấy chứ nhiều chỗ như ảnh lắm",2,Chat_Luong_Chat_Lieu,NEG
+33,"mặc đc 3 lần và đây là kết_quả , quần_áo cứ bị bung chỉ dần , quá thất_vọng , màu đen nhìn khó thấy chứ nhiều chỗ như ảnh lắm",2,Dong_Goi,NEU
+33,"mặc đc 3 lần và đây là kết_quả , quần_áo cứ bị bung chỉ dần , quá thất_vọng , màu đen nhìn khó thấy chứ nhiều chỗ như ảnh lắm",2,Gia_Ca,NEU
+33,"mặc đc 3 lần và đây là kết_quả , quần_áo cứ bị bung chỉ dần , quá thất_vọng , màu đen nhìn khó thấy chứ nhiều chỗ như ảnh lắm",2,Mau_Sac_Mau_Ma,NEG
+33,"mặc đc 3 lần và đây là kết_quả , quần_áo cứ bị bung chỉ dần , quá thất_vọng , màu đen nhìn khó thấy chứ nhiều chỗ như ảnh lắm",2,Form_Size,NEG
+34,"đặt 3 bộ shop giao sai màu 1 bộ , mình đặt bộ dài đen_shop lại giao màu hồng còn có chữ dior , cũng không thông_báo trước cho khách là hết hàng hay ntn , đồ mình gửi cho bạn đi nước_ngoài thì đúng bộ đó không gửi đi được vì bưu_cục cảnh_báo hàng fake dior coi có chán không chứ",2,Giao_Hang,NEG
+34,"đặt 3 bộ shop giao sai màu 1 bộ , mình đặt bộ dài đen_shop lại giao màu hồng còn có chữ dior , cũng không thông_báo trước cho khách là hết hàng hay ntn , đồ mình gửi cho bạn đi nước_ngoài thì đúng bộ đó không gửi đi được vì bưu_cục cảnh_báo hàng fake dior coi có chán không chứ",2,CSKH_Hau_Mai,NEU
+34,"đặt 3 bộ shop giao sai màu 1 bộ , mình đặt bộ dài đen_shop lại giao màu hồng còn có chữ dior , cũng không thông_báo trước cho khách là hết hàng hay ntn , đồ mình gửi cho bạn đi nước_ngoài thì đúng bộ đó không gửi đi được vì bưu_cục cảnh_báo hàng fake dior coi có chán không chứ",2,Chat_Luong_Chat_Lieu,NEG
+34,"đặt 3 bộ shop giao sai màu 1 bộ , mình đặt bộ dài đen_shop lại giao màu hồng còn có chữ dior , cũng không thông_báo trước cho khách là hết hàng hay ntn , đồ mình gửi cho bạn đi nước_ngoài thì đúng bộ đó không gửi đi được vì bưu_cục cảnh_báo hàng fake dior coi có chán không chứ",2,Dong_Goi,NEG
+34,"đặt 3 bộ shop giao sai màu 1 bộ , mình đặt bộ dài đen_shop lại giao màu hồng còn có chữ dior , cũng không thông_báo trước cho khách là hết hàng hay ntn , đồ mình gửi cho bạn đi nước_ngoài thì đúng bộ đó không gửi đi được vì bưu_cục cảnh_báo hàng fake dior coi có chán không chứ",2,Gia_Ca,NEG
+34,"đặt 3 bộ shop giao sai màu 1 bộ , mình đặt bộ dài đen_shop lại giao màu hồng còn có chữ dior , cũng không thông_báo trước cho khách là hết hàng hay ntn , đồ mình gửi cho bạn đi nước_ngoài thì đúng bộ đó không gửi đi được vì bưu_cục cảnh_báo hàng fake dior coi có chán không chứ",2,Mau_Sac_Mau_Ma,NEG
+34,"đặt 3 bộ shop giao sai màu 1 bộ , mình đặt bộ dài đen_shop lại giao màu hồng còn có chữ dior , cũng không thông_báo trước cho khách là hết hàng hay ntn , đồ mình gửi cho bạn đi nước_ngoài thì đúng bộ đó không gửi đi được vì bưu_cục cảnh_báo hàng fake dior coi có chán không chứ",2,Form_Size,NEG
+35,"mới giặt lần đầu đã rách_túi , để size cho khách mua k chuẩn , dưới 57 kg mà mặc chật phải đổi cái khác thêm 20 k tiền ship , k đổi k mặc dc rất chật . như shop khác size tham_khảo hoặc tư_vấn size k chuẩn_shop kêu hoàn về rồi đặt đơn khác k tốn phí ship",2,Giao_Hang,NEG
+35,"mới giặt lần đầu đã rách_túi , để size cho khách mua k chuẩn , dưới 57 kg mà mặc chật phải đổi cái khác thêm 20 k tiền ship , k đổi k mặc dc rất chật . như shop khác size tham_khảo hoặc tư_vấn size k chuẩn_shop kêu hoàn về rồi đặt đơn khác k tốn phí ship",2,CSKH_Hau_Mai,NEU
+35,"mới giặt lần đầu đã rách_túi , để size cho khách mua k chuẩn , dưới 57 kg mà mặc chật phải đổi cái khác thêm 20 k tiền ship , k đổi k mặc dc rất chật . như shop khác size tham_khảo hoặc tư_vấn size k chuẩn_shop kêu hoàn về rồi đặt đơn khác k tốn phí ship",2,Chat_Luong_Chat_Lieu,NEG
+35,"mới giặt lần đầu đã rách_túi , để size cho khách mua k chuẩn , dưới 57 kg mà mặc chật phải đổi cái khác thêm 20 k tiền ship , k đổi k mặc dc rất chật . như shop khác size tham_khảo hoặc tư_vấn size k chuẩn_shop kêu hoàn về rồi đặt đơn khác k tốn phí ship",2,Dong_Goi,NEG
+35,"mới giặt lần đầu đã rách_túi , để size cho khách mua k chuẩn , dưới 57 kg mà mặc chật phải đổi cái khác thêm 20 k tiền ship , k đổi k mặc dc rất chật . như shop khác size tham_khảo hoặc tư_vấn size k chuẩn_shop kêu hoàn về rồi đặt đơn khác k tốn phí ship",2,Gia_Ca,NEG
+35,"mới giặt lần đầu đã rách_túi , để size cho khách mua k chuẩn , dưới 57 kg mà mặc chật phải đổi cái khác thêm 20 k tiền ship , k đổi k mặc dc rất chật . như shop khác size tham_khảo hoặc tư_vấn size k chuẩn_shop kêu hoàn về rồi đặt đơn khác k tốn phí ship",2,Mau_Sac_Mau_Ma,NEG
+35,"mới giặt lần đầu đã rách_túi , để size cho khách mua k chuẩn , dưới 57 kg mà mặc chật phải đổi cái khác thêm 20 k tiền ship , k đổi k mặc dc rất chật . như shop khác size tham_khảo hoặc tư_vấn size k chuẩn_shop kêu hoàn về rồi đặt đơn khác k tốn phí ship",2,Form_Size,NEG
+36,mua trừ_hao size 65 kg mà thử vào bé tí . mình 50 kg quần mặc vào cũng ngắn cũn cái ống_quần nhỏ như hình . chị_em có mua nên cân_nhắc nha,2,Giao_Hang,NEG
+36,mua trừ_hao size 65 kg mà thử vào bé tí . mình 50 kg quần mặc vào cũng ngắn cũn cái ống_quần nhỏ như hình . chị_em có mua nên cân_nhắc nha,2,CSKH_Hau_Mai,NEU
+36,mua trừ_hao size 65 kg mà thử vào bé tí . mình 50 kg quần mặc vào cũng ngắn cũn cái ống_quần nhỏ như hình . chị_em có mua nên cân_nhắc nha,2,Chat_Luong_Chat_Lieu,NEG
+36,mua trừ_hao size 65 kg mà thử vào bé tí . mình 50 kg quần mặc vào cũng ngắn cũn cái ống_quần nhỏ như hình . chị_em có mua nên cân_nhắc nha,2,Dong_Goi,NEG
+36,mua trừ_hao size 65 kg mà thử vào bé tí . mình 50 kg quần mặc vào cũng ngắn cũn cái ống_quần nhỏ như hình . chị_em có mua nên cân_nhắc nha,2,Gia_Ca,NEG
+36,mua trừ_hao size 65 kg mà thử vào bé tí . mình 50 kg quần mặc vào cũng ngắn cũn cái ống_quần nhỏ như hình . chị_em có mua nên cân_nhắc nha,2,Mau_Sac_Mau_Ma,NEG
+36,mua trừ_hao size 65 kg mà thử vào bé tí . mình 50 kg quần mặc vào cũng ngắn cũn cái ống_quần nhỏ như hình . chị_em có mua nên cân_nhắc nha,2,Form_Size,NEG
+37,"quần tạm được , áo_phom xấu cộc , vải mỏng . với giá tiền 145 k mua trên shopee thì đắt , nói_chung giá hơi_chát so với sản_phẩm , sản_phẩm ko như mong_muốn",2,Giao_Hang,NEG
+37,"quần tạm được , áo_phom xấu cộc , vải mỏng . với giá tiền 145 k mua trên shopee thì đắt , nói_chung giá hơi_chát so với sản_phẩm , sản_phẩm ko như mong_muốn",2,CSKH_Hau_Mai,NEG
+37,"quần tạm được , áo_phom xấu cộc , vải mỏng . với giá tiền 145 k mua trên shopee thì đắt , nói_chung giá hơi_chát so với sản_phẩm , sản_phẩm ko như mong_muốn",2,Chat_Luong_Chat_Lieu,NEG
+37,"quần tạm được , áo_phom xấu cộc , vải mỏng . với giá tiền 145 k mua trên shopee thì đắt , nói_chung giá hơi_chát so với sản_phẩm , sản_phẩm ko như mong_muốn",2,Dong_Goi,NEG
+37,"quần tạm được , áo_phom xấu cộc , vải mỏng . với giá tiền 145 k mua trên shopee thì đắt , nói_chung giá hơi_chát so với sản_phẩm , sản_phẩm ko như mong_muốn",2,Gia_Ca,NEG
+37,"quần tạm được , áo_phom xấu cộc , vải mỏng . với giá tiền 145 k mua trên shopee thì đắt , nói_chung giá hơi_chát so với sản_phẩm , sản_phẩm ko như mong_muốn",2,Mau_Sac_Mau_Ma,NEG
+37,"quần tạm được , áo_phom xấu cộc , vải mỏng . với giá tiền 145 k mua trên shopee thì đắt , nói_chung giá hơi_chát so với sản_phẩm , sản_phẩm ko như mong_muốn",2,Form_Size,NEG
+38,shop nên điều_chỉnh lại phần lựa_chọn size . chật và ngắn quá,3,Giao_Hang,NEG
+38,shop nên điều_chỉnh lại phần lựa_chọn size . chật và ngắn quá,3,CSKH_Hau_Mai,NEG
+38,shop nên điều_chỉnh lại phần lựa_chọn size . chật và ngắn quá,3,Chat_Luong_Chat_Lieu,NEG
+38,shop nên điều_chỉnh lại phần lựa_chọn size . chật và ngắn quá,3,Dong_Goi,NEU
+38,shop nên điều_chỉnh lại phần lựa_chọn size . chật và ngắn quá,3,Gia_Ca,NEG
+38,shop nên điều_chỉnh lại phần lựa_chọn size . chật và ngắn quá,3,Mau_Sac_Mau_Ma,NEG
+38,shop nên điều_chỉnh lại phần lựa_chọn size . chật và ngắn quá,3,Form_Size,NEG
+39,mua mau đen lại giao về màu đỏ_shop làm_ăn kiểu gì thế,3,Giao_Hang,NEG
+39,mua mau đen lại giao về màu đỏ_shop làm_ăn kiểu gì thế,3,CSKH_Hau_Mai,NEG
+39,mua mau đen lại giao về màu đỏ_shop làm_ăn kiểu gì thế,3,Chat_Luong_Chat_Lieu,NEG
+39,mua mau đen lại giao về màu đỏ_shop làm_ăn kiểu gì thế,3,Dong_Goi,NEU
+39,mua mau đen lại giao về màu đỏ_shop làm_ăn kiểu gì thế,3,Gia_Ca,NEU
+39,mua mau đen lại giao về màu đỏ_shop làm_ăn kiểu gì thế,3,Mau_Sac_Mau_Ma,NEG
+39,mua mau đen lại giao về màu đỏ_shop làm_ăn kiểu gì thế,3,Form_Size,NEU
+40,mua 2 bộ màu đen nhưng giao đến một đen một đỏ,3,Giao_Hang,NEG
+40,mua 2 bộ màu đen nhưng giao đến một đen một đỏ,3,CSKH_Hau_Mai,NEU
+40,mua 2 bộ màu đen nhưng giao đến một đen một đỏ,3,Chat_Luong_Chat_Lieu,NEG
+40,mua 2 bộ màu đen nhưng giao đến một đen một đỏ,3,Dong_Goi,NEU
+40,mua 2 bộ màu đen nhưng giao đến một đen một đỏ,3,Gia_Ca,NEU
+40,mua 2 bộ màu đen nhưng giao đến một đen một đỏ,3,Mau_Sac_Mau_Ma,NEG
+40,mua 2 bộ màu đen nhưng giao đến một đen một đỏ,3,Form_Size,NEU
+41,"shop giao nhầm mẫu nhưng đã đổi lại được cho m , nhưng vải mỏng hơn , nhăn_nheo , không biét đã qua sử_dụng chưa mà có vết đó",3,Giao_Hang,NEG
+41,"shop giao nhầm mẫu nhưng đã đổi lại được cho m , nhưng vải mỏng hơn , nhăn_nheo , không biét đã qua sử_dụng chưa mà có vết đó",3,CSKH_Hau_Mai,POS
+41,"shop giao nhầm mẫu nhưng đã đổi lại được cho m , nhưng vải mỏng hơn , nhăn_nheo , không biét đã qua sử_dụng chưa mà có vết đó",3,Chat_Luong_Chat_Lieu,NEG
+41,"shop giao nhầm mẫu nhưng đã đổi lại được cho m , nhưng vải mỏng hơn , nhăn_nheo , không biét đã qua sử_dụng chưa mà có vết đó",3,Dong_Goi,NEG
+41,"shop giao nhầm mẫu nhưng đã đổi lại được cho m , nhưng vải mỏng hơn , nhăn_nheo , không biét đã qua sử_dụng chưa mà có vết đó",3,Gia_Ca,NEU
+41,"shop giao nhầm mẫu nhưng đã đổi lại được cho m , nhưng vải mỏng hơn , nhăn_nheo , không biét đã qua sử_dụng chưa mà có vết đó",3,Mau_Sac_Mau_Ma,NEG
+41,"shop giao nhầm mẫu nhưng đã đổi lại được cho m , nhưng vải mỏng hơn , nhăn_nheo , không biét đã qua sử_dụng chưa mà có vết đó",3,Form_Size,NEG
+42,đáng nhẽ 5 nhưng 1 mẫu shop hết màu mà k báo khách tự_động đổi màu nên chỉ đánh_giá 3 khá nhiều chie thừa,3,Giao_Hang,NEG
+42,đáng nhẽ 5 nhưng 1 mẫu shop hết màu mà k báo khách tự_động đổi màu nên chỉ đánh_giá 3 khá nhiều chie thừa,3,CSKH_Hau_Mai,NEG
+42,đáng nhẽ 5 nhưng 1 mẫu shop hết màu mà k báo khách tự_động đổi màu nên chỉ đánh_giá 3 khá nhiều chie thừa,3,Chat_Luong_Chat_Lieu,NEG
+42,đáng nhẽ 5 nhưng 1 mẫu shop hết màu mà k báo khách tự_động đổi màu nên chỉ đánh_giá 3 khá nhiều chie thừa,3,Dong_Goi,NEU
+42,đáng nhẽ 5 nhưng 1 mẫu shop hết màu mà k báo khách tự_động đổi màu nên chỉ đánh_giá 3 khá nhiều chie thừa,3,Gia_Ca,NEU
+42,đáng nhẽ 5 nhưng 1 mẫu shop hết màu mà k báo khách tự_động đổi màu nên chỉ đánh_giá 3 khá nhiều chie thừa,3,Mau_Sac_Mau_Ma,NEG
+42,đáng nhẽ 5 nhưng 1 mẫu shop hết màu mà k báo khách tự_động đổi màu nên chỉ đánh_giá 3 khá nhiều chie thừa,3,Form_Size,NEG
+43,"đặt xl mà giao qao quá ngắn , viền vàng khâu ẩu quá , khuy áo vừa đóng đã thấy sổ chỉ ra rồi ,",3,Giao_Hang,NEG
+43,"đặt xl mà giao qao quá ngắn , viền vàng khâu ẩu quá , khuy áo vừa đóng đã thấy sổ chỉ ra rồi ,",3,CSKH_Hau_Mai,NEG
+43,"đặt xl mà giao qao quá ngắn , viền vàng khâu ẩu quá , khuy áo vừa đóng đã thấy sổ chỉ ra rồi ,",3,Chat_Luong_Chat_Lieu,NEG
+43,"đặt xl mà giao qao quá ngắn , viền vàng khâu ẩu quá , khuy áo vừa đóng đã thấy sổ chỉ ra rồi ,",3,Dong_Goi,NEG
+43,"đặt xl mà giao qao quá ngắn , viền vàng khâu ẩu quá , khuy áo vừa đóng đã thấy sổ chỉ ra rồi ,",3,Gia_Ca,NEU
+43,"đặt xl mà giao qao quá ngắn , viền vàng khâu ẩu quá , khuy áo vừa đóng đã thấy sổ chỉ ra rồi ,",3,Mau_Sac_Mau_Ma,NEG
+43,"đặt xl mà giao qao quá ngắn , viền vàng khâu ẩu quá , khuy áo vừa đóng đã thấy sổ chỉ ra rồi ,",3,Form_Size,NEG
+44,mới đầu thấy đẹp và vải mát cho 5 ai_ngờ mặc có 1 lần rách tận 4 chỗ ? :,3,Giao_Hang,POS
+44,mới đầu thấy đẹp và vải mát cho 5 ai_ngờ mặc có 1 lần rách tận 4 chỗ ? :,3,CSKH_Hau_Mai,POS
+44,mới đầu thấy đẹp và vải mát cho 5 ai_ngờ mặc có 1 lần rách tận 4 chỗ ? :,3,Chat_Luong_Chat_Lieu,POS
+44,mới đầu thấy đẹp và vải mát cho 5 ai_ngờ mặc có 1 lần rách tận 4 chỗ ? :,3,Dong_Goi,NEU
+44,mới đầu thấy đẹp và vải mát cho 5 ai_ngờ mặc có 1 lần rách tận 4 chỗ ? :,3,Gia_Ca,NEU
+44,mới đầu thấy đẹp và vải mát cho 5 ai_ngờ mặc có 1 lần rách tận 4 chỗ ? :,3,Mau_Sac_Mau_Ma,NEG
+44,mới đầu thấy đẹp và vải mát cho 5 ai_ngờ mặc có 1 lần rách tận 4 chỗ ? :,3,Form_Size,NEU
+45,"chất_liệu : hoi mong màu_sắc : chuẩn nên mua sz to hơn cơ_thể nhiều một_chút e cao_m63 nặng 49 mặc sz 3 áo vẫn bị ngắn , nhưng_mà sao mác của hai màu hai cổ áo lại khác nhau nhỉ",3,Giao_Hang,NEG
+45,"chất_liệu : hoi mong màu_sắc : chuẩn nên mua sz to hơn cơ_thể nhiều một_chút e cao_m63 nặng 49 mặc sz 3 áo vẫn bị ngắn , nhưng_mà sao mác của hai màu hai cổ áo lại khác nhau nhỉ",3,CSKH_Hau_Mai,POS
+45,"chất_liệu : hoi mong màu_sắc : chuẩn nên mua sz to hơn cơ_thể nhiều một_chút e cao_m63 nặng 49 mặc sz 3 áo vẫn bị ngắn , nhưng_mà sao mác của hai màu hai cổ áo lại khác nhau nhỉ",3,Chat_Luong_Chat_Lieu,POS
+45,"chất_liệu : hoi mong màu_sắc : chuẩn nên mua sz to hơn cơ_thể nhiều một_chút e cao_m63 nặng 49 mặc sz 3 áo vẫn bị ngắn , nhưng_mà sao mác của hai màu hai cổ áo lại khác nhau nhỉ",3,Dong_Goi,NEU
+45,"chất_liệu : hoi mong màu_sắc : chuẩn nên mua sz to hơn cơ_thể nhiều một_chút e cao_m63 nặng 49 mặc sz 3 áo vẫn bị ngắn , nhưng_mà sao mác của hai màu hai cổ áo lại khác nhau nhỉ",3,Gia_Ca,POS
+45,"chất_liệu : hoi mong màu_sắc : chuẩn nên mua sz to hơn cơ_thể nhiều một_chút e cao_m63 nặng 49 mặc sz 3 áo vẫn bị ngắn , nhưng_mà sao mác của hai màu hai cổ áo lại khác nhau nhỉ",3,Mau_Sac_Mau_Ma,NEG
+45,"chất_liệu : hoi mong màu_sắc : chuẩn nên mua sz to hơn cơ_thể nhiều một_chút e cao_m63 nặng 49 mặc sz 3 áo vẫn bị ngắn , nhưng_mà sao mác của hai màu hai cổ áo lại khác nhau nhỉ",3,Form_Size,NEG
+46,chất_liệu : lụa màu_sắc : đen đúng với mô_tả : oki nói_chung tiền nào của nấy thôi . mình đặt 2 sezi mà sezi s còn to hơn cả sezi m .. với cả đường may sơ_sài .. chưa mặc đã bung .. nói_chung không mua lại,3,Giao_Hang,NEG
+46,chất_liệu : lụa màu_sắc : đen đúng với mô_tả : oki nói_chung tiền nào của nấy thôi . mình đặt 2 sezi mà sezi s còn to hơn cả sezi m .. với cả đường may sơ_sài .. chưa mặc đã bung .. nói_chung không mua lại,3,CSKH_Hau_Mai,NEU
+46,chất_liệu : lụa màu_sắc : đen đúng với mô_tả : oki nói_chung tiền nào của nấy thôi . mình đặt 2 sezi mà sezi s còn to hơn cả sezi m .. với cả đường may sơ_sài .. chưa mặc đã bung .. nói_chung không mua lại,3,Chat_Luong_Chat_Lieu,NEG
+46,chất_liệu : lụa màu_sắc : đen đúng với mô_tả : oki nói_chung tiền nào của nấy thôi . mình đặt 2 sezi mà sezi s còn to hơn cả sezi m .. với cả đường may sơ_sài .. chưa mặc đã bung .. nói_chung không mua lại,3,Dong_Goi,NEU
+46,chất_liệu : lụa màu_sắc : đen đúng với mô_tả : oki nói_chung tiền nào của nấy thôi . mình đặt 2 sezi mà sezi s còn to hơn cả sezi m .. với cả đường may sơ_sài .. chưa mặc đã bung .. nói_chung không mua lại,3,Gia_Ca,NEU
+46,chất_liệu : lụa màu_sắc : đen đúng với mô_tả : oki nói_chung tiền nào của nấy thôi . mình đặt 2 sezi mà sezi s còn to hơn cả sezi m .. với cả đường may sơ_sài .. chưa mặc đã bung .. nói_chung không mua lại,3,Mau_Sac_Mau_Ma,NEG
+46,chất_liệu : lụa màu_sắc : đen đúng với mô_tả : oki nói_chung tiền nào của nấy thôi . mình đặt 2 sezi mà sezi s còn to hơn cả sezi m .. với cả đường may sơ_sài .. chưa mặc đã bung .. nói_chung không mua lại,3,Form_Size,NEG
+47,khá đẹp nm đường chỉ may rất lỏng_lẻo giặt máy rất dễ bị rách ra,3,Giao_Hang,POS
+47,khá đẹp nm đường chỉ may rất lỏng_lẻo giặt máy rất dễ bị rách ra,3,CSKH_Hau_Mai,POS
+47,khá đẹp nm đường chỉ may rất lỏng_lẻo giặt máy rất dễ bị rách ra,3,Chat_Luong_Chat_Lieu,POS
+47,khá đẹp nm đường chỉ may rất lỏng_lẻo giặt máy rất dễ bị rách ra,3,Dong_Goi,NEU
+47,khá đẹp nm đường chỉ may rất lỏng_lẻo giặt máy rất dễ bị rách ra,3,Gia_Ca,NEU
+47,khá đẹp nm đường chỉ may rất lỏng_lẻo giặt máy rất dễ bị rách ra,3,Mau_Sac_Mau_Ma,POS
+47,khá đẹp nm đường chỉ may rất lỏng_lẻo giặt máy rất dễ bị rách ra,3,Form_Size,NEU
+48,khuy ko_trùng màu với áo nên trông ko sang . còn chất cũng được,3,Giao_Hang,NEG
+48,khuy ko_trùng màu với áo nên trông ko sang . còn chất cũng được,3,CSKH_Hau_Mai,POS
+48,khuy ko_trùng màu với áo nên trông ko sang . còn chất cũng được,3,Chat_Luong_Chat_Lieu,NEG
+48,khuy ko_trùng màu với áo nên trông ko sang . còn chất cũng được,3,Dong_Goi,NEU
+48,khuy ko_trùng màu với áo nên trông ko sang . còn chất cũng được,3,Gia_Ca,NEU
+48,khuy ko_trùng màu với áo nên trông ko sang . còn chất cũng được,3,Mau_Sac_Mau_Ma,NEG
+48,khuy ko_trùng màu với áo nên trông ko sang . còn chất cũng được,3,Form_Size,NEU
+49,"màu_sắc : đúng màu đúng với mô_tả : sp y_hình chất vải . , m . n có_thể cân_nhắc móng tay lỡ_quào qua cái ngồi miết cho nó về như cũ thì k dk . là coi như chỗ đó bị lỗi luôn . đường chỉ thì có khả_năng phả_may lại cho k bị lộ chỉ . nhìn tổng_quan thì ôk đó . nếu vải k lõi tui 60 kg m67 quần_mặc thoải_mái , quần khá dài_áo thì nếu v1 hơi bư 1 tý thì k lấy size lớn hơn",3,Giao_Hang,POS
+49,"màu_sắc : đúng màu đúng với mô_tả : sp y_hình chất vải . , m . n có_thể cân_nhắc móng tay lỡ_quào qua cái ngồi miết cho nó về như cũ thì k dk . là coi như chỗ đó bị lỗi luôn . đường chỉ thì có khả_năng phả_may lại cho k bị lộ chỉ . nhìn tổng_quan thì ôk đó . nếu vải k lõi tui 60 kg m67 quần_mặc thoải_mái , quần khá dài_áo thì nếu v1 hơi bư 1 tý thì k lấy size lớn hơn",3,CSKH_Hau_Mai,POS
+49,"màu_sắc : đúng màu đúng với mô_tả : sp y_hình chất vải . , m . n có_thể cân_nhắc móng tay lỡ_quào qua cái ngồi miết cho nó về như cũ thì k dk . là coi như chỗ đó bị lỗi luôn . đường chỉ thì có khả_năng phả_may lại cho k bị lộ chỉ . nhìn tổng_quan thì ôk đó . nếu vải k lõi tui 60 kg m67 quần_mặc thoải_mái , quần khá dài_áo thì nếu v1 hơi bư 1 tý thì k lấy size lớn hơn",3,Chat_Luong_Chat_Lieu,POS
+49,"màu_sắc : đúng màu đúng với mô_tả : sp y_hình chất vải . , m . n có_thể cân_nhắc móng tay lỡ_quào qua cái ngồi miết cho nó về như cũ thì k dk . là coi như chỗ đó bị lỗi luôn . đường chỉ thì có khả_năng phả_may lại cho k bị lộ chỉ . nhìn tổng_quan thì ôk đó . nếu vải k lõi tui 60 kg m67 quần_mặc thoải_mái , quần khá dài_áo thì nếu v1 hơi bư 1 tý thì k lấy size lớn hơn",3,Dong_Goi,POS
+49,"màu_sắc : đúng màu đúng với mô_tả : sp y_hình chất vải . , m . n có_thể cân_nhắc móng tay lỡ_quào qua cái ngồi miết cho nó về như cũ thì k dk . là coi như chỗ đó bị lỗi luôn . đường chỉ thì có khả_năng phả_may lại cho k bị lộ chỉ . nhìn tổng_quan thì ôk đó . nếu vải k lõi tui 60 kg m67 quần_mặc thoải_mái , quần khá dài_áo thì nếu v1 hơi bư 1 tý thì k lấy size lớn hơn",3,Gia_Ca,POS
+49,"màu_sắc : đúng màu đúng với mô_tả : sp y_hình chất vải . , m . n có_thể cân_nhắc móng tay lỡ_quào qua cái ngồi miết cho nó về như cũ thì k dk . là coi như chỗ đó bị lỗi luôn . đường chỉ thì có khả_năng phả_may lại cho k bị lộ chỉ . nhìn tổng_quan thì ôk đó . nếu vải k lõi tui 60 kg m67 quần_mặc thoải_mái , quần khá dài_áo thì nếu v1 hơi bư 1 tý thì k lấy size lớn hơn",3,Mau_Sac_Mau_Ma,POS
+49,"màu_sắc : đúng màu đúng với mô_tả : sp y_hình chất vải . , m . n có_thể cân_nhắc móng tay lỡ_quào qua cái ngồi miết cho nó về như cũ thì k dk . là coi như chỗ đó bị lỗi luôn . đường chỉ thì có khả_năng phả_may lại cho k bị lộ chỉ . nhìn tổng_quan thì ôk đó . nếu vải k lõi tui 60 kg m67 quần_mặc thoải_mái , quần khá dài_áo thì nếu v1 hơi bư 1 tý thì k lấy size lớn hơn",3,Form_Size,POS
+50,màu_sắc : đúng ai đó trong lúc đính_cúc áo đã lơ_đãng và quên đính 1 cúc áo nên áo chỉ có 3 cúc . đã mua hàng mình k muốn hoàn_dù shop nói lỗi thì hoàn tiền lại . mình đã đi cắt 4 cái cúc của cái áo khác may vào . vì ngồi đính lại 4 cúc nên trừ sao nhé . bộ_đồ nhìn cũng kute nhưng áo hơn ngắn so với mình . shop giao hàng hơi lâu .,3,Giao_Hang,NEG
+50,màu_sắc : đúng ai đó trong lúc đính_cúc áo đã lơ_đãng và quên đính 1 cúc áo nên áo chỉ có 3 cúc . đã mua hàng mình k muốn hoàn_dù shop nói lỗi thì hoàn tiền lại . mình đã đi cắt 4 cái cúc của cái áo khác may vào . vì ngồi đính lại 4 cúc nên trừ sao nhé . bộ_đồ nhìn cũng kute nhưng áo hơn ngắn so với mình . shop giao hàng hơi lâu .,3,CSKH_Hau_Mai,NEG
+50,màu_sắc : đúng ai đó trong lúc đính_cúc áo đã lơ_đãng và quên đính 1 cúc áo nên áo chỉ có 3 cúc . đã mua hàng mình k muốn hoàn_dù shop nói lỗi thì hoàn tiền lại . mình đã đi cắt 4 cái cúc của cái áo khác may vào . vì ngồi đính lại 4 cúc nên trừ sao nhé . bộ_đồ nhìn cũng kute nhưng áo hơn ngắn so với mình . shop giao hàng hơi lâu .,3,Chat_Luong_Chat_Lieu,NEG
+50,màu_sắc : đúng ai đó trong lúc đính_cúc áo đã lơ_đãng và quên đính 1 cúc áo nên áo chỉ có 3 cúc . đã mua hàng mình k muốn hoàn_dù shop nói lỗi thì hoàn tiền lại . mình đã đi cắt 4 cái cúc của cái áo khác may vào . vì ngồi đính lại 4 cúc nên trừ sao nhé . bộ_đồ nhìn cũng kute nhưng áo hơn ngắn so với mình . shop giao hàng hơi lâu .,3,Dong_Goi,NEG
+50,màu_sắc : đúng ai đó trong lúc đính_cúc áo đã lơ_đãng và quên đính 1 cúc áo nên áo chỉ có 3 cúc . đã mua hàng mình k muốn hoàn_dù shop nói lỗi thì hoàn tiền lại . mình đã đi cắt 4 cái cúc của cái áo khác may vào . vì ngồi đính lại 4 cúc nên trừ sao nhé . bộ_đồ nhìn cũng kute nhưng áo hơn ngắn so với mình . shop giao hàng hơi lâu .,3,Gia_Ca,NEG
+50,màu_sắc : đúng ai đó trong lúc đính_cúc áo đã lơ_đãng và quên đính 1 cúc áo nên áo chỉ có 3 cúc . đã mua hàng mình k muốn hoàn_dù shop nói lỗi thì hoàn tiền lại . mình đã đi cắt 4 cái cúc của cái áo khác may vào . vì ngồi đính lại 4 cúc nên trừ sao nhé . bộ_đồ nhìn cũng kute nhưng áo hơn ngắn so với mình . shop giao hàng hơi lâu .,3,Mau_Sac_Mau_Ma,NEG
+50,màu_sắc : đúng ai đó trong lúc đính_cúc áo đã lơ_đãng và quên đính 1 cúc áo nên áo chỉ có 3 cúc . đã mua hàng mình k muốn hoàn_dù shop nói lỗi thì hoàn tiền lại . mình đã đi cắt 4 cái cúc của cái áo khác may vào . vì ngồi đính lại 4 cúc nên trừ sao nhé . bộ_đồ nhìn cũng kute nhưng áo hơn ngắn so với mình . shop giao hàng hơi lâu .,3,Form_Size,NEG
+51,chất_liệu : lụa màu_sắc : đen đúng với mô_tả : hơi giống chỉ không chắc_chắn dễ bung chỉ dễ bị xước vải tuy_vậy mik m52 mặc size s hơi rộng nhưng quần_áo vẫn đẹp,3,Giao_Hang,NEG
+51,chất_liệu : lụa màu_sắc : đen đúng với mô_tả : hơi giống chỉ không chắc_chắn dễ bung chỉ dễ bị xước vải tuy_vậy mik m52 mặc size s hơi rộng nhưng quần_áo vẫn đẹp,3,CSKH_Hau_Mai,POS
+51,chất_liệu : lụa màu_sắc : đen đúng với mô_tả : hơi giống chỉ không chắc_chắn dễ bung chỉ dễ bị xước vải tuy_vậy mik m52 mặc size s hơi rộng nhưng quần_áo vẫn đẹp,3,Chat_Luong_Chat_Lieu,NEG
+51,chất_liệu : lụa màu_sắc : đen đúng với mô_tả : hơi giống chỉ không chắc_chắn dễ bung chỉ dễ bị xước vải tuy_vậy mik m52 mặc size s hơi rộng nhưng quần_áo vẫn đẹp,3,Dong_Goi,NEG
+51,chất_liệu : lụa màu_sắc : đen đúng với mô_tả : hơi giống chỉ không chắc_chắn dễ bung chỉ dễ bị xước vải tuy_vậy mik m52 mặc size s hơi rộng nhưng quần_áo vẫn đẹp,3,Gia_Ca,NEG
+51,chất_liệu : lụa màu_sắc : đen đúng với mô_tả : hơi giống chỉ không chắc_chắn dễ bung chỉ dễ bị xước vải tuy_vậy mik m52 mặc size s hơi rộng nhưng quần_áo vẫn đẹp,3,Mau_Sac_Mau_Ma,NEG
+51,chất_liệu : lụa màu_sắc : đen đúng với mô_tả : hơi giống chỉ không chắc_chắn dễ bung chỉ dễ bị xước vải tuy_vậy mik m52 mặc size s hơi rộng nhưng quần_áo vẫn đẹp,3,Form_Size,NEG
+52,cao 1 m65 45 kg bận đồ ko được dài_nha nằm mà dở 2 tay lên là cái áo nó hụt lên trên với_lại cái nách áo cũng ko rộng vừa để mà được thoải_mái nhất . mình 45 kg thôi bạn nào hơn chắc hơi khó_chịu . đồ đẹp vãi mềm mặc sang nhưng_mà size đồ ko chuẩn như chổ khác 7 5 10,3,Giao_Hang,POS
+52,cao 1 m65 45 kg bận đồ ko được dài_nha nằm mà dở 2 tay lên là cái áo nó hụt lên trên với_lại cái nách áo cũng ko rộng vừa để mà được thoải_mái nhất . mình 45 kg thôi bạn nào hơn chắc hơi khó_chịu . đồ đẹp vãi mềm mặc sang nhưng_mà size đồ ko chuẩn như chổ khác 7 5 10,3,CSKH_Hau_Mai,POS
+52,cao 1 m65 45 kg bận đồ ko được dài_nha nằm mà dở 2 tay lên là cái áo nó hụt lên trên với_lại cái nách áo cũng ko rộng vừa để mà được thoải_mái nhất . mình 45 kg thôi bạn nào hơn chắc hơi khó_chịu . đồ đẹp vãi mềm mặc sang nhưng_mà size đồ ko chuẩn như chổ khác 7 5 10,3,Chat_Luong_Chat_Lieu,POS
+52,cao 1 m65 45 kg bận đồ ko được dài_nha nằm mà dở 2 tay lên là cái áo nó hụt lên trên với_lại cái nách áo cũng ko rộng vừa để mà được thoải_mái nhất . mình 45 kg thôi bạn nào hơn chắc hơi khó_chịu . đồ đẹp vãi mềm mặc sang nhưng_mà size đồ ko chuẩn như chổ khác 7 5 10,3,Dong_Goi,NEU
+52,cao 1 m65 45 kg bận đồ ko được dài_nha nằm mà dở 2 tay lên là cái áo nó hụt lên trên với_lại cái nách áo cũng ko rộng vừa để mà được thoải_mái nhất . mình 45 kg thôi bạn nào hơn chắc hơi khó_chịu . đồ đẹp vãi mềm mặc sang nhưng_mà size đồ ko chuẩn như chổ khác 7 5 10,3,Gia_Ca,POS
+52,cao 1 m65 45 kg bận đồ ko được dài_nha nằm mà dở 2 tay lên là cái áo nó hụt lên trên với_lại cái nách áo cũng ko rộng vừa để mà được thoải_mái nhất . mình 45 kg thôi bạn nào hơn chắc hơi khó_chịu . đồ đẹp vãi mềm mặc sang nhưng_mà size đồ ko chuẩn như chổ khác 7 5 10,3,Mau_Sac_Mau_Ma,NEG
+52,cao 1 m65 45 kg bận đồ ko được dài_nha nằm mà dở 2 tay lên là cái áo nó hụt lên trên với_lại cái nách áo cũng ko rộng vừa để mà được thoải_mái nhất . mình 45 kg thôi bạn nào hơn chắc hơi khó_chịu . đồ đẹp vãi mềm mặc sang nhưng_mà size đồ ko chuẩn như chổ khác 7 5 10,3,Form_Size,POS
+53,"giao hàng nhanh . shiper thân_thiện . sản_phẩm bị lỗi , 2 cánh_tay của 2 bộ đều bị 1 bên dài , 1 bên ngắn , k bằng nhau",3,Giao_Hang,POS
+53,"giao hàng nhanh . shiper thân_thiện . sản_phẩm bị lỗi , 2 cánh_tay của 2 bộ đều bị 1 bên dài , 1 bên ngắn , k bằng nhau",3,CSKH_Hau_Mai,POS
+53,"giao hàng nhanh . shiper thân_thiện . sản_phẩm bị lỗi , 2 cánh_tay của 2 bộ đều bị 1 bên dài , 1 bên ngắn , k bằng nhau",3,Chat_Luong_Chat_Lieu,POS
+53,"giao hàng nhanh . shiper thân_thiện . sản_phẩm bị lỗi , 2 cánh_tay của 2 bộ đều bị 1 bên dài , 1 bên ngắn , k bằng nhau",3,Dong_Goi,POS
+53,"giao hàng nhanh . shiper thân_thiện . sản_phẩm bị lỗi , 2 cánh_tay của 2 bộ đều bị 1 bên dài , 1 bên ngắn , k bằng nhau",3,Gia_Ca,POS
+53,"giao hàng nhanh . shiper thân_thiện . sản_phẩm bị lỗi , 2 cánh_tay của 2 bộ đều bị 1 bên dài , 1 bên ngắn , k bằng nhau",3,Mau_Sac_Mau_Ma,POS
+53,"giao hàng nhanh . shiper thân_thiện . sản_phẩm bị lỗi , 2 cánh_tay của 2 bộ đều bị 1 bên dài , 1 bên ngắn , k bằng nhau",3,Form_Size,POS
+54,"chỉ thừa nhiều , giống vải phi_bóng hơn là lụa , nhưng nhìn chnug giống hình",3,Giao_Hang,POS
+54,"chỉ thừa nhiều , giống vải phi_bóng hơn là lụa , nhưng nhìn chnug giống hình",3,CSKH_Hau_Mai,POS
+54,"chỉ thừa nhiều , giống vải phi_bóng hơn là lụa , nhưng nhìn chnug giống hình",3,Chat_Luong_Chat_Lieu,POS
+54,"chỉ thừa nhiều , giống vải phi_bóng hơn là lụa , nhưng nhìn chnug giống hình",3,Dong_Goi,NEU
+54,"chỉ thừa nhiều , giống vải phi_bóng hơn là lụa , nhưng nhìn chnug giống hình",3,Gia_Ca,NEU
+54,"chỉ thừa nhiều , giống vải phi_bóng hơn là lụa , nhưng nhìn chnug giống hình",3,Mau_Sac_Mau_Ma,POS
+54,"chỉ thừa nhiều , giống vải phi_bóng hơn là lụa , nhưng nhìn chnug giống hình",3,Form_Size,POS
+55,form hơi chật . nhưng mình mặc vẫn vừa có_điều mới mua mặc 1 lần mình đã bị bung chỉ . tiền nào của nấy nên vải cũng xài đc so với giá tiền nhé,3,Giao_Hang,POS
+55,form hơi chật . nhưng mình mặc vẫn vừa có_điều mới mua mặc 1 lần mình đã bị bung chỉ . tiền nào của nấy nên vải cũng xài đc so với giá tiền nhé,3,CSKH_Hau_Mai,POS
+55,form hơi chật . nhưng mình mặc vẫn vừa có_điều mới mua mặc 1 lần mình đã bị bung chỉ . tiền nào của nấy nên vải cũng xài đc so với giá tiền nhé,3,Chat_Luong_Chat_Lieu,POS
+55,form hơi chật . nhưng mình mặc vẫn vừa có_điều mới mua mặc 1 lần mình đã bị bung chỉ . tiền nào của nấy nên vải cũng xài đc so với giá tiền nhé,3,Dong_Goi,NEG
+55,form hơi chật . nhưng mình mặc vẫn vừa có_điều mới mua mặc 1 lần mình đã bị bung chỉ . tiền nào của nấy nên vải cũng xài đc so với giá tiền nhé,3,Gia_Ca,POS
+55,form hơi chật . nhưng mình mặc vẫn vừa có_điều mới mua mặc 1 lần mình đã bị bung chỉ . tiền nào của nấy nên vải cũng xài đc so với giá tiền nhé,3,Mau_Sac_Mau_Ma,POS
+55,form hơi chật . nhưng mình mặc vẫn vừa có_điều mới mua mặc 1 lần mình đã bị bung chỉ . tiền nào của nấy nên vải cũng xài đc so với giá tiền nhé,3,Form_Size,NEG
+56,áo hơn ngắn_xíu còn lại thì ok dưới 57 kg mà áo ngắn vậy,3,Giao_Hang,NEG
+56,áo hơn ngắn_xíu còn lại thì ok dưới 57 kg mà áo ngắn vậy,3,CSKH_Hau_Mai,POS
+56,áo hơn ngắn_xíu còn lại thì ok dưới 57 kg mà áo ngắn vậy,3,Chat_Luong_Chat_Lieu,POS
+56,áo hơn ngắn_xíu còn lại thì ok dưới 57 kg mà áo ngắn vậy,3,Dong_Goi,NEU
+56,áo hơn ngắn_xíu còn lại thì ok dưới 57 kg mà áo ngắn vậy,3,Gia_Ca,NEU
+56,áo hơn ngắn_xíu còn lại thì ok dưới 57 kg mà áo ngắn vậy,3,Mau_Sac_Mau_Ma,POS
+56,áo hơn ngắn_xíu còn lại thì ok dưới 57 kg mà áo ngắn vậy,3,Form_Size,NEG
+57,chất_liệu : pha nilong màu_sắc : trắng đúng với mô_tả : ý_hình chất xấu . mặc mùa đông thì đubgs giật_tanh tach giá thế_k đòi_hỏi .,3,Giao_Hang,NEG
+57,chất_liệu : pha nilong màu_sắc : trắng đúng với mô_tả : ý_hình chất xấu . mặc mùa đông thì đubgs giật_tanh tach giá thế_k đòi_hỏi .,3,CSKH_Hau_Mai,NEU
+57,chất_liệu : pha nilong màu_sắc : trắng đúng với mô_tả : ý_hình chất xấu . mặc mùa đông thì đubgs giật_tanh tach giá thế_k đòi_hỏi .,3,Chat_Luong_Chat_Lieu,NEG
+57,chất_liệu : pha nilong màu_sắc : trắng đúng với mô_tả : ý_hình chất xấu . mặc mùa đông thì đubgs giật_tanh tach giá thế_k đòi_hỏi .,3,Dong_Goi,NEU
+57,chất_liệu : pha nilong màu_sắc : trắng đúng với mô_tả : ý_hình chất xấu . mặc mùa đông thì đubgs giật_tanh tach giá thế_k đòi_hỏi .,3,Gia_Ca,NEU
+57,chất_liệu : pha nilong màu_sắc : trắng đúng với mô_tả : ý_hình chất xấu . mặc mùa đông thì đubgs giật_tanh tach giá thế_k đòi_hỏi .,3,Mau_Sac_Mau_Ma,NEG
+57,chất_liệu : pha nilong màu_sắc : trắng đúng với mô_tả : ý_hình chất xấu . mặc mùa đông thì đubgs giật_tanh tach giá thế_k đòi_hỏi .,3,Form_Size,NEU
+58,"ơi nhiều chỉ thừa , đường may không rõ , vải ở túi áo chỗ thừa chỗ thiếu , túi_áo cũng may đường_nét k rõ , chỗ thì đứt chỉ",3,Giao_Hang,NEG
+58,"ơi nhiều chỉ thừa , đường may không rõ , vải ở túi áo chỗ thừa chỗ thiếu , túi_áo cũng may đường_nét k rõ , chỗ thì đứt chỉ",3,CSKH_Hau_Mai,NEG
+58,"ơi nhiều chỉ thừa , đường may không rõ , vải ở túi áo chỗ thừa chỗ thiếu , túi_áo cũng may đường_nét k rõ , chỗ thì đứt chỉ",3,Chat_Luong_Chat_Lieu,NEG
+58,"ơi nhiều chỉ thừa , đường may không rõ , vải ở túi áo chỗ thừa chỗ thiếu , túi_áo cũng may đường_nét k rõ , chỗ thì đứt chỉ",3,Dong_Goi,NEU
+58,"ơi nhiều chỉ thừa , đường may không rõ , vải ở túi áo chỗ thừa chỗ thiếu , túi_áo cũng may đường_nét k rõ , chỗ thì đứt chỉ",3,Gia_Ca,NEG
+58,"ơi nhiều chỉ thừa , đường may không rõ , vải ở túi áo chỗ thừa chỗ thiếu , túi_áo cũng may đường_nét k rõ , chỗ thì đứt chỉ",3,Mau_Sac_Mau_Ma,NEG
+58,"ơi nhiều chỉ thừa , đường may không rõ , vải ở túi áo chỗ thừa chỗ thiếu , túi_áo cũng may đường_nét k rõ , chỗ thì đứt chỉ",3,Form_Size,NEG
+59,mình thấy chất vải cũng tạm ổn . nhưng shop gửi sai màu cho mình . mình chọn màu đen shop lại gửi màu đỏ . mình không ưng lắm cho 4 sao thôi,4,Giao_Hang,NEG
+59,mình thấy chất vải cũng tạm ổn . nhưng shop gửi sai màu cho mình . mình chọn màu đen shop lại gửi màu đỏ . mình không ưng lắm cho 4 sao thôi,4,CSKH_Hau_Mai,POS
+59,mình thấy chất vải cũng tạm ổn . nhưng shop gửi sai màu cho mình . mình chọn màu đen shop lại gửi màu đỏ . mình không ưng lắm cho 4 sao thôi,4,Chat_Luong_Chat_Lieu,NEG
+59,mình thấy chất vải cũng tạm ổn . nhưng shop gửi sai màu cho mình . mình chọn màu đen shop lại gửi màu đỏ . mình không ưng lắm cho 4 sao thôi,4,Dong_Goi,NEG
+59,mình thấy chất vải cũng tạm ổn . nhưng shop gửi sai màu cho mình . mình chọn màu đen shop lại gửi màu đỏ . mình không ưng lắm cho 4 sao thôi,4,Gia_Ca,NEG
+59,mình thấy chất vải cũng tạm ổn . nhưng shop gửi sai màu cho mình . mình chọn màu đen shop lại gửi màu đỏ . mình không ưng lắm cho 4 sao thôi,4,Mau_Sac_Mau_Ma,NEG
+59,mình thấy chất vải cũng tạm ổn . nhưng shop gửi sai màu cho mình . mình chọn màu đen shop lại gửi màu đỏ . mình không ưng lắm cho 4 sao thôi,4,Form_Size,NEG
+60,"shop giao nhầm màu , chưa có phản_hồi khi khách hỏi",4,Giao_Hang,NEG
+60,"shop giao nhầm màu , chưa có phản_hồi khi khách hỏi",4,CSKH_Hau_Mai,NEG
+60,"shop giao nhầm màu , chưa có phản_hồi khi khách hỏi",4,Chat_Luong_Chat_Lieu,NEG
+60,"shop giao nhầm màu , chưa có phản_hồi khi khách hỏi",4,Dong_Goi,NEU
+60,"shop giao nhầm màu , chưa có phản_hồi khi khách hỏi",4,Gia_Ca,NEU
+60,"shop giao nhầm màu , chưa có phản_hồi khi khách hỏi",4,Mau_Sac_Mau_Ma,NEG
+60,"shop giao nhầm màu , chưa có phản_hồi khi khách hỏi",4,Form_Size,NEG
+61,màu_sắc : có mà xanh xanh ko đen như trong ảnh giá ok,4,Giao_Hang,POS
+61,màu_sắc : có mà xanh xanh ko đen như trong ảnh giá ok,4,CSKH_Hau_Mai,POS
+61,màu_sắc : có mà xanh xanh ko đen như trong ảnh giá ok,4,Chat_Luong_Chat_Lieu,POS
+61,màu_sắc : có mà xanh xanh ko đen như trong ảnh giá ok,4,Dong_Goi,NEU
+61,màu_sắc : có mà xanh xanh ko đen như trong ảnh giá ok,4,Gia_Ca,NEU
+61,màu_sắc : có mà xanh xanh ko đen như trong ảnh giá ok,4,Mau_Sac_Mau_Ma,POS
+61,màu_sắc : có mà xanh xanh ko đen như trong ảnh giá ok,4,Form_Size,NEU
+62,chất_liệu : vải trơn màu_sắc : đen đúng với mô_tả : kh đúng lắm_nha trên hình áo tay dài mà về tay ngắn đường may lỗi có chỗ chưa may,4,Giao_Hang,NEG
+62,chất_liệu : vải trơn màu_sắc : đen đúng với mô_tả : kh đúng lắm_nha trên hình áo tay dài mà về tay ngắn đường may lỗi có chỗ chưa may,4,CSKH_Hau_Mai,POS
+62,chất_liệu : vải trơn màu_sắc : đen đúng với mô_tả : kh đúng lắm_nha trên hình áo tay dài mà về tay ngắn đường may lỗi có chỗ chưa may,4,Chat_Luong_Chat_Lieu,POS
+62,chất_liệu : vải trơn màu_sắc : đen đúng với mô_tả : kh đúng lắm_nha trên hình áo tay dài mà về tay ngắn đường may lỗi có chỗ chưa may,4,Dong_Goi,NEU
+62,chất_liệu : vải trơn màu_sắc : đen đúng với mô_tả : kh đúng lắm_nha trên hình áo tay dài mà về tay ngắn đường may lỗi có chỗ chưa may,4,Gia_Ca,POS
+62,chất_liệu : vải trơn màu_sắc : đen đúng với mô_tả : kh đúng lắm_nha trên hình áo tay dài mà về tay ngắn đường may lỗi có chỗ chưa may,4,Mau_Sac_Mau_Ma,NEG
+62,chất_liệu : vải trơn màu_sắc : đen đúng với mô_tả : kh đúng lắm_nha trên hình áo tay dài mà về tay ngắn đường may lỗi có chỗ chưa may,4,Form_Size,NEG
+63,dẹt bộ lụa_xinh lắm nha mọi người .. vải thun mềm mặc_mát lắm mấy_chế .. đường may cẩn_thận không_chỉ thừa gì luôn .. hàng chuẩn đẹp 5 nên mua nha mọi người hình_ảnh chỉ mang tính_chất nhận xu thuii,4,Giao_Hang,POS
+63,dẹt bộ lụa_xinh lắm nha mọi người .. vải thun mềm mặc_mát lắm mấy_chế .. đường may cẩn_thận không_chỉ thừa gì luôn .. hàng chuẩn đẹp 5 nên mua nha mọi người hình_ảnh chỉ mang tính_chất nhận xu thuii,4,CSKH_Hau_Mai,POS
+63,dẹt bộ lụa_xinh lắm nha mọi người .. vải thun mềm mặc_mát lắm mấy_chế .. đường may cẩn_thận không_chỉ thừa gì luôn .. hàng chuẩn đẹp 5 nên mua nha mọi người hình_ảnh chỉ mang tính_chất nhận xu thuii,4,Chat_Luong_Chat_Lieu,POS
+63,dẹt bộ lụa_xinh lắm nha mọi người .. vải thun mềm mặc_mát lắm mấy_chế .. đường may cẩn_thận không_chỉ thừa gì luôn .. hàng chuẩn đẹp 5 nên mua nha mọi người hình_ảnh chỉ mang tính_chất nhận xu thuii,4,Dong_Goi,NEU
+63,dẹt bộ lụa_xinh lắm nha mọi người .. vải thun mềm mặc_mát lắm mấy_chế .. đường may cẩn_thận không_chỉ thừa gì luôn .. hàng chuẩn đẹp 5 nên mua nha mọi người hình_ảnh chỉ mang tính_chất nhận xu thuii,4,Gia_Ca,POS
+63,dẹt bộ lụa_xinh lắm nha mọi người .. vải thun mềm mặc_mát lắm mấy_chế .. đường may cẩn_thận không_chỉ thừa gì luôn .. hàng chuẩn đẹp 5 nên mua nha mọi người hình_ảnh chỉ mang tính_chất nhận xu thuii,4,Mau_Sac_Mau_Ma,POS
+63,dẹt bộ lụa_xinh lắm nha mọi người .. vải thun mềm mặc_mát lắm mấy_chế .. đường may cẩn_thận không_chỉ thừa gì luôn .. hàng chuẩn đẹp 5 nên mua nha mọi người hình_ảnh chỉ mang tính_chất nhận xu thuii,4,Form_Size,POS
+64,"đẹp nha mọi người , đường may nhìn chắc_chắn , cẩn_thận , k có chỉ thừa đâu , nên mua ạ , , giao hàng nhanh lắm 2 hôm nhận được hàng luôn rồi",4,Giao_Hang,POS
+64,"đẹp nha mọi người , đường may nhìn chắc_chắn , cẩn_thận , k có chỉ thừa đâu , nên mua ạ , , giao hàng nhanh lắm 2 hôm nhận được hàng luôn rồi",4,CSKH_Hau_Mai,POS
+64,"đẹp nha mọi người , đường may nhìn chắc_chắn , cẩn_thận , k có chỉ thừa đâu , nên mua ạ , , giao hàng nhanh lắm 2 hôm nhận được hàng luôn rồi",4,Chat_Luong_Chat_Lieu,POS
+64,"đẹp nha mọi người , đường may nhìn chắc_chắn , cẩn_thận , k có chỉ thừa đâu , nên mua ạ , , giao hàng nhanh lắm 2 hôm nhận được hàng luôn rồi",4,Dong_Goi,POS
+64,"đẹp nha mọi người , đường may nhìn chắc_chắn , cẩn_thận , k có chỉ thừa đâu , nên mua ạ , , giao hàng nhanh lắm 2 hôm nhận được hàng luôn rồi",4,Gia_Ca,POS
+64,"đẹp nha mọi người , đường may nhìn chắc_chắn , cẩn_thận , k có chỉ thừa đâu , nên mua ạ , , giao hàng nhanh lắm 2 hôm nhận được hàng luôn rồi",4,Mau_Sac_Mau_Ma,POS
+64,"đẹp nha mọi người , đường may nhìn chắc_chắn , cẩn_thận , k có chỉ thừa đâu , nên mua ạ , , giao hàng nhanh lắm 2 hôm nhận được hàng luôn rồi",4,Form_Size,POS
+65,nói_chung là chất_liệu tương_xứng với giá tiền_nha mọi người . nó không phải chất_liệu lụa cao_cấp gì đâu . chất thường thôi mà giá rẻ ntn nên cũng ko yêu_cầu cao được .,4,Giao_Hang,POS
+65,nói_chung là chất_liệu tương_xứng với giá tiền_nha mọi người . nó không phải chất_liệu lụa cao_cấp gì đâu . chất thường thôi mà giá rẻ ntn nên cũng ko yêu_cầu cao được .,4,CSKH_Hau_Mai,POS
+65,nói_chung là chất_liệu tương_xứng với giá tiền_nha mọi người . nó không phải chất_liệu lụa cao_cấp gì đâu . chất thường thôi mà giá rẻ ntn nên cũng ko yêu_cầu cao được .,4,Chat_Luong_Chat_Lieu,POS
+65,nói_chung là chất_liệu tương_xứng với giá tiền_nha mọi người . nó không phải chất_liệu lụa cao_cấp gì đâu . chất thường thôi mà giá rẻ ntn nên cũng ko yêu_cầu cao được .,4,Dong_Goi,POS
+65,nói_chung là chất_liệu tương_xứng với giá tiền_nha mọi người . nó không phải chất_liệu lụa cao_cấp gì đâu . chất thường thôi mà giá rẻ ntn nên cũng ko yêu_cầu cao được .,4,Gia_Ca,POS
+65,nói_chung là chất_liệu tương_xứng với giá tiền_nha mọi người . nó không phải chất_liệu lụa cao_cấp gì đâu . chất thường thôi mà giá rẻ ntn nên cũng ko yêu_cầu cao được .,4,Mau_Sac_Mau_Ma,POS
+65,nói_chung là chất_liệu tương_xứng với giá tiền_nha mọi người . nó không phải chất_liệu lụa cao_cấp gì đâu . chất thường thôi mà giá rẻ ntn nên cũng ko yêu_cầu cao được .,4,Form_Size,POS
+66,chất_lượng sản_phẩm tuyệt_vời . nên mua nha . mình chưa mặc thử nhưng nhìn rất ưng . shipper thân_thiện,4,Giao_Hang,POS
+66,chất_lượng sản_phẩm tuyệt_vời . nên mua nha . mình chưa mặc thử nhưng nhìn rất ưng . shipper thân_thiện,4,CSKH_Hau_Mai,POS
+66,chất_lượng sản_phẩm tuyệt_vời . nên mua nha . mình chưa mặc thử nhưng nhìn rất ưng . shipper thân_thiện,4,Chat_Luong_Chat_Lieu,POS
+66,chất_lượng sản_phẩm tuyệt_vời . nên mua nha . mình chưa mặc thử nhưng nhìn rất ưng . shipper thân_thiện,4,Dong_Goi,POS
+66,chất_lượng sản_phẩm tuyệt_vời . nên mua nha . mình chưa mặc thử nhưng nhìn rất ưng . shipper thân_thiện,4,Gia_Ca,POS
+66,chất_lượng sản_phẩm tuyệt_vời . nên mua nha . mình chưa mặc thử nhưng nhìn rất ưng . shipper thân_thiện,4,Mau_Sac_Mau_Ma,POS
+66,chất_lượng sản_phẩm tuyệt_vời . nên mua nha . mình chưa mặc thử nhưng nhìn rất ưng . shipper thân_thiện,4,Form_Size,POS
+67,"mk 1 m65 56 kg mặc rộng_rãi thoải_mái chất vải mịn mặc khá thoải_mái khi ờ nhà vs máy_lạnh lúc nhận hàng có mùi hơi nồng của nc_giặt hay xao đó , mk khá nhạy_cảm về mùi nên ko thích mùi khi đồ bị giặt qua .",4,Giao_Hang,POS
+67,"mk 1 m65 56 kg mặc rộng_rãi thoải_mái chất vải mịn mặc khá thoải_mái khi ờ nhà vs máy_lạnh lúc nhận hàng có mùi hơi nồng của nc_giặt hay xao đó , mk khá nhạy_cảm về mùi nên ko thích mùi khi đồ bị giặt qua .",4,CSKH_Hau_Mai,POS
+67,"mk 1 m65 56 kg mặc rộng_rãi thoải_mái chất vải mịn mặc khá thoải_mái khi ờ nhà vs máy_lạnh lúc nhận hàng có mùi hơi nồng của nc_giặt hay xao đó , mk khá nhạy_cảm về mùi nên ko thích mùi khi đồ bị giặt qua .",4,Chat_Luong_Chat_Lieu,POS
+67,"mk 1 m65 56 kg mặc rộng_rãi thoải_mái chất vải mịn mặc khá thoải_mái khi ờ nhà vs máy_lạnh lúc nhận hàng có mùi hơi nồng của nc_giặt hay xao đó , mk khá nhạy_cảm về mùi nên ko thích mùi khi đồ bị giặt qua .",4,Dong_Goi,NEU
+67,"mk 1 m65 56 kg mặc rộng_rãi thoải_mái chất vải mịn mặc khá thoải_mái khi ờ nhà vs máy_lạnh lúc nhận hàng có mùi hơi nồng của nc_giặt hay xao đó , mk khá nhạy_cảm về mùi nên ko thích mùi khi đồ bị giặt qua .",4,Gia_Ca,POS
+67,"mk 1 m65 56 kg mặc rộng_rãi thoải_mái chất vải mịn mặc khá thoải_mái khi ờ nhà vs máy_lạnh lúc nhận hàng có mùi hơi nồng của nc_giặt hay xao đó , mk khá nhạy_cảm về mùi nên ko thích mùi khi đồ bị giặt qua .",4,Mau_Sac_Mau_Ma,POS
+67,"mk 1 m65 56 kg mặc rộng_rãi thoải_mái chất vải mịn mặc khá thoải_mái khi ờ nhà vs máy_lạnh lúc nhận hàng có mùi hơi nồng của nc_giặt hay xao đó , mk khá nhạy_cảm về mùi nên ko thích mùi khi đồ bị giặt qua .",4,Form_Size,POS
+68,chất_liệu : lụa 8 10 màu_sắc : trắng đúng với mô_tả : yes giao hàng nhanh đóng_gói sản_phẩm chắc_chắn hơi nhăn mình m60 mà mặc vẫn thấy hơi ngắn,4,Giao_Hang,POS
+68,chất_liệu : lụa 8 10 màu_sắc : trắng đúng với mô_tả : yes giao hàng nhanh đóng_gói sản_phẩm chắc_chắn hơi nhăn mình m60 mà mặc vẫn thấy hơi ngắn,4,CSKH_Hau_Mai,POS
+68,chất_liệu : lụa 8 10 màu_sắc : trắng đúng với mô_tả : yes giao hàng nhanh đóng_gói sản_phẩm chắc_chắn hơi nhăn mình m60 mà mặc vẫn thấy hơi ngắn,4,Chat_Luong_Chat_Lieu,POS
+68,chất_liệu : lụa 8 10 màu_sắc : trắng đúng với mô_tả : yes giao hàng nhanh đóng_gói sản_phẩm chắc_chắn hơi nhăn mình m60 mà mặc vẫn thấy hơi ngắn,4,Dong_Goi,POS
+68,chất_liệu : lụa 8 10 màu_sắc : trắng đúng với mô_tả : yes giao hàng nhanh đóng_gói sản_phẩm chắc_chắn hơi nhăn mình m60 mà mặc vẫn thấy hơi ngắn,4,Gia_Ca,POS
+68,chất_liệu : lụa 8 10 màu_sắc : trắng đúng với mô_tả : yes giao hàng nhanh đóng_gói sản_phẩm chắc_chắn hơi nhăn mình m60 mà mặc vẫn thấy hơi ngắn,4,Mau_Sac_Mau_Ma,POS
+68,chất_liệu : lụa 8 10 màu_sắc : trắng đúng với mô_tả : yes giao hàng nhanh đóng_gói sản_phẩm chắc_chắn hơi nhăn mình m60 mà mặc vẫn thấy hơi ngắn,4,Form_Size,POS
+69,"shop giao hàng nhanh , chất thích nha mm . mình 46 ký m50 mặc thoải_mái luôn . h anh , video mang tính_chất minh_họa hoy",4,Giao_Hang,POS
+69,"shop giao hàng nhanh , chất thích nha mm . mình 46 ký m50 mặc thoải_mái luôn . h anh , video mang tính_chất minh_họa hoy",4,CSKH_Hau_Mai,POS
+69,"shop giao hàng nhanh , chất thích nha mm . mình 46 ký m50 mặc thoải_mái luôn . h anh , video mang tính_chất minh_họa hoy",4,Chat_Luong_Chat_Lieu,POS
+69,"shop giao hàng nhanh , chất thích nha mm . mình 46 ký m50 mặc thoải_mái luôn . h anh , video mang tính_chất minh_họa hoy",4,Dong_Goi,POS
+69,"shop giao hàng nhanh , chất thích nha mm . mình 46 ký m50 mặc thoải_mái luôn . h anh , video mang tính_chất minh_họa hoy",4,Gia_Ca,POS
+69,"shop giao hàng nhanh , chất thích nha mm . mình 46 ký m50 mặc thoải_mái luôn . h anh , video mang tính_chất minh_họa hoy",4,Mau_Sac_Mau_Ma,POS
+69,"shop giao hàng nhanh , chất thích nha mm . mình 46 ký m50 mặc thoải_mái luôn . h anh , video mang tính_chất minh_họa hoy",4,Form_Size,POS
+70,mình đặt 2 sp nhưng shop giao thiếu 1 sp e gọi thì chị bảo sẽ giao đủ bộ quần_áo quá đẹp luôn chất dày,4,Giao_Hang,POS
+70,mình đặt 2 sp nhưng shop giao thiếu 1 sp e gọi thì chị bảo sẽ giao đủ bộ quần_áo quá đẹp luôn chất dày,4,CSKH_Hau_Mai,POS
+70,mình đặt 2 sp nhưng shop giao thiếu 1 sp e gọi thì chị bảo sẽ giao đủ bộ quần_áo quá đẹp luôn chất dày,4,Chat_Luong_Chat_Lieu,POS
+70,mình đặt 2 sp nhưng shop giao thiếu 1 sp e gọi thì chị bảo sẽ giao đủ bộ quần_áo quá đẹp luôn chất dày,4,Dong_Goi,NEU
+70,mình đặt 2 sp nhưng shop giao thiếu 1 sp e gọi thì chị bảo sẽ giao đủ bộ quần_áo quá đẹp luôn chất dày,4,Gia_Ca,NEU
+70,mình đặt 2 sp nhưng shop giao thiếu 1 sp e gọi thì chị bảo sẽ giao đủ bộ quần_áo quá đẹp luôn chất dày,4,Mau_Sac_Mau_Ma,POS
+70,mình đặt 2 sp nhưng shop giao thiếu 1 sp e gọi thì chị bảo sẽ giao đủ bộ quần_áo quá đẹp luôn chất dày,4,Form_Size,NEU
+71,"đúng với mô_tả : quần_áo giống_hệt ảnh chất_liệu : không biết màu_sắc : đen giao hàng nhanh , quần_áo giống_hệt ảnh mẫu_nha mọi người . quần_áo đẹp lm mn lên mua nha mik m50 lên mặc quần_hơi dài 1 tí",4,Giao_Hang,POS
+71,"đúng với mô_tả : quần_áo giống_hệt ảnh chất_liệu : không biết màu_sắc : đen giao hàng nhanh , quần_áo giống_hệt ảnh mẫu_nha mọi người . quần_áo đẹp lm mn lên mua nha mik m50 lên mặc quần_hơi dài 1 tí",4,CSKH_Hau_Mai,POS
+71,"đúng với mô_tả : quần_áo giống_hệt ảnh chất_liệu : không biết màu_sắc : đen giao hàng nhanh , quần_áo giống_hệt ảnh mẫu_nha mọi người . quần_áo đẹp lm mn lên mua nha mik m50 lên mặc quần_hơi dài 1 tí",4,Chat_Luong_Chat_Lieu,POS
+71,"đúng với mô_tả : quần_áo giống_hệt ảnh chất_liệu : không biết màu_sắc : đen giao hàng nhanh , quần_áo giống_hệt ảnh mẫu_nha mọi người . quần_áo đẹp lm mn lên mua nha mik m50 lên mặc quần_hơi dài 1 tí",4,Dong_Goi,POS
+71,"đúng với mô_tả : quần_áo giống_hệt ảnh chất_liệu : không biết màu_sắc : đen giao hàng nhanh , quần_áo giống_hệt ảnh mẫu_nha mọi người . quần_áo đẹp lm mn lên mua nha mik m50 lên mặc quần_hơi dài 1 tí",4,Gia_Ca,POS
+71,"đúng với mô_tả : quần_áo giống_hệt ảnh chất_liệu : không biết màu_sắc : đen giao hàng nhanh , quần_áo giống_hệt ảnh mẫu_nha mọi người . quần_áo đẹp lm mn lên mua nha mik m50 lên mặc quần_hơi dài 1 tí",4,Mau_Sac_Mau_Ma,POS
+71,"đúng với mô_tả : quần_áo giống_hệt ảnh chất_liệu : không biết màu_sắc : đen giao hàng nhanh , quần_áo giống_hệt ảnh mẫu_nha mọi người . quần_áo đẹp lm mn lên mua nha mik m50 lên mặc quần_hơi dài 1 tí",4,Form_Size,POS
+72,màu_sắc : trắng chất_liệu : lụa giao hàng nhanh giá rẻ chất dày dặn sờ_thích nhưng_mà cố áo bị ố bẩn màu cam_cam,4,Giao_Hang,POS
+72,màu_sắc : trắng chất_liệu : lụa giao hàng nhanh giá rẻ chất dày dặn sờ_thích nhưng_mà cố áo bị ố bẩn màu cam_cam,4,CSKH_Hau_Mai,POS
+72,màu_sắc : trắng chất_liệu : lụa giao hàng nhanh giá rẻ chất dày dặn sờ_thích nhưng_mà cố áo bị ố bẩn màu cam_cam,4,Chat_Luong_Chat_Lieu,POS
+72,màu_sắc : trắng chất_liệu : lụa giao hàng nhanh giá rẻ chất dày dặn sờ_thích nhưng_mà cố áo bị ố bẩn màu cam_cam,4,Dong_Goi,POS
+72,màu_sắc : trắng chất_liệu : lụa giao hàng nhanh giá rẻ chất dày dặn sờ_thích nhưng_mà cố áo bị ố bẩn màu cam_cam,4,Gia_Ca,POS
+72,màu_sắc : trắng chất_liệu : lụa giao hàng nhanh giá rẻ chất dày dặn sờ_thích nhưng_mà cố áo bị ố bẩn màu cam_cam,4,Mau_Sac_Mau_Ma,POS
+72,màu_sắc : trắng chất_liệu : lụa giao hàng nhanh giá rẻ chất dày dặn sờ_thích nhưng_mà cố áo bị ố bẩn màu cam_cam,4,Form_Size,POS
+73,"vải ok , đường may chỉ là 1 đường vắt_sổ chỉ hơi lỏng , nhão . giao hàng cực nhanh .",4,Giao_Hang,POS
+73,"vải ok , đường may chỉ là 1 đường vắt_sổ chỉ hơi lỏng , nhão . giao hàng cực nhanh .",4,CSKH_Hau_Mai,POS
+73,"vải ok , đường may chỉ là 1 đường vắt_sổ chỉ hơi lỏng , nhão . giao hàng cực nhanh .",4,Chat_Luong_Chat_Lieu,POS
+73,"vải ok , đường may chỉ là 1 đường vắt_sổ chỉ hơi lỏng , nhão . giao hàng cực nhanh .",4,Dong_Goi,POS
+73,"vải ok , đường may chỉ là 1 đường vắt_sổ chỉ hơi lỏng , nhão . giao hàng cực nhanh .",4,Gia_Ca,NEU
+73,"vải ok , đường may chỉ là 1 đường vắt_sổ chỉ hơi lỏng , nhão . giao hàng cực nhanh .",4,Mau_Sac_Mau_Ma,POS
+73,"vải ok , đường may chỉ là 1 đường vắt_sổ chỉ hơi lỏng , nhão . giao hàng cực nhanh .",4,Form_Size,POS
+74,nên mua nhé mình 1 m60 nặng 48 kg mặc sz s đẹp luôn vải_mướt lắm mặc thích,4,Giao_Hang,POS
+74,nên mua nhé mình 1 m60 nặng 48 kg mặc sz s đẹp luôn vải_mướt lắm mặc thích,4,CSKH_Hau_Mai,POS
+74,nên mua nhé mình 1 m60 nặng 48 kg mặc sz s đẹp luôn vải_mướt lắm mặc thích,4,Chat_Luong_Chat_Lieu,POS
+74,nên mua nhé mình 1 m60 nặng 48 kg mặc sz s đẹp luôn vải_mướt lắm mặc thích,4,Dong_Goi,NEU
+74,nên mua nhé mình 1 m60 nặng 48 kg mặc sz s đẹp luôn vải_mướt lắm mặc thích,4,Gia_Ca,POS
+74,nên mua nhé mình 1 m60 nặng 48 kg mặc sz s đẹp luôn vải_mướt lắm mặc thích,4,Mau_Sac_Mau_Ma,POS
+74,nên mua nhé mình 1 m60 nặng 48 kg mặc sz s đẹp luôn vải_mướt lắm mặc thích,4,Form_Size,POS
+75,vải đẹp ok đặt chiều_qua chưa nay giao tới nơi luôn có vết bẩn quần trắng vậy k biết có giặt ra k,4,Giao_Hang,NEG
+75,vải đẹp ok đặt chiều_qua chưa nay giao tới nơi luôn có vết bẩn quần trắng vậy k biết có giặt ra k,4,CSKH_Hau_Mai,POS
+75,vải đẹp ok đặt chiều_qua chưa nay giao tới nơi luôn có vết bẩn quần trắng vậy k biết có giặt ra k,4,Chat_Luong_Chat_Lieu,POS
+75,vải đẹp ok đặt chiều_qua chưa nay giao tới nơi luôn có vết bẩn quần trắng vậy k biết có giặt ra k,4,Dong_Goi,NEU
+75,vải đẹp ok đặt chiều_qua chưa nay giao tới nơi luôn có vết bẩn quần trắng vậy k biết có giặt ra k,4,Gia_Ca,NEU
+75,vải đẹp ok đặt chiều_qua chưa nay giao tới nơi luôn có vết bẩn quần trắng vậy k biết có giặt ra k,4,Mau_Sac_Mau_Ma,NEG
+75,vải đẹp ok đặt chiều_qua chưa nay giao tới nơi luôn có vết bẩn quần trắng vậy k biết có giặt ra k,4,Form_Size,NEU
+76,"chất_liệu : vãi màu_sắc : đen , xanh đúng với mô_tả : phù_hợp vs giá tiền shop giao hàng nhanh . chất_lượng phù_hợp với giá tiền .. , áo bị ngắn quá .. , đường may bị lệt . dc cái shop phụ vụ tốt . hình_ảnh chỉ mang tính_chất nhận xu",4,Giao_Hang,POS
+76,"chất_liệu : vãi màu_sắc : đen , xanh đúng với mô_tả : phù_hợp vs giá tiền shop giao hàng nhanh . chất_lượng phù_hợp với giá tiền .. , áo bị ngắn quá .. , đường may bị lệt . dc cái shop phụ vụ tốt . hình_ảnh chỉ mang tính_chất nhận xu",4,CSKH_Hau_Mai,POS
+76,"chất_liệu : vãi màu_sắc : đen , xanh đúng với mô_tả : phù_hợp vs giá tiền shop giao hàng nhanh . chất_lượng phù_hợp với giá tiền .. , áo bị ngắn quá .. , đường may bị lệt . dc cái shop phụ vụ tốt . hình_ảnh chỉ mang tính_chất nhận xu",4,Chat_Luong_Chat_Lieu,POS
+76,"chất_liệu : vãi màu_sắc : đen , xanh đúng với mô_tả : phù_hợp vs giá tiền shop giao hàng nhanh . chất_lượng phù_hợp với giá tiền .. , áo bị ngắn quá .. , đường may bị lệt . dc cái shop phụ vụ tốt . hình_ảnh chỉ mang tính_chất nhận xu",4,Dong_Goi,POS
+76,"chất_liệu : vãi màu_sắc : đen , xanh đúng với mô_tả : phù_hợp vs giá tiền shop giao hàng nhanh . chất_lượng phù_hợp với giá tiền .. , áo bị ngắn quá .. , đường may bị lệt . dc cái shop phụ vụ tốt . hình_ảnh chỉ mang tính_chất nhận xu",4,Gia_Ca,POS
+76,"chất_liệu : vãi màu_sắc : đen , xanh đúng với mô_tả : phù_hợp vs giá tiền shop giao hàng nhanh . chất_lượng phù_hợp với giá tiền .. , áo bị ngắn quá .. , đường may bị lệt . dc cái shop phụ vụ tốt . hình_ảnh chỉ mang tính_chất nhận xu",4,Mau_Sac_Mau_Ma,POS
+76,"chất_liệu : vãi màu_sắc : đen , xanh đúng với mô_tả : phù_hợp vs giá tiền shop giao hàng nhanh . chất_lượng phù_hợp với giá tiền .. , áo bị ngắn quá .. , đường may bị lệt . dc cái shop phụ vụ tốt . hình_ảnh chỉ mang tính_chất nhận xu",4,Form_Size,POS
+77,chất đẹp không dày không mỏng giao hàng nhanh,4,Giao_Hang,POS
+77,chất đẹp không dày không mỏng giao hàng nhanh,4,CSKH_Hau_Mai,POS
+77,chất đẹp không dày không mỏng giao hàng nhanh,4,Chat_Luong_Chat_Lieu,POS
+77,chất đẹp không dày không mỏng giao hàng nhanh,4,Dong_Goi,POS
+77,chất đẹp không dày không mỏng giao hàng nhanh,4,Gia_Ca,NEU
+77,chất đẹp không dày không mỏng giao hàng nhanh,4,Mau_Sac_Mau_Ma,POS
+77,chất đẹp không dày không mỏng giao hàng nhanh,4,Form_Size,NEU
+78,"chất_liệu : mềm mặc rất êm , đẹp chất_liệu mềm_mại mang đến cảm_giác thoải_mái khi sử_dụng",4,Giao_Hang,POS
+78,"chất_liệu : mềm mặc rất êm , đẹp chất_liệu mềm_mại mang đến cảm_giác thoải_mái khi sử_dụng",4,CSKH_Hau_Mai,POS
+78,"chất_liệu : mềm mặc rất êm , đẹp chất_liệu mềm_mại mang đến cảm_giác thoải_mái khi sử_dụng",4,Chat_Luong_Chat_Lieu,POS
+78,"chất_liệu : mềm mặc rất êm , đẹp chất_liệu mềm_mại mang đến cảm_giác thoải_mái khi sử_dụng",4,Dong_Goi,NEU
+78,"chất_liệu : mềm mặc rất êm , đẹp chất_liệu mềm_mại mang đến cảm_giác thoải_mái khi sử_dụng",4,Gia_Ca,NEU
+78,"chất_liệu : mềm mặc rất êm , đẹp chất_liệu mềm_mại mang đến cảm_giác thoải_mái khi sử_dụng",4,Mau_Sac_Mau_Ma,POS
+78,"chất_liệu : mềm mặc rất êm , đẹp chất_liệu mềm_mại mang đến cảm_giác thoải_mái khi sử_dụng",4,Form_Size,POS
+79,"màu_sắc : đen ô_vuông chất_liệu : lụa đúng với mô_tả : đúng sản_phẩm đẹp lắm , chất lụa_mát . rất ưng khi mua hàng",4,Giao_Hang,POS
+79,"màu_sắc : đen ô_vuông chất_liệu : lụa đúng với mô_tả : đúng sản_phẩm đẹp lắm , chất lụa_mát . rất ưng khi mua hàng",4,CSKH_Hau_Mai,POS
+79,"màu_sắc : đen ô_vuông chất_liệu : lụa đúng với mô_tả : đúng sản_phẩm đẹp lắm , chất lụa_mát . rất ưng khi mua hàng",4,Chat_Luong_Chat_Lieu,POS
+79,"màu_sắc : đen ô_vuông chất_liệu : lụa đúng với mô_tả : đúng sản_phẩm đẹp lắm , chất lụa_mát . rất ưng khi mua hàng",4,Dong_Goi,POS
+79,"màu_sắc : đen ô_vuông chất_liệu : lụa đúng với mô_tả : đúng sản_phẩm đẹp lắm , chất lụa_mát . rất ưng khi mua hàng",4,Gia_Ca,POS
+79,"màu_sắc : đen ô_vuông chất_liệu : lụa đúng với mô_tả : đúng sản_phẩm đẹp lắm , chất lụa_mát . rất ưng khi mua hàng",4,Mau_Sac_Mau_Ma,POS
+79,"màu_sắc : đen ô_vuông chất_liệu : lụa đúng với mô_tả : đúng sản_phẩm đẹp lắm , chất lụa_mát . rất ưng khi mua hàng",4,Form_Size,POS
+80,chất_liệu : lụa mát màu_sắc : đúng mô_tả 1 m66 nặng 53 kg áo bị hơi ngắn vải mềm mịn_ok nhưng nhiều chỉ thừa_bộ đen dài túi_quần bị may lỗi lòi lớp lót trong và bục chỉ,4,Giao_Hang,NEG
+80,chất_liệu : lụa mát màu_sắc : đúng mô_tả 1 m66 nặng 53 kg áo bị hơi ngắn vải mềm mịn_ok nhưng nhiều chỉ thừa_bộ đen dài túi_quần bị may lỗi lòi lớp lót trong và bục chỉ,4,CSKH_Hau_Mai,POS
+80,chất_liệu : lụa mát màu_sắc : đúng mô_tả 1 m66 nặng 53 kg áo bị hơi ngắn vải mềm mịn_ok nhưng nhiều chỉ thừa_bộ đen dài túi_quần bị may lỗi lòi lớp lót trong và bục chỉ,4,Chat_Luong_Chat_Lieu,POS
+80,chất_liệu : lụa mát màu_sắc : đúng mô_tả 1 m66 nặng 53 kg áo bị hơi ngắn vải mềm mịn_ok nhưng nhiều chỉ thừa_bộ đen dài túi_quần bị may lỗi lòi lớp lót trong và bục chỉ,4,Dong_Goi,NEU
+80,chất_liệu : lụa mát màu_sắc : đúng mô_tả 1 m66 nặng 53 kg áo bị hơi ngắn vải mềm mịn_ok nhưng nhiều chỉ thừa_bộ đen dài túi_quần bị may lỗi lòi lớp lót trong và bục chỉ,4,Gia_Ca,NEG
+80,chất_liệu : lụa mát màu_sắc : đúng mô_tả 1 m66 nặng 53 kg áo bị hơi ngắn vải mềm mịn_ok nhưng nhiều chỉ thừa_bộ đen dài túi_quần bị may lỗi lòi lớp lót trong và bục chỉ,4,Mau_Sac_Mau_Ma,NEG
+80,chất_liệu : lụa mát màu_sắc : đúng mô_tả 1 m66 nặng 53 kg áo bị hơi ngắn vải mềm mịn_ok nhưng nhiều chỉ thừa_bộ đen dài túi_quần bị may lỗi lòi lớp lót trong và bục chỉ,4,Form_Size,NEG
+81,chất_liệu mát giao hàng nhanh . đẹp hơn m nghĩ .,4,Giao_Hang,POS
+81,chất_liệu mát giao hàng nhanh . đẹp hơn m nghĩ .,4,CSKH_Hau_Mai,POS
+81,chất_liệu mát giao hàng nhanh . đẹp hơn m nghĩ .,4,Chat_Luong_Chat_Lieu,POS
+81,chất_liệu mát giao hàng nhanh . đẹp hơn m nghĩ .,4,Dong_Goi,POS
+81,chất_liệu mát giao hàng nhanh . đẹp hơn m nghĩ .,4,Gia_Ca,POS
+81,chất_liệu mát giao hàng nhanh . đẹp hơn m nghĩ .,4,Mau_Sac_Mau_Ma,POS
+81,chất_liệu mát giao hàng nhanh . đẹp hơn m nghĩ .,4,Form_Size,POS
+82,"lúc đầu đã đánh_giá 1 sao vì hơi lỗi nhưng shop quá nhiệt_tình và hỗ_trợ hết_sức nên không lỡ luôn . chất vải đẹp so bs giá tiền , mn bảo size chât nhưng mk thấy ok",4,Giao_Hang,POS
+82,"lúc đầu đã đánh_giá 1 sao vì hơi lỗi nhưng shop quá nhiệt_tình và hỗ_trợ hết_sức nên không lỡ luôn . chất vải đẹp so bs giá tiền , mn bảo size chât nhưng mk thấy ok",4,CSKH_Hau_Mai,POS
+82,"lúc đầu đã đánh_giá 1 sao vì hơi lỗi nhưng shop quá nhiệt_tình và hỗ_trợ hết_sức nên không lỡ luôn . chất vải đẹp so bs giá tiền , mn bảo size chât nhưng mk thấy ok",4,Chat_Luong_Chat_Lieu,POS
+82,"lúc đầu đã đánh_giá 1 sao vì hơi lỗi nhưng shop quá nhiệt_tình và hỗ_trợ hết_sức nên không lỡ luôn . chất vải đẹp so bs giá tiền , mn bảo size chât nhưng mk thấy ok",4,Dong_Goi,NEU
+82,"lúc đầu đã đánh_giá 1 sao vì hơi lỗi nhưng shop quá nhiệt_tình và hỗ_trợ hết_sức nên không lỡ luôn . chất vải đẹp so bs giá tiền , mn bảo size chât nhưng mk thấy ok",4,Gia_Ca,POS
+82,"lúc đầu đã đánh_giá 1 sao vì hơi lỗi nhưng shop quá nhiệt_tình và hỗ_trợ hết_sức nên không lỡ luôn . chất vải đẹp so bs giá tiền , mn bảo size chât nhưng mk thấy ok",4,Mau_Sac_Mau_Ma,POS
+82,"lúc đầu đã đánh_giá 1 sao vì hơi lỗi nhưng shop quá nhiệt_tình và hỗ_trợ hết_sức nên không lỡ luôn . chất vải đẹp so bs giá tiền , mn bảo size chât nhưng mk thấy ok",4,Form_Size,POS
+83,đúng với mô_tả : hàng y_như mô_tả chất rất đẹp đặt thử ưng quá làm cái nữa ủng_hộ shop,4,Giao_Hang,POS
+83,đúng với mô_tả : hàng y_như mô_tả chất rất đẹp đặt thử ưng quá làm cái nữa ủng_hộ shop,4,CSKH_Hau_Mai,POS
+83,đúng với mô_tả : hàng y_như mô_tả chất rất đẹp đặt thử ưng quá làm cái nữa ủng_hộ shop,4,Chat_Luong_Chat_Lieu,POS
+83,đúng với mô_tả : hàng y_như mô_tả chất rất đẹp đặt thử ưng quá làm cái nữa ủng_hộ shop,4,Dong_Goi,NEU
+83,đúng với mô_tả : hàng y_như mô_tả chất rất đẹp đặt thử ưng quá làm cái nữa ủng_hộ shop,4,Gia_Ca,POS
+83,đúng với mô_tả : hàng y_như mô_tả chất rất đẹp đặt thử ưng quá làm cái nữa ủng_hộ shop,4,Mau_Sac_Mau_Ma,POS
+83,đúng với mô_tả : hàng y_như mô_tả chất rất đẹp đặt thử ưng quá làm cái nữa ủng_hộ shop,4,Form_Size,POS
+84,"vải đẹp , đường may ko ổn lắm , lai_áo bị nhăn , tuy_nhiên với tầm giá này thì sản_phẩm tạm ổn . hình_ảnh mang tính_chất nhân xu",4,Giao_Hang,POS
+84,"vải đẹp , đường may ko ổn lắm , lai_áo bị nhăn , tuy_nhiên với tầm giá này thì sản_phẩm tạm ổn . hình_ảnh mang tính_chất nhân xu",4,CSKH_Hau_Mai,POS
+84,"vải đẹp , đường may ko ổn lắm , lai_áo bị nhăn , tuy_nhiên với tầm giá này thì sản_phẩm tạm ổn . hình_ảnh mang tính_chất nhân xu",4,Chat_Luong_Chat_Lieu,POS
+84,"vải đẹp , đường may ko ổn lắm , lai_áo bị nhăn , tuy_nhiên với tầm giá này thì sản_phẩm tạm ổn . hình_ảnh mang tính_chất nhân xu",4,Dong_Goi,NEU
+84,"vải đẹp , đường may ko ổn lắm , lai_áo bị nhăn , tuy_nhiên với tầm giá này thì sản_phẩm tạm ổn . hình_ảnh mang tính_chất nhân xu",4,Gia_Ca,NEU
+84,"vải đẹp , đường may ko ổn lắm , lai_áo bị nhăn , tuy_nhiên với tầm giá này thì sản_phẩm tạm ổn . hình_ảnh mang tính_chất nhân xu",4,Mau_Sac_Mau_Ma,POS
+84,"vải đẹp , đường may ko ổn lắm , lai_áo bị nhăn , tuy_nhiên với tầm giá này thì sản_phẩm tạm ổn . hình_ảnh mang tính_chất nhân xu",4,Form_Size,NEU
+85,nói_chung y_hình mà về nó rách chỗ đấy may_lai mà cũng chi đánh_giá 4 sao thôi giao hàng cực nhanh,4,Giao_Hang,POS
+85,nói_chung y_hình mà về nó rách chỗ đấy may_lai mà cũng chi đánh_giá 4 sao thôi giao hàng cực nhanh,4,CSKH_Hau_Mai,POS
+85,nói_chung y_hình mà về nó rách chỗ đấy may_lai mà cũng chi đánh_giá 4 sao thôi giao hàng cực nhanh,4,Chat_Luong_Chat_Lieu,POS
+85,nói_chung y_hình mà về nó rách chỗ đấy may_lai mà cũng chi đánh_giá 4 sao thôi giao hàng cực nhanh,4,Dong_Goi,POS
+85,nói_chung y_hình mà về nó rách chỗ đấy may_lai mà cũng chi đánh_giá 4 sao thôi giao hàng cực nhanh,4,Gia_Ca,POS
+85,nói_chung y_hình mà về nó rách chỗ đấy may_lai mà cũng chi đánh_giá 4 sao thôi giao hàng cực nhanh,4,Mau_Sac_Mau_Ma,POS
+85,nói_chung y_hình mà về nó rách chỗ đấy may_lai mà cũng chi đánh_giá 4 sao thôi giao hàng cực nhanh,4,Form_Size,POS
+86,"shop đóng_gói cẩn_thận , giao hàng nhanh , áo với quần 2 vải khác nhau . vải áo_mềm hơn cúc khác trong hình , đường may_k được chắc_chắn lắm phải dặm lại , quần_may lỗi chỗ túi và bị xì . ổn so với giá",4,Giao_Hang,POS
+86,"shop đóng_gói cẩn_thận , giao hàng nhanh , áo với quần 2 vải khác nhau . vải áo_mềm hơn cúc khác trong hình , đường may_k được chắc_chắn lắm phải dặm lại , quần_may lỗi chỗ túi và bị xì . ổn so với giá",4,CSKH_Hau_Mai,POS
+86,"shop đóng_gói cẩn_thận , giao hàng nhanh , áo với quần 2 vải khác nhau . vải áo_mềm hơn cúc khác trong hình , đường may_k được chắc_chắn lắm phải dặm lại , quần_may lỗi chỗ túi và bị xì . ổn so với giá",4,Chat_Luong_Chat_Lieu,POS
+86,"shop đóng_gói cẩn_thận , giao hàng nhanh , áo với quần 2 vải khác nhau . vải áo_mềm hơn cúc khác trong hình , đường may_k được chắc_chắn lắm phải dặm lại , quần_may lỗi chỗ túi và bị xì . ổn so với giá",4,Dong_Goi,POS
+86,"shop đóng_gói cẩn_thận , giao hàng nhanh , áo với quần 2 vải khác nhau . vải áo_mềm hơn cúc khác trong hình , đường may_k được chắc_chắn lắm phải dặm lại , quần_may lỗi chỗ túi và bị xì . ổn so với giá",4,Gia_Ca,POS
+86,"shop đóng_gói cẩn_thận , giao hàng nhanh , áo với quần 2 vải khác nhau . vải áo_mềm hơn cúc khác trong hình , đường may_k được chắc_chắn lắm phải dặm lại , quần_may lỗi chỗ túi và bị xì . ổn so với giá",4,Mau_Sac_Mau_Ma,POS
+86,"shop đóng_gói cẩn_thận , giao hàng nhanh , áo với quần 2 vải khác nhau . vải áo_mềm hơn cúc khác trong hình , đường may_k được chắc_chắn lắm phải dặm lại , quần_may lỗi chỗ túi và bị xì . ổn so với giá",4,Form_Size,POS
+87,"chất_liệu : tốt đáng_giá tiền , đường may chắc_chắn .. màu_sắc : đẹp đúng ý đúng với mô_tả : tôi rất hài_lòng",5,Giao_Hang,POS
+87,"chất_liệu : tốt đáng_giá tiền , đường may chắc_chắn .. màu_sắc : đẹp đúng ý đúng với mô_tả : tôi rất hài_lòng",5,CSKH_Hau_Mai,POS
+87,"chất_liệu : tốt đáng_giá tiền , đường may chắc_chắn .. màu_sắc : đẹp đúng ý đúng với mô_tả : tôi rất hài_lòng",5,Chat_Luong_Chat_Lieu,POS
+87,"chất_liệu : tốt đáng_giá tiền , đường may chắc_chắn .. màu_sắc : đẹp đúng ý đúng với mô_tả : tôi rất hài_lòng",5,Dong_Goi,NEU
+87,"chất_liệu : tốt đáng_giá tiền , đường may chắc_chắn .. màu_sắc : đẹp đúng ý đúng với mô_tả : tôi rất hài_lòng",5,Gia_Ca,POS
+87,"chất_liệu : tốt đáng_giá tiền , đường may chắc_chắn .. màu_sắc : đẹp đúng ý đúng với mô_tả : tôi rất hài_lòng",5,Mau_Sac_Mau_Ma,POS
+87,"chất_liệu : tốt đáng_giá tiền , đường may chắc_chắn .. màu_sắc : đẹp đúng ý đúng với mô_tả : tôi rất hài_lòng",5,Form_Size,POS
+88,chất_liệu : tốt màu_sắc : đen hàng đẹp và chất_lượng tốt với giá này mọi người nên mua ủng_hộ,5,Giao_Hang,POS
+88,chất_liệu : tốt màu_sắc : đen hàng đẹp và chất_lượng tốt với giá này mọi người nên mua ủng_hộ,5,CSKH_Hau_Mai,POS
+88,chất_liệu : tốt màu_sắc : đen hàng đẹp và chất_lượng tốt với giá này mọi người nên mua ủng_hộ,5,Chat_Luong_Chat_Lieu,POS
+88,chất_liệu : tốt màu_sắc : đen hàng đẹp và chất_lượng tốt với giá này mọi người nên mua ủng_hộ,5,Dong_Goi,NEU
+88,chất_liệu : tốt màu_sắc : đen hàng đẹp và chất_lượng tốt với giá này mọi người nên mua ủng_hộ,5,Gia_Ca,POS
+88,chất_liệu : tốt màu_sắc : đen hàng đẹp và chất_lượng tốt với giá này mọi người nên mua ủng_hộ,5,Mau_Sac_Mau_Ma,POS
+88,chất_liệu : tốt màu_sắc : đen hàng đẹp và chất_lượng tốt với giá này mọi người nên mua ủng_hộ,5,Form_Size,POS
+89,"màu_sắc : đen chất_liệu : vải lụa , vải rất ok , đẹp quần_áo vừa vặn , xinh , mặc ủ kem hay ủ body đều rất tuyệt",5,Giao_Hang,POS
+89,"màu_sắc : đen chất_liệu : vải lụa , vải rất ok , đẹp quần_áo vừa vặn , xinh , mặc ủ kem hay ủ body đều rất tuyệt",5,CSKH_Hau_Mai,POS
+89,"màu_sắc : đen chất_liệu : vải lụa , vải rất ok , đẹp quần_áo vừa vặn , xinh , mặc ủ kem hay ủ body đều rất tuyệt",5,Chat_Luong_Chat_Lieu,POS
+89,"màu_sắc : đen chất_liệu : vải lụa , vải rất ok , đẹp quần_áo vừa vặn , xinh , mặc ủ kem hay ủ body đều rất tuyệt",5,Dong_Goi,POS
+89,"màu_sắc : đen chất_liệu : vải lụa , vải rất ok , đẹp quần_áo vừa vặn , xinh , mặc ủ kem hay ủ body đều rất tuyệt",5,Gia_Ca,POS
+89,"màu_sắc : đen chất_liệu : vải lụa , vải rất ok , đẹp quần_áo vừa vặn , xinh , mặc ủ kem hay ủ body đều rất tuyệt",5,Mau_Sac_Mau_Ma,POS
+89,"màu_sắc : đen chất_liệu : vải lụa , vải rất ok , đẹp quần_áo vừa vặn , xinh , mặc ủ kem hay ủ body đều rất tuyệt",5,Form_Size,POS
+90,ảo to khổng_lồ luôn ship thì cũng nhanh nhưng áo này phải tầm sai_lờ hoặc ít lờ_mặc mới vừa,5,Giao_Hang,POS
+90,ảo to khổng_lồ luôn ship thì cũng nhanh nhưng áo này phải tầm sai_lờ hoặc ít lờ_mặc mới vừa,5,CSKH_Hau_Mai,POS
+90,ảo to khổng_lồ luôn ship thì cũng nhanh nhưng áo này phải tầm sai_lờ hoặc ít lờ_mặc mới vừa,5,Chat_Luong_Chat_Lieu,POS
+90,ảo to khổng_lồ luôn ship thì cũng nhanh nhưng áo này phải tầm sai_lờ hoặc ít lờ_mặc mới vừa,5,Dong_Goi,POS
+90,ảo to khổng_lồ luôn ship thì cũng nhanh nhưng áo này phải tầm sai_lờ hoặc ít lờ_mặc mới vừa,5,Gia_Ca,POS
+90,ảo to khổng_lồ luôn ship thì cũng nhanh nhưng áo này phải tầm sai_lờ hoặc ít lờ_mặc mới vừa,5,Mau_Sac_Mau_Ma,POS
+90,ảo to khổng_lồ luôn ship thì cũng nhanh nhưng áo này phải tầm sai_lờ hoặc ít lờ_mặc mới vừa,5,Form_Size,POS
+91,giao hàng nhanh đong_gói cẩn_thận . hợp với giá tiên,5,Giao_Hang,POS
+91,giao hàng nhanh đong_gói cẩn_thận . hợp với giá tiên,5,CSKH_Hau_Mai,POS
+91,giao hàng nhanh đong_gói cẩn_thận . hợp với giá tiên,5,Chat_Luong_Chat_Lieu,POS
+91,giao hàng nhanh đong_gói cẩn_thận . hợp với giá tiên,5,Dong_Goi,POS
+91,giao hàng nhanh đong_gói cẩn_thận . hợp với giá tiên,5,Gia_Ca,POS
+91,giao hàng nhanh đong_gói cẩn_thận . hợp với giá tiên,5,Mau_Sac_Mau_Ma,POS
+91,giao hàng nhanh đong_gói cẩn_thận . hợp với giá tiên,5,Form_Size,POS
+92,hàng tốt . nên mua,5,Giao_Hang,POS
+92,hàng tốt . nên mua,5,CSKH_Hau_Mai,POS
+92,hàng tốt . nên mua,5,Chat_Luong_Chat_Lieu,POS
+92,hàng tốt . nên mua,5,Dong_Goi,NEU
+92,hàng tốt . nên mua,5,Gia_Ca,POS
+92,hàng tốt . nên mua,5,Mau_Sac_Mau_Ma,POS
+92,hàng tốt . nên mua,5,Form_Size,NEU
+93,"chất_liệu : siêu_êm , thoáng_mát khi mặc màu_sắc : đúng với hình_ảnh",5,Giao_Hang,POS
+93,"chất_liệu : siêu_êm , thoáng_mát khi mặc màu_sắc : đúng với hình_ảnh",5,CSKH_Hau_Mai,POS
+93,"chất_liệu : siêu_êm , thoáng_mát khi mặc màu_sắc : đúng với hình_ảnh",5,Chat_Luong_Chat_Lieu,POS
+93,"chất_liệu : siêu_êm , thoáng_mát khi mặc màu_sắc : đúng với hình_ảnh",5,Dong_Goi,NEU
+93,"chất_liệu : siêu_êm , thoáng_mát khi mặc màu_sắc : đúng với hình_ảnh",5,Gia_Ca,NEU
+93,"chất_liệu : siêu_êm , thoáng_mát khi mặc màu_sắc : đúng với hình_ảnh",5,Mau_Sac_Mau_Ma,POS
+93,"chất_liệu : siêu_êm , thoáng_mát khi mặc màu_sắc : đúng với hình_ảnh",5,Form_Size,NEU
+94,hàng đẹp đóng_gói cần thận lên đơn nhanh giao hàng cũng nhanh .,5,Giao_Hang,POS
+94,hàng đẹp đóng_gói cần thận lên đơn nhanh giao hàng cũng nhanh .,5,CSKH_Hau_Mai,POS
+94,hàng đẹp đóng_gói cần thận lên đơn nhanh giao hàng cũng nhanh .,5,Chat_Luong_Chat_Lieu,POS
+94,hàng đẹp đóng_gói cần thận lên đơn nhanh giao hàng cũng nhanh .,5,Dong_Goi,POS
+94,hàng đẹp đóng_gói cần thận lên đơn nhanh giao hàng cũng nhanh .,5,Gia_Ca,NEU
+94,hàng đẹp đóng_gói cần thận lên đơn nhanh giao hàng cũng nhanh .,5,Mau_Sac_Mau_Ma,POS
+94,hàng đẹp đóng_gói cần thận lên đơn nhanh giao hàng cũng nhanh .,5,Form_Size,POS
+95,"màu_sắc : đúng hình đúng với mô_tả : ok chất_liệu : vải nhiều nilong , phù_hợp với mua đông",5,Giao_Hang,POS
+95,"màu_sắc : đúng hình đúng với mô_tả : ok chất_liệu : vải nhiều nilong , phù_hợp với mua đông",5,CSKH_Hau_Mai,POS
+95,"màu_sắc : đúng hình đúng với mô_tả : ok chất_liệu : vải nhiều nilong , phù_hợp với mua đông",5,Chat_Luong_Chat_Lieu,POS
+95,"màu_sắc : đúng hình đúng với mô_tả : ok chất_liệu : vải nhiều nilong , phù_hợp với mua đông",5,Dong_Goi,POS
+95,"màu_sắc : đúng hình đúng với mô_tả : ok chất_liệu : vải nhiều nilong , phù_hợp với mua đông",5,Gia_Ca,POS
+95,"màu_sắc : đúng hình đúng với mô_tả : ok chất_liệu : vải nhiều nilong , phù_hợp với mua đông",5,Mau_Sac_Mau_Ma,POS
+95,"màu_sắc : đúng hình đúng với mô_tả : ok chất_liệu : vải nhiều nilong , phù_hợp với mua đông",5,Form_Size,POS
+96,hàg tốy chất_lượng giao cx khá nhanh,5,Giao_Hang,POS
+96,hàg tốy chất_lượng giao cx khá nhanh,5,CSKH_Hau_Mai,POS
+96,hàg tốy chất_lượng giao cx khá nhanh,5,Chat_Luong_Chat_Lieu,POS
+96,hàg tốy chất_lượng giao cx khá nhanh,5,Dong_Goi,POS
+96,hàg tốy chất_lượng giao cx khá nhanh,5,Gia_Ca,NEU
+96,hàg tốy chất_lượng giao cx khá nhanh,5,Mau_Sac_Mau_Ma,POS
+96,hàg tốy chất_lượng giao cx khá nhanh,5,Form_Size,POS
+97,"sản_phẩm được đóng_gói và giao hàng rất cẩn_thận , shop nhiệt_tình chu_đáo",5,Giao_Hang,POS
+97,"sản_phẩm được đóng_gói và giao hàng rất cẩn_thận , shop nhiệt_tình chu_đáo",5,CSKH_Hau_Mai,POS
+97,"sản_phẩm được đóng_gói và giao hàng rất cẩn_thận , shop nhiệt_tình chu_đáo",5,Chat_Luong_Chat_Lieu,POS
+97,"sản_phẩm được đóng_gói và giao hàng rất cẩn_thận , shop nhiệt_tình chu_đáo",5,Dong_Goi,POS
+97,"sản_phẩm được đóng_gói và giao hàng rất cẩn_thận , shop nhiệt_tình chu_đáo",5,Gia_Ca,NEU
+97,"sản_phẩm được đóng_gói và giao hàng rất cẩn_thận , shop nhiệt_tình chu_đáo",5,Mau_Sac_Mau_Ma,POS
+97,"sản_phẩm được đóng_gói và giao hàng rất cẩn_thận , shop nhiệt_tình chu_đáo",5,Form_Size,NEU
+98,xuất_sắc . shipper thân_thiện,5,Giao_Hang,POS
+98,xuất_sắc . shipper thân_thiện,5,CSKH_Hau_Mai,POS
+98,xuất_sắc . shipper thân_thiện,5,Chat_Luong_Chat_Lieu,POS
+98,xuất_sắc . shipper thân_thiện,5,Dong_Goi,POS
+98,xuất_sắc . shipper thân_thiện,5,Gia_Ca,POS
+98,xuất_sắc . shipper thân_thiện,5,Mau_Sac_Mau_Ma,POS
+98,xuất_sắc . shipper thân_thiện,5,Form_Size,POS
+99,"đúng màu , giao hàng nhanh . ok . thanks",5,Giao_Hang,POS
+99,"đúng màu , giao hàng nhanh . ok . thanks",5,CSKH_Hau_Mai,POS
+99,"đúng màu , giao hàng nhanh . ok . thanks",5,Chat_Luong_Chat_Lieu,POS
+99,"đúng màu , giao hàng nhanh . ok . thanks",5,Dong_Goi,POS
+99,"đúng màu , giao hàng nhanh . ok . thanks",5,Gia_Ca,NEU
+99,"đúng màu , giao hàng nhanh . ok . thanks",5,Mau_Sac_Mau_Ma,POS
+99,"đúng màu , giao hàng nhanh . ok . thanks",5,Form_Size,POS
+100,"sản_phẩm ok và giao hàng khá là nhanh . mỗi tội mk k mặc vừa áo cho lắm , tại nó hơi ngắn",5,Giao_Hang,POS
+100,"sản_phẩm ok và giao hàng khá là nhanh . mỗi tội mk k mặc vừa áo cho lắm , tại nó hơi ngắn",5,CSKH_Hau_Mai,POS
+100,"sản_phẩm ok và giao hàng khá là nhanh . mỗi tội mk k mặc vừa áo cho lắm , tại nó hơi ngắn",5,Chat_Luong_Chat_Lieu,POS
+100,"sản_phẩm ok và giao hàng khá là nhanh . mỗi tội mk k mặc vừa áo cho lắm , tại nó hơi ngắn",5,Dong_Goi,POS
+100,"sản_phẩm ok và giao hàng khá là nhanh . mỗi tội mk k mặc vừa áo cho lắm , tại nó hơi ngắn",5,Gia_Ca,POS
+100,"sản_phẩm ok và giao hàng khá là nhanh . mỗi tội mk k mặc vừa áo cho lắm , tại nó hơi ngắn",5,Mau_Sac_Mau_Ma,POS
+100,"sản_phẩm ok và giao hàng khá là nhanh . mỗi tội mk k mặc vừa áo cho lắm , tại nó hơi ngắn",5,Form_Size,POS
+101,chất_liệu : chất vải xấu hơn so với quảng_cáo màu_sắc : đen đúng với mô_tả : ko đúng với mô_tả tí nào lun sản_phẩm xấu vải cứng,5,Giao_Hang,NEG
+101,chất_liệu : chất vải xấu hơn so với quảng_cáo màu_sắc : đen đúng với mô_tả : ko đúng với mô_tả tí nào lun sản_phẩm xấu vải cứng,5,CSKH_Hau_Mai,POS
+101,chất_liệu : chất vải xấu hơn so với quảng_cáo màu_sắc : đen đúng với mô_tả : ko đúng với mô_tả tí nào lun sản_phẩm xấu vải cứng,5,Chat_Luong_Chat_Lieu,NEG
+101,chất_liệu : chất vải xấu hơn so với quảng_cáo màu_sắc : đen đúng với mô_tả : ko đúng với mô_tả tí nào lun sản_phẩm xấu vải cứng,5,Dong_Goi,NEU
+101,chất_liệu : chất vải xấu hơn so với quảng_cáo màu_sắc : đen đúng với mô_tả : ko đúng với mô_tả tí nào lun sản_phẩm xấu vải cứng,5,Gia_Ca,NEU
+101,chất_liệu : chất vải xấu hơn so với quảng_cáo màu_sắc : đen đúng với mô_tả : ko đúng với mô_tả tí nào lun sản_phẩm xấu vải cứng,5,Mau_Sac_Mau_Ma,NEG
+101,chất_liệu : chất vải xấu hơn so với quảng_cáo màu_sắc : đen đúng với mô_tả : ko đúng với mô_tả tí nào lun sản_phẩm xấu vải cứng,5,Form_Size,NEG
+102,hàng thì thô_rách ở 2 bên nách nhiều chỉ thừa tôi muốn trả lại hàng,5,Giao_Hang,NEG
+102,hàng thì thô_rách ở 2 bên nách nhiều chỉ thừa tôi muốn trả lại hàng,5,CSKH_Hau_Mai,POS
+102,hàng thì thô_rách ở 2 bên nách nhiều chỉ thừa tôi muốn trả lại hàng,5,Chat_Luong_Chat_Lieu,NEG
+102,hàng thì thô_rách ở 2 bên nách nhiều chỉ thừa tôi muốn trả lại hàng,5,Dong_Goi,NEU
+102,hàng thì thô_rách ở 2 bên nách nhiều chỉ thừa tôi muốn trả lại hàng,5,Gia_Ca,NEU
+102,hàng thì thô_rách ở 2 bên nách nhiều chỉ thừa tôi muốn trả lại hàng,5,Mau_Sac_Mau_Ma,NEG
+102,hàng thì thô_rách ở 2 bên nách nhiều chỉ thừa tôi muốn trả lại hàng,5,Form_Size,NEU
+103,"vải hơi thô , shop gửi size hơi to , với giá tiền thì ok",5,Giao_Hang,NEG
+103,"vải hơi thô , shop gửi size hơi to , với giá tiền thì ok",5,CSKH_Hau_Mai,POS
+103,"vải hơi thô , shop gửi size hơi to , với giá tiền thì ok",5,Chat_Luong_Chat_Lieu,POS
+103,"vải hơi thô , shop gửi size hơi to , với giá tiền thì ok",5,Dong_Goi,NEG
+103,"vải hơi thô , shop gửi size hơi to , với giá tiền thì ok",5,Gia_Ca,NEG
+103,"vải hơi thô , shop gửi size hơi to , với giá tiền thì ok",5,Mau_Sac_Mau_Ma,NEG
+103,"vải hơi thô , shop gửi size hơi to , với giá tiền thì ok",5,Form_Size,NEG
+104,"tốt chất_lượng , mà chỉ thừa vẫn còn",5,Giao_Hang,NEG
+104,"tốt chất_lượng , mà chỉ thừa vẫn còn",5,CSKH_Hau_Mai,POS
+104,"tốt chất_lượng , mà chỉ thừa vẫn còn",5,Chat_Luong_Chat_Lieu,POS
+104,"tốt chất_lượng , mà chỉ thừa vẫn còn",5,Dong_Goi,NEU
+104,"tốt chất_lượng , mà chỉ thừa vẫn còn",5,Gia_Ca,NEU
+104,"tốt chất_lượng , mà chỉ thừa vẫn còn",5,Mau_Sac_Mau_Ma,POS
+104,"tốt chất_lượng , mà chỉ thừa vẫn còn",5,Form_Size,NEU
+105,giao hàng_không đúng như yêu_cầu,5,Giao_Hang,NEG
+105,giao hàng_không đúng như yêu_cầu,5,CSKH_Hau_Mai,NEG
+105,giao hàng_không đúng như yêu_cầu,5,Chat_Luong_Chat_Lieu,NEG
+105,giao hàng_không đúng như yêu_cầu,5,Dong_Goi,NEU
+105,giao hàng_không đúng như yêu_cầu,5,Gia_Ca,NEG
+105,giao hàng_không đúng như yêu_cầu,5,Mau_Sac_Mau_Ma,NEG
+105,giao hàng_không đúng như yêu_cầu,5,Form_Size,NEG
+106,màu_sắc : màu_sắc ổn đúng với mô_tả : đúng vs mô_tả chất_liệu : vải mát vào mùa hè ấm vào mùa đông nên mua,5,Giao_Hang,POS
+106,màu_sắc : màu_sắc ổn đúng với mô_tả : đúng vs mô_tả chất_liệu : vải mát vào mùa hè ấm vào mùa đông nên mua,5,CSKH_Hau_Mai,POS
+106,màu_sắc : màu_sắc ổn đúng với mô_tả : đúng vs mô_tả chất_liệu : vải mát vào mùa hè ấm vào mùa đông nên mua,5,Chat_Luong_Chat_Lieu,POS
+106,màu_sắc : màu_sắc ổn đúng với mô_tả : đúng vs mô_tả chất_liệu : vải mát vào mùa hè ấm vào mùa đông nên mua,5,Dong_Goi,NEU
+106,màu_sắc : màu_sắc ổn đúng với mô_tả : đúng vs mô_tả chất_liệu : vải mát vào mùa hè ấm vào mùa đông nên mua,5,Gia_Ca,POS
+106,màu_sắc : màu_sắc ổn đúng với mô_tả : đúng vs mô_tả chất_liệu : vải mát vào mùa hè ấm vào mùa đông nên mua,5,Mau_Sac_Mau_Ma,POS
+106,màu_sắc : màu_sắc ổn đúng với mô_tả : đúng vs mô_tả chất_liệu : vải mát vào mùa hè ấm vào mùa đông nên mua,5,Form_Size,NEU
+107,chất vải ko quá là tốt lúc đầu nhìn tưởng đểu rồi nhưng khi mặc vào cũng khá ok nhiều đường chỉ trắng bị lộ ra bên ngoài áo nhìn rất xấu nói_chung là hợp giá tiền,5,Giao_Hang,POS
+107,chất vải ko quá là tốt lúc đầu nhìn tưởng đểu rồi nhưng khi mặc vào cũng khá ok nhiều đường chỉ trắng bị lộ ra bên ngoài áo nhìn rất xấu nói_chung là hợp giá tiền,5,CSKH_Hau_Mai,POS
+107,chất vải ko quá là tốt lúc đầu nhìn tưởng đểu rồi nhưng khi mặc vào cũng khá ok nhiều đường chỉ trắng bị lộ ra bên ngoài áo nhìn rất xấu nói_chung là hợp giá tiền,5,Chat_Luong_Chat_Lieu,POS
+107,chất vải ko quá là tốt lúc đầu nhìn tưởng đểu rồi nhưng khi mặc vào cũng khá ok nhiều đường chỉ trắng bị lộ ra bên ngoài áo nhìn rất xấu nói_chung là hợp giá tiền,5,Dong_Goi,NEU
+107,chất vải ko quá là tốt lúc đầu nhìn tưởng đểu rồi nhưng khi mặc vào cũng khá ok nhiều đường chỉ trắng bị lộ ra bên ngoài áo nhìn rất xấu nói_chung là hợp giá tiền,5,Gia_Ca,POS
+107,chất vải ko quá là tốt lúc đầu nhìn tưởng đểu rồi nhưng khi mặc vào cũng khá ok nhiều đường chỉ trắng bị lộ ra bên ngoài áo nhìn rất xấu nói_chung là hợp giá tiền,5,Mau_Sac_Mau_Ma,NEG
+107,chất vải ko quá là tốt lúc đầu nhìn tưởng đểu rồi nhưng khi mặc vào cũng khá ok nhiều đường chỉ trắng bị lộ ra bên ngoài áo nhìn rất xấu nói_chung là hợp giá tiền,5,Form_Size,POS
