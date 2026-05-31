@@ -1,30 +1,23 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import Papa from "papaparse";
 import { motion, AnimatePresence } from "framer-motion";
-import * as d3 from 'd3';
 import AprioriNetworkGraph from "./AprioriNetworkGraph";
 import {
   Activity,
   AlertCircle,
+  ArrowRight,
   BarChart3,
   BrainCircuit,
   CalendarDays,
   CheckCircle2,
   ChevronDown,
-  ClipboardList,
   Cloud,
   CloudRain,
   CloudSun,
-  Database,
   Download,
   Droplets,
-  BookOpen,
-  FileText,
   FileSpreadsheet,
-  Gauge,
-  Headphones,
+  Filter,
   Info,
-  Layers3,
   Loader2,
   MapPin,
   Mic,
@@ -35,8 +28,6 @@ import {
   Send,
   SlidersHorizontal,
   Sparkles,
-  Table2,
-  Target,
   Thermometer,
   Trophy,
   UploadCloud,
@@ -51,9 +42,6 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
-  Cell,
-  Pie,
-  PieChart,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -62,7 +50,6 @@ import {
 
 const API_PREDICT_URL = "/api/predict";
 const API_APRIORI_ANALYZE_URL = "/api/apriori/analyze";
-const API_APRIORI_SAMPLE_URL = "/api/apriori/sample";
 
 const FEATURE_OPTIONS = {
   Outlook: ["None", "Sunny", "Overcast", "Rain"],
@@ -85,11 +72,6 @@ const EMPTY_FEATURES = {
   Wind: "None",
 };
 
-const DATASET_FILES = [
-  { name: "David_Tennis.csv", label: "David Tennis", icon: Table2 },
-];
-
-const CHART_COLORS = ["#2563eb", "#059669", "#f59e0b", "#dc2626", "#7c3aed", "#0891b2", "#4b5563"];
 const POS_COLOR = "#059669";
 const NEG_COLOR = "#e11d48";
 
@@ -105,94 +87,6 @@ const PREDICTION_SOURCE_TEXT = {
   "manual combobox": "dùng feature chọn thủ công",
   "phobert + manual override": "PhoBERT trích từ mô tả, feature chọn thủ công ghi đè các ô khác None",
 };
-
-const APRIORI_SOURCE_MODE_TEXT = {
-  sample_rules_csv: "luật mẫu",
-  aspect_sentiment: "aspect + cảm xúc",
-  transaction_items: "item giao dịch",
-  wide_aspect_sentiment: "bảng aspect rộng",
-  comment_heuristic: "đọc từ comment",
-  phobert_absa_predictions: "PhoBERT dự đoán",
-};
-
-const RATING_GROUP_TEXT = {
-  HIGH: "Đánh giá cao",
-  LOW: "Đánh giá thấp",
-  ALL: "Tất cả",
-};
-
-const PROJECT_METRICS = [
-  { label: "Dữ liệu gốc", value: "14", detail: "David_Tennis.csv", icon: Table2, tone: "blue" },
-  { label: "Dòng đã xử lý", value: "429", detail: "David_Tennis_Segmented.csv", icon: FileText, tone: "violet" },
-  { label: "Dòng NLI", value: "1,716", detail: "David_Tennis_NLI_Ready.csv", icon: Layers3, tone: "green" },
-  { label: "Feature chính", value: "4", detail: "Outlook, Temperature, Humidity, Wind", icon: BrainCircuit, tone: "amber" },
-];
-
-const SYSTEM_PIPELINE = [
-  {
-    step: "01",
-    title: "Nhập văn bản hoặc giọng nói",
-    description: "Web demo nhận câu mô tả thời tiết; file pipeline đầy đủ ở thư mục Tennis có thêm luồng Whisper small để chuyển giọng nói tiếng Việt sang text.",
-    icon: Mic,
-  },
-  {
-    step: "02",
-    title: "Tiền xử lý tiếng Việt",
-    description: "Chuẩn hóa Unicode, làm sạch ký tự lạ, rút gọn ký tự lặp và tách từ bằng underthesea trước khi đưa vào PhoBERT.",
-    icon: RefreshCw,
-  },
-  {
-    step: "03",
-    title: "PhoBERT theo dạng NLI",
-    description: "Với mỗi câu, mô hình hỏi lần lượt 4 aspect: thời tiết, nhiệt độ, độ ẩm và gió để lấy nhãn feature tương ứng.",
-    icon: Headphones,
-  },
-  {
-    step: "04",
-    title: "CatBoost ra quyết định",
-    description: "Bốn feature dạng bảng được đưa vào CatBoost để dự đoán Yes/No và xác suất nên chơi Tennis.",
-    icon: Target,
-  },
-  {
-    step: "05",
-    title: "Báo cáo và Apriori",
-    description: "Tab dữ liệu, lịch dự báo và Apriori phục vụ phần trực quan hóa, phân tích luật kết hợp và trình bày kết quả báo cáo.",
-    icon: Network,
-  },
-];
-
-const REPORT_SECTIONS = [
-  {
-    title: "Tổng quan đề tài",
-    description: "Bài toán hỗ trợ quyết định chơi Tennis dựa trên mô tả thời tiết tiếng Việt.",
-    status: "Đã có UI",
-    tone: "green",
-  },
-  {
-    title: "Dữ liệu và tiền xử lý",
-    description: "Hiển thị David_Tennis cơ bản 14 dòng, dữ liệu segmented và tập NLI sinh từ 4 aspect.",
-    status: "Đã bổ sung",
-    tone: "green",
-  },
-  {
-    title: "Mô hình dự đoán",
-    description: "Trình bày rõ vai trò PhoBERT trích feature và CatBoost đưa ra quyết định cuối.",
-    status: "Đã kết nối",
-    tone: "blue",
-  },
-  {
-    title: "Thực nghiệm",
-    description: "Nên bổ sung thêm ma trận nhầm lẫn, classification report hoặc ảnh kết quả train nếu cần chấm báo cáo chi tiết.",
-    status: "Cần số liệu train",
-    tone: "amber",
-  },
-];
-
-const FEATURE_EXAMPLES = [
-  ["Trời âm u, mát, gió nhẹ", "Overcast", "Cool", "Normal", "Weak", "Yes"],
-  ["Mưa to, độ ẩm cao, gió mạnh", "Rain", "Mild", "High", "Strong", "No"],
-  ["Nắng nóng và oi", "Sunny", "Hot", "High", "Weak", "No"],
-];
 
 const DEFAULT_FORECAST_LOCATION = {
   id: "ho-chi-minh",
@@ -234,14 +128,6 @@ function formatPredictionSource(source, hasAnyInput) {
   return PREDICTION_SOURCE_TEXT[source] || "đầu vào hiện tại";
 }
 
-function formatAprioriSourceMode(mode) {
-  return APRIORI_SOURCE_MODE_TEXT[mode] || mode || "chưa có";
-}
-
-function formatRatingGroup(group) {
-  return RATING_GROUP_TEXT[group] || group || "Tất cả";
-}
-
 function formatCoordinate(value) {
   const number = Number(value);
   return Number.isFinite(number) ? number.toFixed(3) : "0.000";
@@ -278,33 +164,6 @@ function normalizeKey(key) {
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, "_")
     .replace(/^_+|_+$/g, "");
-}
-
-function getValue(row, possibleNames) {
-  const keys = Object.keys(row || {});
-  const normalized = possibleNames.map(normalizeKey);
-  const found = keys.find((key) => normalized.includes(normalizeKey(key)));
-  return found ? row[found] : undefined;
-}
-
-function cleanLabel(value) {
-  const text = String(value ?? "").trim();
-  if (!text || text.toLowerCase() === "nan") return "None";
-  return text;
-}
-
-function parseCSV(csvText) {
-  const parsed = Papa.parse(csvText, {
-    header: true,
-    skipEmptyLines: true,
-    transformHeader: (header) => header.trim(),
-  });
-
-  if (parsed.errors?.length && !parsed.data?.length) {
-    throw new Error(parsed.errors[0].message || "Không đọc được CSV.");
-  }
-
-  return parsed.data.filter((row) => Object.values(row).some((value) => cleanLabel(value) !== "None"));
 }
 
 function Panel({ children, className = "", as: Component = "section" }) {
@@ -1142,88 +1001,6 @@ function CalendarPage({ forecastCache, setForecastCache }) {
   );
 }
 
-function buildDatasetSummary(rows) {
-  if (!rows.length) {
-    return {
-      mode: "empty",
-      modeLabel: "Không có dữ liệu",
-      totalRows: 0,
-      tableRows: [],
-      labelRows: [],
-      decisionRows: [],
-      aspectDistribution: [],
-      labelKeys: [],
-    };
-  }
-
-  const first = rows[0];
-  const hasNliShape = getValue(first, ["aspect_en"]) !== undefined && getValue(first, ["label"]) !== undefined;
-
-  if (hasNliShape) {
-    const grouped = {};
-    rows.forEach((row) => {
-      const aspect = cleanLabel(getValue(row, ["aspect_en"]));
-      const label = cleanLabel(getValue(row, ["label"]));
-      if (!grouped[aspect]) grouped[aspect] = { aspect };
-      grouped[aspect][label] = (grouped[aspect][label] || 0) + 1;
-    });
-
-    const aspectDistribution = Object.values(grouped);
-    const labelKeys = Array.from(new Set(aspectDistribution.flatMap((item) => Object.keys(item).filter((key) => key !== "aspect"))));
-    const labelRows = labelKeys.map((label) => ({
-      name: label,
-      value: rows.filter((row) => cleanLabel(getValue(row, ["label"])) === label).length,
-    }));
-
-    return {
-      mode: "nli",
-      modeLabel: "Aspect NLI",
-      totalRows: rows.length,
-      tableRows: rows.slice(0, 20),
-      labelRows,
-      decisionRows: [],
-      aspectDistribution,
-      labelKeys,
-    };
-  }
-
-  const aspectNames = ["outlook", "temperature", "humidity", "wind"];
-  const hasClassicTennisShape =
-    aspectNames.every((aspect) => getValue(first, [aspect]) !== undefined) &&
-    getValue(first, ["play", "play tennis", "play_tennis", "playtennis", "decision", "result"]) !== undefined;
-  const grouped = {};
-  aspectNames.forEach((aspect) => {
-    grouped[aspect] = { aspect };
-    rows.forEach((row) => {
-      const label = cleanLabel(getValue(row, [aspect]));
-      grouped[aspect][label] = (grouped[aspect][label] || 0) + 1;
-    });
-  });
-
-  const decisionCounts = {};
-  rows.forEach((row) => {
-    const decision = cleanLabel(getValue(row, ["play", "play tennis", "play_tennis", "playtennis", "decision", "result"]));
-    if (decision !== "None") decisionCounts[decision] = (decisionCounts[decision] || 0) + 1;
-  });
-
-  const aspectDistribution = Object.values(grouped);
-  const labelKeys = Array.from(new Set(aspectDistribution.flatMap((item) => Object.keys(item).filter((key) => key !== "aspect"))));
-
-  return {
-    mode: "segmented",
-    modeLabel: hasClassicTennisShape ? "David Tennis cơ bản" : "Segmented features",
-    totalRows: rows.length,
-    tableRows: rows.slice(0, hasClassicTennisShape ? 14 : 20),
-    labelRows: labelKeys.map((label) => ({
-      name: label,
-      value: aspectDistribution.reduce((sum, item) => sum + (item[label] || 0), 0),
-    })),
-    decisionRows: Object.entries(decisionCounts).map(([name, value]) => ({ name, value })),
-    aspectDistribution,
-    labelKeys,
-  };
-}
-
 function RatioTooltip({ active, payload, label }) {
   if (!active || !payload?.length) return null;
   const row = payload[0].payload;
@@ -1348,19 +1125,44 @@ function AprioriPage() {
     [result]
   );
 
-  const visibleRules = result?.rules?.slice(0, 12) || [];
-
   return (
     <div className="space-y-6">
-      {/* KHỐI ĐIỀU KHIỂN ĐẦU VÀO VÀ ĐỊNH CẤU HÌNH APRIORI (ĐÃ ĐƯA LÊN ĐẦU TRANG) */}
-      <Panel className="p-5 bg-white border border-slate-200">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+      <Panel className="overflow-hidden">
+        <SectionTitle
+          eyebrow="Apriori setup"
+          title="Thiết lập phân tích luật kết hợp"
+          description="Tải CSV bình luận, chọn ngưỡng tối thiểu rồi chạy phân tích để cập nhật biểu đồ, danh sách luật và đồ thị tương tác phía dưới."
+          icon={Network}
+          action={
+            <Button onClick={analyzeUploadedCsv} disabled={loading} className="h-11 w-full shrink-0 lg:w-auto">
+              {loading ? <Loader2 className="animate-spin" size={18} /> : <BrainCircuit size={18} />}
+              Chạy Apriori
+            </Button>
+          }
+        />
 
-          {/* Vùng chọn file + Mô tả điều kiện đầu vào */}
-          <div className="w-full lg:w-1/3 space-y-2">
-            <label className="flex min-h-[135px] cursor-pointer flex-col items-center justify-center rounded-lg border border-dashed border-slate-300 bg-slate-50 p-4 text-center transition hover:border-blue-400 hover:bg-blue-50">
-              <UploadCloud className="text-slate-500" size={28} />
-              <span className="mt-2 max-w-full truncate text-sm font-semibold text-slate-950">
+        {error && (
+          <div className="border-b border-slate-100 px-5 py-4">
+            <div className="rounded-md border border-rose-200 bg-rose-50 px-3 py-2 text-sm font-semibold leading-6 text-rose-700" role="alert">
+              Lỗi: {error}
+            </div>
+          </div>
+        )}
+
+        <div className="grid gap-5 p-5 lg:grid-cols-[minmax(280px,0.9fr)_minmax(0,1.4fr)]">
+          <div className="space-y-3">
+            <label
+              className={classNames(
+                "flex min-h-[184px] cursor-pointer flex-col items-center justify-center rounded-lg border border-dashed px-4 py-5 text-center transition",
+                file
+                  ? "border-blue-300 bg-blue-50/70 ring-1 ring-blue-100"
+                  : "border-slate-300 bg-slate-50 hover:border-blue-400 hover:bg-blue-50"
+              )}
+            >
+              <span className={classNames("flex h-12 w-12 items-center justify-center rounded-md ring-1", file ? "bg-blue-600 text-white ring-blue-600" : "bg-white text-slate-500 ring-slate-200")}>
+                <UploadCloud size={24} />
+              </span>
+              <span className="mt-3 max-w-[calc(100%-2rem)] truncate text-sm font-semibold text-slate-950">
                 {file ? file.name : "Chọn file dữ liệu CSV comment"}
               </span>
               <span className="mt-1 text-xs text-slate-500">
@@ -1373,26 +1175,30 @@ function AprioriPage() {
                 onChange={(event) => setFile(event.target.files?.[0] || null)}
               />
             </label>
-            <p className="text-[11px] text-slate-500 leading-relaxed bg-slate-50 p-2 rounded border border-slate-100">
-              💡 <span className="font-semibold text-slate-700">Yêu cầu cấu trúc cột file CSV:</span> Cột <code className="rounded bg-slate-200/80 px-1 font-mono text-rose-600 font-bold">comment</code> (hoặc nội dung/text) là <b>bắt buộc</b>. Cột <code className="rounded bg-slate-100 px-1 font-mono text-slate-600">comment_id</code> và <code className="rounded bg-slate-100 px-1 font-mono text-slate-600">rating</code> (hoặc rate) <b>không bắt buộc</b> (hệ thống sẽ tự động phát sinh ngẫu nhiên nếu thiếu).
+
+            <p className="flex gap-2 rounded-md border border-slate-200 bg-slate-50 p-3 text-xs leading-5 text-slate-600">
+              <Info className="mt-0.5 shrink-0 text-slate-400" size={14} />
+              <span>
+                CSV cần có cột <code className="rounded bg-white px-1 font-mono font-bold text-rose-600">comment</code> hoặc nội dung/text.
+                Các cột <code className="rounded bg-white px-1 font-mono text-slate-700">comment_id</code> và <code className="rounded bg-white px-1 font-mono text-slate-700">rating</code> là tùy chọn.
+              </span>
             </p>
           </div>
 
-          {/* Vùng kéo các thanh trượt tham số luật toán học */}
-          <div className="flex-1 rounded-lg border border-slate-200 p-4 bg-white shadow-sm space-y-4">
-            <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-2">
+          <div className="rounded-lg border border-slate-200 bg-slate-50/60 p-4">
+            <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-3">
               <div>
-                <p className="text-sm font-semibold text-slate-950">Cấu hình bộ lọc thuật toán Apriori</p>
-                <p className="text-xs text-slate-500">Tăng/giảm các ngưỡng tối thiểu để tìm kiếm luật ngầm giá trị.</p>
+                <p className="text-sm font-semibold text-slate-950">Ngưỡng sinh luật</p>
+                <p className="mt-1 text-xs leading-5 text-slate-500">Điều chỉnh để kiểm soát độ phổ biến và độ tin cậy tối thiểu của luật.</p>
               </div>
-              <SlidersHorizontal className="text-slate-400" size={18} />
+              <SlidersHorizontal className="shrink-0 text-slate-400" size={18} />
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              <label className="block">
-                <span className="flex justify-between text-xs font-bold text-slate-700">
-                  <span>Support tối thiểu (Độ hỗ trợ)</span>
-                  <span className="text-blue-600 font-mono">{formatPercent(minSupport * 100, 0)}</span>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              <label className="rounded-lg border border-slate-200 bg-white p-4">
+                <span className="flex items-start justify-between gap-3 text-xs font-bold text-slate-700">
+                  <span>Support tối thiểu</span>
+                  <span className="rounded-md bg-blue-50 px-2 py-1 font-mono text-blue-700 ring-1 ring-blue-100">{formatPercent(minSupport * 100, 0)}</span>
                 </span>
                 <input
                   type="range"
@@ -1401,14 +1207,18 @@ function AprioriPage() {
                   step="0.01"
                   value={minSupport}
                   onChange={(event) => setMinSupport(Number(event.target.value))}
-                  className="mt-2 w-full accent-blue-600 cursor-pointer"
+                  className="apriori-range mt-4 w-full cursor-pointer"
                 />
+                <span className="mt-2 flex justify-between text-[11px] font-medium text-slate-400">
+                  <span>1%</span>
+                  <span>30%</span>
+                </span>
               </label>
 
-              <label className="block">
-                <span className="flex justify-between text-xs font-bold text-slate-700">
-                  <span>Confidence tối thiểu (Độ tin cậy)</span>
-                  <span className="text-blue-600 font-mono">{formatPercent(minConfidence * 100, 0)}</span>
+              <label className="rounded-lg border border-slate-200 bg-white p-4">
+                <span className="flex items-start justify-between gap-3 text-xs font-bold text-slate-700">
+                  <span>Confidence tối thiểu</span>
+                  <span className="rounded-md bg-blue-50 px-2 py-1 font-mono text-blue-700 ring-1 ring-blue-100">{formatPercent(minConfidence * 100, 0)}</span>
                 </span>
                 <input
                   type="range"
@@ -1417,51 +1227,41 @@ function AprioriPage() {
                   step="0.05"
                   value={minConfidence}
                   onChange={(event) => setMinConfidence(Number(event.target.value))}
-                  className="mt-2 w-full accent-blue-600 cursor-pointer"
+                  className="apriori-range mt-4 w-full cursor-pointer"
                 />
+                <span className="mt-2 flex justify-between text-[11px] font-medium text-slate-400">
+                  <span>10%</span>
+                  <span>95%</span>
+                </span>
               </label>
             </div>
           </div>
-
-          {/* Nút bấm kích hoạt tiến trình xử lý */}
-          <div className="flex flex-col items-stretch lg:w-44">
-            <Button onClick={analyzeUploadedCsv} disabled={loading} className="w-full h-12 flex items-center justify-center gap-2">
-              {loading ? <Loader2 className="animate-spin" size={18} /> : <BrainCircuit size={18} />}
-              Chạy Apriori
-            </Button>
-            {error && (
-              <div className="mt-2 rounded-lg border border-rose-200 bg-rose-50 p-2 text-xs text-rose-700 font-semibold leading-normal">
-                ⚠️ Lỗi: {error}
-              </div>
-            )}
-          </div>
-
         </div>
       </Panel>
 
       {/* KHỐI BIỂU ĐỒ TRỰC QUAN HÓA (CHỈ LÊN HÌNH KHI ĐÃ CÓ DATA PHÂN TÍCH) */}
       <Panel className="overflow-hidden">
         <SectionTitle
-          eyebrow="Data Analysis Insights"
-          title="Kết quả thống kê khía cạnh & Phán đoán cảm xúc từ PhoBERT AI"
-          description="Báo cáo phân tích tự động cấu trúc nội dung từ tập dữ liệu ý kiến khách hàng."
+          eyebrow="Insights"
+          title="Thống kê khía cạnh và cảm xúc"
+          description="Hai biểu đồ cập nhật sau mỗi lần chạy Apriori để so sánh mật độ xuất hiện và sắc thái cảm xúc theo từng khía cạnh."
           icon={BarChart3}
         />
 
         {!result ? (
-          <div className="p-16 text-center flex flex-col items-center justify-center gap-2 border-t border-slate-100 bg-slate-50/40">
-            <Info className="text-slate-400 animate-pulse" size={36} />
-            <p className="text-base font-semibold text-slate-700">Hệ thống đang ở trạng thái trống (None)</p>
-            <p className="text-sm text-slate-500 max-w-md">Vui lòng tải lên tập tin dữ liệu và bấm nút <b>Chạy Apriori</b> phía trên để bắt đầu bóc tách mô hình AI.</p>
+          <div className="flex flex-col items-center justify-center gap-2 border-t border-slate-100 bg-slate-50/50 p-14 text-center">
+            <FileSpreadsheet className="text-slate-400" size={34} />
+            <p className="text-base font-semibold text-slate-800">Chưa có kết quả phân tích</p>
+            <p className="max-w-md text-sm leading-6 text-slate-500">Chọn CSV và bấm <b>Chạy Apriori</b> để hiển thị thống kê khía cạnh, cảm xúc và luật kết hợp.</p>
           </div>
         ) : (
-          <div className="grid gap-6 p-5 xl:grid-cols-2 border-t border-slate-100 bg-slate-50/20">
+          <div className="grid gap-5 border-t border-slate-100 bg-slate-50/20 p-5 xl:grid-cols-2">
 
             {/* 📊 BIỂU ĐỒ BÊN TRÁI (MỚI THÊM): TỶ LỆ KHÍA CẠNH / TỔNG SỐ CÂU */}
-            <Panel className="p-4 shadow-none border border-slate-200 bg-white rounded-xl">
-              <div className="mb-4">
-                <p className="font-semibold text-slate-950 text-sm">Mật độ xuất hiện của khía cạnh trên tổng số câu</p>
-                <p className="text-xs text-slate-400 mt-0.5">
+            <div className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
+              <div className="mb-4 min-h-[54px]">
+                <p className="text-sm font-semibold text-slate-950">Mật độ xuất hiện của khía cạnh trên tổng số câu</p>
+                <p className="mt-0.5 text-xs leading-5 text-slate-500">
                   Tỷ lệ mẫu số câu có gán nhãn (POS/NEG) thuộc khía cạnh này chia cho tổng số câu duy nhất ({result?.metrics?.comments || 0} câu).
                 </p>
               </div>
@@ -1474,7 +1274,7 @@ function AprioriPage() {
                       <XAxis type="number" domain={[0, 100]} tickFormatter={(val) => `${val}%`} tick={{ fontSize: 11 }} stroke="#94a3b8" />
                       <YAxis type="category" dataKey="name" width={130} tick={{ fontSize: 11, fontWeight: 500 }} stroke="#64748b" />
                       <Tooltip
-                        formatter={(value, name) => [`${value}%`, "Mật độ xuất hiện"]}
+                        formatter={(value) => [`${value}%`, "Mật độ xuất hiện"]}
                         contentStyle={{ borderRadius: '8px', borderColor: '#e2e8f0', fontSize: '12px' }}
                       />
                       <Bar dataKey="percentage" name="Tỷ lệ xuất hiện" fill="#3b82f6" radius={[0, 4, 4, 0]} barSize={18} />
@@ -1484,13 +1284,13 @@ function AprioriPage() {
                   <div className="flex h-full items-center justify-center text-slate-400 text-xs">Không thu thập được dữ liệu khía cạnh.</div>
                 )}
               </div>
-            </Panel>
+            </div>
 
             {/* 📊 BIỂU ĐỒ BÊN PHẢI (CŨ): TỶ LỆ POS / NEG TRONG KHÍA CẠNH (ĐÃ LƯỢC BỎ BẢNG PHẦN TRĂM) */}
-            <Panel className="p-4 shadow-none border border-slate-200 bg-white rounded-xl">
-              <div className="mb-2">
-                <p className="font-semibold text-slate-950 text-sm">Tỉ lệ phân phối Tốt / Xấu trong từng khía cạnh</p>
-                <p className="text-xs text-slate-400 mt-0.5">
+            <div className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
+              <div className="mb-2 min-h-[54px]">
+                <p className="text-sm font-semibold text-slate-950">Tỉ lệ phân phối Tốt / Xấu trong từng khía cạnh</p>
+                <p className="mt-0.5 text-xs leading-5 text-slate-500">
                   Phần trăm phân tách sắc thái cảm xúc tích cực và tiêu cực dựa trên tổng số ý kiến nhận diện của khía cạnh đó.
                 </p>
               </div>
@@ -1523,18 +1323,17 @@ function AprioriPage() {
                   <div className="flex h-full items-center justify-center text-slate-400 text-xs">Chưa có dữ liệu cảm xúc để vẽ biểu đồ.</div>
                 )}
               </div>
-            </Panel>
+            </div>
 
           </div>
         )}
       </Panel>
 
-      {/* 🌟 HỆ THỐNG PHÂN TÍCH XU HƯỚNG VÀ KIẾN NGHỊ HÀNH ĐỘNG CAO CẤP (TÍCH HỢP 4 KHÁI NIỆM) */}
-      <Panel className="overflow-hidden bg-white border border-slate-200 shadow-sm rounded-xl">
+      <Panel className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
         <SectionTitle
-          eyebrow="Rules Mining & Actionable Analytics"
-          title="Báo cáo phân tích hành vi & Khuyến nghị từ AI"
-          description="Hệ thống tự động biên dịch thuật toán sang ngôn ngữ quản trị doanh nghiệp và đề xuất phương án cải tiến vận hành."
+          eyebrow="Association rules"
+          title="Luật kết hợp và đồ thị tương tác"
+          description="Bộ lọc, danh sách luật và đồ thị dùng chung một tập kết quả sau khi chạy phân tích."
           icon={BrainCircuit}
           action={
             <Button variant="secondary" onClick={() => exportRules(result?.rules || [])} disabled={!result?.rules?.length}>
@@ -1651,65 +1450,85 @@ function AprioriPage() {
             return typeof item === 'object' ? (item.aspect_label || labelMap[item.key] || item.key) : item;
           };
 
+          const formatGraphSelection = (id) => {
+            const rawId = String(id || "");
+            const sentiment = rawId.endsWith("_POS") ? "POS" : rawId.endsWith("_NEG") ? "NEG" : "";
+            const key = sentiment ? rawId.slice(0, -(sentiment.length + 1)) : rawId;
+            const name = getAspectName({ key, sentiment });
+            return sentiment ? `${name} ${sentiment === "POS" ? "Tốt" : "Tệ"}` : name;
+          };
+
+          const selectedGraphFilterLabel = selectedGraphNode
+            ? `Node: ${formatGraphSelection(selectedGraphNode)}`
+            : selectedGraphEdge
+              ? `Cạnh: ${selectedGraphEdge.map(formatGraphSelection).join(" → ")}`
+              : "";
+
+          const ratingFilterOptions = [
+            { id: "ALL", label: "Tất cả", count: uniqueRules.length },
+            { id: "LOW", label: "1-3 Sao", count: lowRules.length },
+            { id: "HIGH", label: "4-5 Sao", count: highRules.length },
+          ];
+
           if (!uniqueRules.length) {
             return (
-              <div className="p-12 text-center text-sm font-medium text-slate-400 bg-slate-50/20 border-t border-slate-100">
-                Chưa thu thập được bộ luật nào thỏa mãn điều kiện.
+              <div className="border-t border-slate-100 bg-slate-50/50 p-12 text-center">
+                <p className="text-sm font-semibold text-slate-700">Chưa có luật kết hợp</p>
+                <p className="mt-1 text-sm text-slate-500">Sau khi chạy phân tích, các luật thỏa ngưỡng support và confidence sẽ xuất hiện tại đây.</p>
               </div>
             );
           }
 
           return (
-            <div className="border-t border-slate-100 p-5 bg-slate-50/30 space-y-6">
-
-              {/* 🏢 KHỐI PHÍA TRÊN: CHIA THEO CỘT LAYOUT (TRÁI: LỌC CHỒNG - PHẢI: KẾT QUẢ LUẬT) */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
-
-                {/* CỘT TRÁI (BỘ ĐIỀU KHIỂN UI LỌC THÀNH 1 KHỐI GỌN GÀNG) */}
-                <div className="lg:col-span-2 bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm space-y-4">
-                  <div className="text-xs font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100 pb-2">
-                    Bộ điều khiển bộ lọc
+            <div className="space-y-5 border-t border-slate-100 bg-slate-50/40 p-5">
+              <div className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
+                <div className="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-slate-500">
+                      <Filter size={14} />
+                      Bộ lọc luật
+                    </div>
+                    <div className="mt-3 grid gap-2 sm:grid-cols-3">
+                      {ratingFilterOptions.map((option) => {
+                        const active = ruleFilter === option.id;
+                        return (
+                          <button
+                            key={option.id}
+                            onClick={() => setRuleFilter(option.id)}
+                            className={classNames(
+                              "flex min-h-11 items-center justify-between gap-3 rounded-md border px-3 text-sm font-semibold transition",
+                              active && option.id === "ALL" && "border-slate-900 bg-slate-950 text-white shadow-sm",
+                              active && option.id === "LOW" && "border-rose-300 bg-rose-50 text-rose-800 shadow-sm",
+                              active && option.id === "HIGH" && "border-emerald-300 bg-emerald-50 text-emerald-800 shadow-sm",
+                              !active && "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50"
+                            )}
+                          >
+                            <span>{option.label}</span>
+                            <span
+                              className={classNames(
+                                "rounded-full px-2 py-0.5 text-xs font-bold",
+                                active && option.id === "ALL" && "bg-white/15 text-white",
+                                active && option.id === "LOW" && "bg-white text-rose-700",
+                                active && option.id === "HIGH" && "bg-white text-emerald-700",
+                                !active && "bg-slate-100 text-slate-500"
+                              )}
+                            >
+                              {option.count}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
                   </div>
 
-                  {/* Dãy nút chọn Tab nhóm đánh giá sắp xếp dọc */}
-                  <div className="flex flex-col gap-2">
-                    <button
-                      onClick={() => setRuleFilter("LOW")}
-                      className={`w-full flex items-center justify-between py-2.5 px-4 rounded-lg font-bold text-sm transition border ${ruleFilter === "LOW" ? "bg-rose-100 text-rose-800 border-rose-300 shadow-sm" : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"}`}
-                    >
-                      <span>🔴 1-3 Sao</span>
-                      <span className={`px-2 py-0.5 rounded-full text-xs font-black ${ruleFilter === "LOW" ? "bg-white text-rose-700" : "bg-slate-100 text-slate-500"}`}>{lowRules.length}</span>
-                    </button>
-
-                    <button
-                      onClick={() => setRuleFilter("HIGH")}
-                      className={`w-full flex items-center justify-between py-2.5 px-4 rounded-lg font-bold text-sm transition border ${ruleFilter === "HIGH" ? "bg-emerald-100 text-emerald-800 border-emerald-300 shadow-sm" : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"}`}
-                    >
-                      <span>🟢 4-5 Sao</span>
-                      <span className={`px-2 py-0.5 rounded-full text-xs font-black ${ruleFilter === "HIGH" ? "bg-white text-emerald-700" : "bg-slate-100 text-slate-500"}`}>{highRules.length}</span>
-                    </button>
-
-                    <button
-                      onClick={() => setRuleFilter("ALL")}
-                      className={`w-full flex items-center justify-between py-2.5 px-4 rounded-lg font-bold text-sm transition border ${ruleFilter === "ALL" ? "bg-slate-800 text-white border-slate-900 shadow-sm" : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"}`}
-                    >
-                      <span>Cả 2 nhóm</span>
-                      <span className={`px-2 py-0.5 rounded-full text-xs font-black ${ruleFilter === "ALL" ? "bg-slate-600 text-white" : "bg-slate-100 text-slate-500"}`}>{uniqueRules.length}</span>
-                    </button>
-                  </div>
-
-                  {/* Các Combobox lọc Khía cạnh và Đánh giá chuyển thành khối dọc */}
-                  <div className="pt-2 space-y-3 border-t border-slate-100">
-                    {/* Combobox: Chọn Khía Cạnh */}
-                    <div className="flex flex-col">
-                      <label htmlFor="aspectFilter" className="text-xs font-semibold text-slate-500 mb-1 ml-1">
-                        Lọc theo khía cạnh
-                      </label>
+                  <div className="grid gap-3 sm:grid-cols-2 xl:w-[540px]">
+                    <label className="block">
+                      <span className="mb-1.5 block text-xs font-semibold text-slate-500">Khía cạnh</span>
                       <select
                         id="aspectFilter"
                         value={aspectFilter}
                         onChange={(e) => setAspectFilter(e.target.value)}
-                        className="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-sm font-semibold text-slate-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                        className="w-full cursor-pointer rounded-md border border-slate-200 bg-white px-3 py-2.5 text-sm font-semibold text-slate-700 shadow-sm outline-none transition focus:border-blue-400 focus:ring-4 focus:ring-blue-100"
                       >
                         <option value="ALL">Tất cả khía cạnh</option>
                         {BASE_ASPECTS.map((aspect) => (
@@ -1718,148 +1537,146 @@ function AprioriPage() {
                           </option>
                         ))}
                       </select>
-                    </div>
+                    </label>
 
-                    {/* Combobox: Chọn Tốt/Xấu */}
-                    <div className="flex flex-col">
-                      <label htmlFor="sentimentFilter" className="text-xs font-semibold text-slate-500 mb-1 ml-1">
-                        Lọc theo đánh giá (Tốt/Xấu)
-                      </label>
+                    <label className="block">
+                      <span className="mb-1.5 block text-xs font-semibold text-slate-500">Đánh giá</span>
                       <select
                         id="sentimentFilter"
                         value={sentimentFilter}
                         onChange={(e) => setSentimentFilter(e.target.value)}
-                        className="w-full px-3 py-2 bg-white border border-slate-300 rounded-lg text-sm font-semibold text-slate-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+                        className="w-full cursor-pointer rounded-md border border-slate-200 bg-white px-3 py-2.5 text-sm font-semibold text-slate-700 shadow-sm outline-none transition focus:border-blue-400 focus:ring-4 focus:ring-blue-100"
                       >
-                        <option value="ALL">Tất cả (Tốt & Xấu)</option>
-                        <option value="POS">▲ Tốt (Tích cực)</option>
-                        <option value="NEG">▼ Tệ (Tiêu cực)</option>
+                        <option value="ALL">Tất cả Tốt/Xấu</option>
+                        <option value="POS">▲ Tốt</option>
+                        <option value="NEG">▼ Tệ</option>
                       </select>
-                    </div>
+                    </label>
                   </div>
                 </div>
 
-                {/* 📜 CỘT PHẢI (DANH SÁCH THẺ LUẬT TỐI GIẢN - ĐƯỢC ĐEM TỪ DƯỚI LÊN) */}
-                <div className="lg:col-span-10 bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm">
-                  <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-3">
-                    <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-                      Danh sách kết quả luật ({finalDisplayRules.length})
-                    </div>
-
-                    {/* 🚀 NÚT HIỂN THỊ ĐANG CHỌN GÌ VÀ HỦY LỌC */}
-                    {(selectedGraphNode || selectedGraphEdge) && (
-                      <button
-                        onClick={() => { setSelectedGraphNode(null); setSelectedGraphEdge(null); }}
-                        className="flex items-center gap-1.5 text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full hover:bg-blue-100 transition"
-                      >
-                        <span>
-                          Đang lọc: {selectedGraphNode ? "Node" : "Cạnh"}
-                        </span>
-                        <span className="text-blue-400 ml-1">✕</span>
-                      </button>
-                    )}
+                {(selectedGraphNode || selectedGraphEdge) && (
+                  <div className="mt-4 flex flex-col gap-2 rounded-md border border-blue-200 bg-blue-50 p-3 sm:flex-row sm:items-center sm:justify-between">
+                    <p className="text-sm font-semibold text-blue-800">Đang lọc từ đồ thị: {selectedGraphFilterLabel}</p>
+                    <button
+                      onClick={() => { setSelectedGraphNode(null); setSelectedGraphEdge(null); }}
+                      className="inline-flex items-center justify-center gap-1.5 rounded-md bg-white px-3 py-1.5 text-xs font-bold text-blue-700 ring-1 ring-blue-200 transition hover:bg-blue-100"
+                    >
+                      <X size={13} />
+                      Bỏ lọc đồ thị
+                    </button>
                   </div>
-                  <div className="space-y-3 max-h-[460px] overflow-y-auto pr-2 custom-scrollbar">
-                    {finalDisplayRules.length === 0 ? (
-                      <div className="p-12 text-center text-slate-400 text-sm font-medium bg-slate-50/50 rounded-lg border border-dashed border-slate-200">
-                        Không tìm thấy tổ hợp nào thỏa mãn điều kiện lọc.
-                      </div>
-                    ) : (
-                      finalDisplayRules.slice(0, 30).map((rule, index) => {
-                        const isLow = rule.rating_group === "LOW";
-
-                        const renderItem = (item, idx) => {
-                          const isPos = item.sentiment === 'POS';
-                          const itemKey = typeof item === 'string' ? item : (item.key || "");
-                          const combinedItemStr = item.sentiment ? `${itemKey}_${item.sentiment}` : itemKey;
-
-                          let isHighlighted = false;
-                          if (aspectFilter !== "ALL" && sentimentFilter !== "ALL") {
-                            isHighlighted = combinedItemStr === `${aspectFilter}_${sentimentFilter}` || itemKey === `${aspectFilter}_${sentimentFilter}`;
-                          } else if (aspectFilter !== "ALL") {
-                            isHighlighted = combinedItemStr.startsWith(aspectFilter);
-                          } else if (sentimentFilter !== "ALL") {
-                            isHighlighted = combinedItemStr.endsWith(`_${sentimentFilter}`) || item.sentiment === sentimentFilter;
-                          }
-
-                          const highlightClasses = isHighlighted ? "ring-2 ring-blue-500 shadow-md scale-105" : "border shadow-sm";
-
-                          return (
-                            <span key={idx} className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-[13px] font-bold transition-all ${highlightClasses} ${isPos ? 'bg-emerald-50 text-emerald-800 border-emerald-200' : 'bg-rose-50 text-rose-800 border-rose-200'}`}>
-                              <span className={`text-[10px] ${isPos ? 'text-emerald-600' : 'text-rose-600'}`}>
-                                {isPos ? '▲ TỐT' : '▼ TỆ'}
-                              </span>
-                              {getAspectName(item)}
-                            </span>
-                          );
-                        };
-
-                        return (
-                          <div
-                            key={index}
-                            className={`p-3.5 rounded-xl border bg-white shadow-sm hover:shadow-md transition-all flex flex-col md:flex-row md:items-center justify-between gap-4 ${isLow ? 'border-l-4 border-l-rose-500' : 'border-l-4 border-l-emerald-500'}`}
-                          >
-                            {/* Biểu thức Logic: Vế trái ➔ Vế phải */}
-                            <div className="flex flex-wrap items-center gap-2.5">
-                              {rule.antecedents.map((item, idx) => renderItem(item, idx))}
-
-                              <div className="flex flex-col items-center px-1">
-                                <span className="text-slate-300 font-black text-xl leading-none">➔</span>
-                              </div>
-
-                              {rule.consequents.map((item, idx) => renderItem(item, idx))}
-                            </div>
-
-                            {/* Chỉ số Toán học Rút gọn */}
-                            <div className="flex items-center gap-4 bg-slate-50 px-4 py-2 rounded-lg border border-slate-100 whitespace-nowrap self-start md:self-center">
-                              <div className="text-center">
-                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Xác suất</div>
-                                <div className="text-[15px] font-black text-slate-700">{(rule.confidence * 100).toFixed(0)}%</div>
-                              </div>
-                              <div className="w-px h-6 bg-slate-200"></div>
-                              <div className="text-center">
-                                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Độ phủ</div>
-                                <div className="text-[15px] font-black text-slate-700">{(rule.support * 100).toFixed(1)}%</div>
-                              </div>
-                            </div>
-
-                          </div>
-                        );
-                      })
-                    )}
-                  </div>
-                </div>
-
+                )}
               </div>
 
-              {/* ĐỒ THỊ (CẦN TRUYỀN THÊM CÁC HÀM XỬ LÝ SỰ KIỆN CLICK XUỐNG DƯỚI) */}
-              <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-                <div className="text-xs font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100 pb-3 mb-4">
-                  Sơ đồ đồ thị liên kết mạng lưới giữa các khía cạnh (Network Graph Analytics)
+              <div className="grid gap-5 xl:grid-cols-[minmax(420px,0.9fr)_minmax(0,1.1fr)]">
+                <div className="rounded-lg border border-slate-200 bg-white shadow-sm">
+                  <div className="flex flex-col gap-2 border-b border-slate-100 p-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Danh sách luật</p>
+                      <h3 className="text-base font-bold text-slate-950">{finalDisplayRules.length} luật phù hợp bộ lọc hiện tại</h3>
+                    </div>
+                    {finalDisplayRules.length > 30 && (
+                      <span className="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-600">Hiển thị 30 luật đầu tiên</span>
+                    )}
+                  </div>
+
+                  <div className="max-h-[620px] space-y-3 overflow-y-auto p-4 custom-scrollbar">
+                      {finalDisplayRules.length === 0 ? (
+                        <div className="rounded-lg border border-dashed border-slate-200 bg-slate-50/70 p-12 text-center text-sm font-medium text-slate-400">
+                          Không tìm thấy tổ hợp nào thỏa mãn điều kiện lọc.
+                        </div>
+                      ) : (
+                        finalDisplayRules.slice(0, 30).map((rule, index) => {
+                          const isLow = rule.rating_group === "LOW";
+
+                          const renderItem = (item, idx) => {
+                            const sentiment = typeof item === 'object' ? item.sentiment : "";
+                            const isPos = sentiment === 'POS';
+                            const isNeg = sentiment === 'NEG';
+                            const itemKey = typeof item === 'string' ? item : (item.key || "");
+                            const combinedItemStr = sentiment ? `${itemKey}_${sentiment}` : itemKey;
+
+                            let isHighlighted = false;
+                            if (aspectFilter !== "ALL" && sentimentFilter !== "ALL") {
+                              isHighlighted = combinedItemStr === `${aspectFilter}_${sentimentFilter}` || itemKey === `${aspectFilter}_${sentimentFilter}`;
+                            } else if (aspectFilter !== "ALL") {
+                              isHighlighted = combinedItemStr.startsWith(aspectFilter);
+                            } else if (sentimentFilter !== "ALL") {
+                              isHighlighted = combinedItemStr.endsWith(`_${sentimentFilter}`) || sentiment === sentimentFilter;
+                            }
+
+                            const highlightClasses = isHighlighted ? "ring-2 ring-blue-500 shadow-md" : "border shadow-sm";
+                            const toneClasses = isPos
+                              ? "bg-emerald-50 text-emerald-800 border-emerald-200"
+                              : isNeg
+                                ? "bg-rose-50 text-rose-800 border-rose-200"
+                                : "bg-slate-50 text-slate-700 border-slate-200";
+
+                            return (
+                              <span key={idx} className={`inline-flex min-h-8 items-center gap-1.5 rounded-md px-3 py-1.5 text-[13px] font-bold transition-all ${highlightClasses} ${toneClasses}`}>
+                                {sentiment && (
+                                  <span className={`text-[10px] ${isPos ? 'text-emerald-600' : 'text-rose-600'}`}>
+                                    {isPos ? '▲ TỐT' : '▼ TỆ'}
+                                  </span>
+                                )}
+                                {getAspectName(item)}
+                              </span>
+                            );
+                          };
+
+                          return (
+                            <div
+                              key={index}
+                              className={`flex flex-col justify-between gap-4 rounded-lg border bg-white p-4 transition hover:border-slate-300 hover:bg-slate-50/40 hover:shadow-sm md:flex-row md:items-center ${isLow ? 'border-l-4 border-l-rose-500' : 'border-l-4 border-l-emerald-500'}`}
+                            >
+                              <div className="flex flex-wrap items-center gap-2.5">
+                                {rule.antecedents.map((item, idx) => renderItem(item, idx))}
+
+                                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-slate-100 text-slate-400">
+                                  <ArrowRight size={17} />
+                                </span>
+
+                                {rule.consequents.map((item, idx) => renderItem(item, idx))}
+                              </div>
+
+                              <div className="grid w-full grid-cols-2 overflow-hidden rounded-md border border-slate-200 bg-slate-50 text-center whitespace-nowrap md:w-auto">
+                                <div className="px-3 py-2">
+                                  <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Xác suất</div>
+                                  <div className="text-[15px] font-black text-slate-700">{(rule.confidence * 100).toFixed(0)}%</div>
+                                </div>
+                                <div className="border-l border-slate-200 px-3 py-2">
+                                  <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Độ phủ</div>
+                                  <div className="text-[15px] font-black text-slate-700">{(rule.support * 100).toFixed(1)}%</div>
+                                </div>
+                              </div>
+
+                            </div>
+                          );
+                        })
+                      )}
+                    </div>
                 </div>
+
                 <AprioriNetworkGraph
                   rules={filteredRules}
                   getAspectName={getAspectName}
-                  // 🚀 TRUYỀN BỔ SUNG 2 DÒNG NÀY ĐỂ ĐỒ THỊ LẮNG NGHE ĐƯỢC STATE HIỆN TẠI
                   selectedNodeId={selectedGraphNode}
                   selectedEdge={selectedGraphEdge}
-
                   onNodeClick={(nodeId) => {
                     setSelectedGraphNode(nodeId);
-                    setSelectedGraphEdge(null); // Reset cạnh
+                    setSelectedGraphEdge(null);
                   }}
                   onEdgeClick={(sourceId, targetId) => {
                     setSelectedGraphEdge([sourceId, targetId]);
-                    setSelectedGraphNode(null); // Reset node
+                    setSelectedGraphNode(null);
                   }}
                   onBackgroundClick={() => {
-                    // Click ra ngoài khoảng trắng đồ thị thì bỏ lọc
                     setSelectedGraphNode(null);
                     setSelectedGraphEdge(null);
                   }}
                 />
               </div>
-
             </div>
           );
         })()}
