@@ -75,6 +75,12 @@ const EMPTY_FEATURES = {
 const POS_COLOR = "#059669";
 const NEG_COLOR = "#e11d48";
 
+const APRIORI_CHART_GROUP_OPTIONS = [
+  { id: "ALL", label: "Tất cả" },
+  { id: "LOW", label: "Nhóm 1-3" },
+  { id: "HIGH", label: "Nhóm 4-5" },
+];
+
 const SENTIMENT_TEXT = {
   POS: "tốt",
   NEG: "xấu",
@@ -1064,6 +1070,7 @@ function AprioriPage() {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [chartGroup, setChartGroup] = useState("ALL");
   const [ruleFilter, setRuleFilter] = useState("ALL"); // Bộ lọc hiển thị: ALL, HIGH, LOW
   const [aspectFilter, setAspectFilter] = useState("ALL"); // LỌC KHÍA CẠNH
   const [sentimentFilter, setSentimentFilter] = useState("ALL"); // LỌC CẢM XÚC (TỐT)
@@ -1101,28 +1108,41 @@ function AprioriPage() {
     }
   }
 
-  // BIỂU ĐỒ 1 (MỚI): Tính % mật độ khía cạnh xuất hiện trên tổng số câu bình luận
-  const coverageData = useMemo(() => {
+  const selectedChartGroup = APRIORI_CHART_GROUP_OPTIONS.find((option) => option.id === chartGroup) || APRIORI_CHART_GROUP_OPTIONS[0];
+
+  const selectedAspectSummary = useMemo(() => {
     if (!result) return [];
-    const totalComments = result?.metrics?.comments || 1; // Tránh lỗi chia cho 0
-    return (result?.aspect_summary || []).map((item) => ({
+    const groupedSummary = result?.aspect_summary_by_group;
+    if (groupedSummary && Array.isArray(groupedSummary[chartGroup])) {
+      return groupedSummary[chartGroup];
+    }
+    return chartGroup === "ALL" ? result?.aspect_summary || [] : [];
+  }, [result, chartGroup]);
+
+  const chartGroupMetrics = result?.aspect_summary_group_metrics?.[chartGroup] || (chartGroup === "ALL" ? result?.metrics : null) || {};
+  const chartTotalComments = Number(chartGroupMetrics.comments || 0);
+
+  // BIỂU ĐỒ 1 (MỚI): Tính % mật độ khía cạnh xuất hiện trên tổng số câu bình luận theo nhóm rating đã chọn
+  const coverageData = useMemo(() => {
+    const totalComments = chartTotalComments || 1; // Tránh lỗi chia cho 0
+    return selectedAspectSummary.map((item) => ({
       name: item.label,
       percentage: Number(((item.total || 0) / totalComments * 100).toFixed(1)),
       count: item.total || 0,
     }));
-  }, [result]);
+  }, [selectedAspectSummary, chartTotalComments]);
 
-  // BIỂU ĐỒ 2 (CŨ): Tỉ lệ phân phối POS / NEG trong nội bộ khía cạnh đó
+  // BIỂU ĐỒ 2 (CŨ): Tỉ lệ phân phối POS / NEG trong nội bộ khía cạnh đó theo nhóm rating đã chọn
   const ratioData = useMemo(
     () =>
-      (result?.aspect_summary || []).map((item) => ({
+      selectedAspectSummary.map((item) => ({
         name: item.label,
         POS: Number(item.positive_rate || 0),
         NEG: Number(item.negative_rate || 0),
         posCount: item.POS || 0,
         negCount: item.NEG || 0,
       })),
-    [result]
+    [selectedAspectSummary]
   );
 
   return (
@@ -1203,7 +1223,7 @@ function AprioriPage() {
                 <input
                   type="range"
                   min="0.01"
-                  max="0.3"
+                  max="0.95"
                   step="0.01"
                   value={minSupport}
                   onChange={(event) => setMinSupport(Number(event.target.value))}
@@ -1211,7 +1231,7 @@ function AprioriPage() {
                 />
                 <span className="mt-2 flex justify-between text-[11px] font-medium text-slate-400">
                   <span>1%</span>
-                  <span>30%</span>
+                  <span>95%</span>
                 </span>
               </label>
 
@@ -1224,7 +1244,7 @@ function AprioriPage() {
                   type="range"
                   min="0.1"
                   max="0.95"
-                  step="0.05"
+                  step="0.01"
                   value={minConfidence}
                   onChange={(event) => setMinConfidence(Number(event.target.value))}
                   className="apriori-range mt-4 w-full cursor-pointer"
@@ -1246,6 +1266,24 @@ function AprioriPage() {
           title="Thống kê khía cạnh và cảm xúc"
           description="Hai biểu đồ cập nhật sau mỗi lần chạy Apriori để so sánh mật độ xuất hiện và sắc thái cảm xúc theo từng khía cạnh."
           icon={BarChart3}
+          action={
+            result && (
+              <label className="block w-full sm:w-56">
+                <span className="mb-1.5 block text-xs font-semibold text-slate-500">Nhóm dữ liệu</span>
+                <select
+                  value={chartGroup}
+                  onChange={(event) => setChartGroup(event.target.value)}
+                  className="w-full cursor-pointer rounded-md border border-slate-200 bg-white px-3 py-2.5 text-sm font-semibold text-slate-700 shadow-sm outline-none transition focus:border-blue-400 focus:ring-4 focus:ring-blue-100"
+                >
+                  {APRIORI_CHART_GROUP_OPTIONS.map((option) => (
+                    <option key={option.id} value={option.id}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )
+          }
         />
 
         {!result ? (
@@ -1262,7 +1300,7 @@ function AprioriPage() {
               <div className="mb-4 min-h-[54px]">
                 <p className="text-sm font-semibold text-slate-950">Mật độ xuất hiện của khía cạnh trên tổng số câu</p>
                 <p className="mt-0.5 text-xs leading-5 text-slate-500">
-                  Tỷ lệ mẫu số câu có gán nhãn (POS/NEG) thuộc khía cạnh này chia cho tổng số câu duy nhất ({result?.metrics?.comments || 0} câu).
+                  Tỷ lệ mẫu số câu có gán nhãn (POS/NEG) thuộc khía cạnh này chia cho tổng số câu duy nhất của {selectedChartGroup.label.toLowerCase()} ({chartTotalComments} câu).
                 </p>
               </div>
 
@@ -1291,7 +1329,7 @@ function AprioriPage() {
               <div className="mb-2 min-h-[54px]">
                 <p className="text-sm font-semibold text-slate-950">Tỉ lệ phân phối Tốt / Xấu trong từng khía cạnh</p>
                 <p className="mt-0.5 text-xs leading-5 text-slate-500">
-                  Phần trăm phân tách sắc thái cảm xúc tích cực và tiêu cực dựa trên tổng số ý kiến nhận diện của khía cạnh đó.
+                  Phần trăm phân tách sắc thái cảm xúc tích cực và tiêu cực trong {selectedChartGroup.label.toLowerCase()}.
                 </p>
               </div>
 
@@ -1628,29 +1666,39 @@ function AprioriPage() {
                           return (
                             <div
                               key={index}
-                              className={`flex flex-col justify-between gap-4 rounded-lg border bg-white p-4 transition hover:border-slate-300 hover:bg-slate-50/40 hover:shadow-sm md:flex-row md:items-center ${isLow ? 'border-l-4 border-l-rose-500' : 'border-l-4 border-l-emerald-500'}`}
+                              className={`rounded-lg border bg-white p-4 transition hover:border-slate-300 hover:bg-slate-50/40 hover:shadow-sm ${isLow ? 'border-l-4 border-l-rose-500' : 'border-l-4 border-l-emerald-500'}`}
                             >
-                              <div className="flex flex-wrap items-center gap-2.5">
-                                {rule.antecedents.map((item, idx) => renderItem(item, idx))}
-
-                                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-slate-100 text-slate-400">
-                                  <ArrowRight size={17} />
-                                </span>
-
-                                {rule.consequents.map((item, idx) => renderItem(item, idx))}
-                              </div>
-
-                              <div className="grid w-full grid-cols-2 overflow-hidden rounded-md border border-slate-200 bg-slate-50 text-center whitespace-nowrap md:w-auto">
+                              <div className="mb-3 grid grid-cols-2 overflow-hidden rounded-md border border-slate-200 bg-slate-50 text-center whitespace-nowrap">
                                 <div className="px-3 py-2">
-                                  <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Xác suất</div>
-                                  <div className="text-[15px] font-black text-slate-700">{(rule.confidence * 100).toFixed(0)}%</div>
+                                  <div className="text-[10px] font-bold uppercase tracking-wide text-slate-400">Độ tin cậy</div>
+                                  <div className="text-[15px] font-black text-slate-800">{(rule.confidence * 100).toFixed(0)}%</div>
                                 </div>
                                 <div className="border-l border-slate-200 px-3 py-2">
-                                  <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">Độ phủ</div>
-                                  <div className="text-[15px] font-black text-slate-700">{(rule.support * 100).toFixed(1)}%</div>
+                                  <div className="text-[10px] font-bold uppercase tracking-wide text-slate-400">Độ phủ</div>
+                                  <div className="text-[15px] font-black text-slate-800">{(rule.support * 100).toFixed(1)}%</div>
                                 </div>
                               </div>
 
+                              <div className="space-y-3">
+                                <div>
+                                  <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-slate-400">Vế nguồn</p>
+                                  <div className="flex flex-wrap items-center gap-2.5">
+                                    {rule.antecedents.map((item, idx) => renderItem(item, idx))}
+                                  </div>
+                                </div>
+
+                                <div className="flex items-start gap-3 rounded-md border border-slate-100 bg-slate-50 p-3">
+                                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-slate-950 text-white shadow-sm">
+                                    <ArrowRight size={19} strokeWidth={3} />
+                                  </span>
+                                  <div className="min-w-0 flex-1">
+                                    <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-slate-400">Vế đích</p>
+                                    <div className="flex flex-wrap items-center gap-2.5">
+                                      {rule.consequents.map((item, idx) => renderItem(item, idx))}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           );
                         })

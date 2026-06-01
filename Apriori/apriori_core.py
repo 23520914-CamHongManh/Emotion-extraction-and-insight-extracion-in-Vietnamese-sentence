@@ -595,6 +595,36 @@ def build_aspect_summary(records_df: pd.DataFrame) -> list[dict]:
     return sorted(summary, key=lambda item: item["total"], reverse=True)
 
 
+def filter_records_by_rating_group(records_df: pd.DataFrame, group_key: str) -> pd.DataFrame:
+    if group_key == "LOW":
+        return records_df[records_df["rating"] < 4] if "rating" in records_df else records_df.iloc[0:0]
+    if group_key == "HIGH":
+        return records_df[records_df["rating"] >= 4] if "rating" in records_df else records_df.iloc[0:0]
+    return records_df
+
+
+def build_aspect_group_metrics(records_df: pd.DataFrame) -> dict:
+    return {
+        "comments": int(records_df["comment_id"].nunique()) if "comment_id" in records_df else 0,
+        "items": int(len(records_df)),
+        "positive_items": int((records_df["sentiment"] == "POS").sum()) if "sentiment" in records_df else 0,
+        "negative_items": int((records_df["sentiment"] == "NEG").sum()) if "sentiment" in records_df else 0,
+    }
+
+
+def build_aspect_summary_by_group(records_df: pd.DataFrame) -> tuple[dict[str, list[dict]], dict[str, dict]]:
+    group_keys = ["ALL", "LOW", "HIGH"]
+    summaries = {}
+    metrics = {}
+
+    for group_key in group_keys:
+        group_records = filter_records_by_rating_group(records_df, group_key)
+        summaries[group_key] = build_aspect_summary(group_records)
+        metrics[group_key] = build_aspect_group_metrics(group_records)
+
+    return summaries, metrics
+
+
 def build_summary_from_rules(rules: list[dict]) -> list[dict]:
     grouped = defaultdict(Counter)
 
@@ -722,6 +752,7 @@ def analyze_apriori_dataframe(
     total_comments = records_df["comment_id"].nunique()
     pos_count = int((records_df["sentiment"] == "POS").sum())
     neg_count = int((records_df["sentiment"] == "NEG").sum())
+    aspect_summary_by_group, aspect_summary_group_metrics = build_aspect_summary_by_group(records_df)
 
     result_rules = serialized_rules[:max_rules]
     return {
@@ -736,7 +767,9 @@ def analyze_apriori_dataframe(
             "rules": int(len(serialized_rules)),
         },
         "groups": group_stats,
-        "aspect_summary": build_aspect_summary(records_df),
+        "aspect_summary": aspect_summary_by_group["ALL"],
+        "aspect_summary_by_group": aspect_summary_by_group,
+        "aspect_summary_group_metrics": aspect_summary_group_metrics,
         "rules": result_rules,
         "recommendations": build_recommendations(result_rules),
     }
@@ -745,6 +778,9 @@ def analyze_apriori_dataframe(
 def load_rules_csv(path: str) -> dict:
     rules_df = pd.read_csv(path)
     rules = rules_from_dataframe(rules_df)
+    aspect_summary = build_summary_from_rules(rules)
+    low_summary = build_summary_from_rules([rule for rule in rules if rule["rating_group"] == "LOW"])
+    high_summary = build_summary_from_rules([rule for rule in rules if rule["rating_group"] == "HIGH"])
     return {
         "source_mode": "sample_rules_csv",
         "columns": list(rules_df.columns),
@@ -757,7 +793,17 @@ def load_rules_csv(path: str) -> dict:
             "rules": int(len(rules)),
         },
         "groups": [],
-        "aspect_summary": build_summary_from_rules(rules),
+        "aspect_summary": aspect_summary,
+        "aspect_summary_by_group": {
+            "ALL": aspect_summary,
+            "LOW": low_summary,
+            "HIGH": high_summary,
+        },
+        "aspect_summary_group_metrics": {
+            "ALL": {"comments": 0, "items": 0, "positive_items": 0, "negative_items": 0},
+            "LOW": {"comments": 0, "items": 0, "positive_items": 0, "negative_items": 0},
+            "HIGH": {"comments": 0, "items": 0, "positive_items": 0, "negative_items": 0},
+        },
         "rules": rules[:200],
         "recommendations": build_recommendations(rules),
     }
