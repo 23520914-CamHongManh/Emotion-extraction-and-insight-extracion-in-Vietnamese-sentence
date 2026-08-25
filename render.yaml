@@ -19,11 +19,3 @@ services:
         value: "50"
       - key: MAX_UPLOAD_BYTES
         value: "2097152"
-      - key: TENNIS_MODEL_URL
-        sync: false
-      - key: TENNIS_MODEL_SHA256
-        sync: false
-      - key: ABSA_MODEL_URL
-        sync: false
-      - key: ABSA_MODEL_SHA256
-        sync: false

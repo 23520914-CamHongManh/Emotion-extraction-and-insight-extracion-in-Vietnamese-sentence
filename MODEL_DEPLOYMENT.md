@@ -41,9 +41,11 @@ The committed `render.yaml` is configured for Render Free. It starts in
 `FREE_DEMO_MODE`, skips model downloads, and supports CatBoost predictions from
 manual feature selectors only. Text-driven PhoBERT extraction and Apriori/ABSA
 return HTTP 503 by design, so the 512 MB instance is not asked to load models.
+It does not require any model URL or checksum variables.
 
 To restore the full application, set `FREE_DEMO_MODE=false`, change the plan
-to `standard` or higher, and provide the four model URL/checksum variables.
+to `standard` or higher, then add the four model URL/checksum variables listed
+above to the Render service.
 
 ## Vercel frontend
 
