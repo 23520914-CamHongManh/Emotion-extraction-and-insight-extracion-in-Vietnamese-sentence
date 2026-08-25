@@ -48,8 +48,11 @@ import {
   YAxis,
 } from "recharts";
 
-const API_PREDICT_URL = "/api/predict";
-const API_APRIORI_ANALYZE_URL = "/api/apriori/analyze";
+// Leave VITE_API_BASE_URL empty for local development: Vite then proxies /api
+// to Flask. In Vercel, set it to the public Render API origin.
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? "").replace(/\/+$/, "");
+const API_PREDICT_URL = `${API_BASE_URL}/api/predict`;
+const API_APRIORI_ANALYZE_URL = `${API_BASE_URL}/api/apriori/analyze`;
 
 const FEATURE_OPTIONS = {
   Outlook: ["None", "Sunny", "Overcast", "Rain"],

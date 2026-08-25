@@ -1,5 +1,6 @@
 from pathlib import Path
 import io
+import os
 import re
 import unicodedata
 import pickle
@@ -29,7 +30,12 @@ CATBOOST_PATH = BASE_DIR / "catboost_tennis.cbm"
 ENCODER_PATH = BASE_DIR / "tennis_label_encoder.pkl"
 APRIORI_DIR = BASE_DIR / "Apriori"
 APRIORI_RULES_PATH = APRIORI_DIR / "apriori_rules.csv"
-APRIORI_ABSA_ZIP = APRIORI_DIR / "phobert_absa_model.zip"
+
+
+def has_huggingface_weights(model_dir: Path) -> bool:
+    """Check that a locally stored Transformers model has loadable weights."""
+    return (model_dir / "model.safetensors").is_file() or (model_dir / "pytorch_model.bin").is_file()
+
 
 ASPECT_MAPPING = {
     "Outlook": "thời tiết",
@@ -223,11 +229,12 @@ def health():
         "status": "ok",
         "catboost_exists": CATBOOST_PATH.exists(),
         "phobert_dir_exists": PHOBERT_DIR.exists(),
+        "phobert_weights_exists": has_huggingface_weights(PHOBERT_DIR),
         "encoder_exists": ENCODER_PATH.exists(),
         "apriori_dir_exists": APRIORI_DIR.exists(),
         "apriori_rules_exists": APRIORI_RULES_PATH.exists(),
-        "apriori_absa_zip_exists": APRIORI_ABSA_ZIP.exists(),
         "apriori_absa_model_dir_exists": APRIORI_ABSA_MODEL_DIR.exists(),
+        "apriori_absa_weights_exists": has_huggingface_weights(APRIORI_ABSA_MODEL_DIR),
     })
 
 
@@ -319,4 +326,9 @@ def api_apriori_analyze():
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8000, debug=True)
+    debug = os.getenv("FLASK_DEBUG", "false").lower() in {"1", "true", "yes"}
+    app.run(
+        host="0.0.0.0",
+        port=int(os.getenv("PORT", "8000")),
+        debug=debug,
+    )

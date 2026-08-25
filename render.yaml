@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: tennis-ai-api
+    runtime: python
+    # The two CPU PhoBERT models need substantially more memory than Render's
+    # Free and Starter instances. Downsize only after measuring production RAM.
+    plan: pro
+    buildCommand: bash scripts/download-models.sh && pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 1 --timeout 180 --access-logfile - --error-logfile - api_server:app
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.14
+      - key: FLASK_DEBUG
+        value: "false"
+      - key: TENNIS_MODEL_URL
+        sync: false
+      - key: TENNIS_MODEL_SHA256
+        sync: false
+      - key: ABSA_MODEL_URL
+        sync: false
+      - key: ABSA_MODEL_SHA256
+        sync: false
