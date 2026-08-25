@@ -2,11 +2,11 @@ services:
   - type: web
     name: tennis-ai-api
     runtime: python
-    # The two CPU PhoBERT models need substantially more memory than Render's
-    # Free and Starter instances. Downsize only after measuring production RAM.
-    plan: pro
+    # One PhoBERT model is retained at a time; 2 GB remains subject to the
+    # deployment memory smoke test documented in MODEL_DEPLOYMENT.md.
+    plan: standard
     buildCommand: bash scripts/download-models.sh && pip install -r requirements.txt
-    startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 1 --timeout 180 --access-logfile - --error-logfile - api_server:app
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 1 --timeout 300 --access-logfile - --error-logfile - api_server:app
     healthCheckPath: /api/health
     autoDeployTrigger: commit
     envVars:
@@ -14,6 +14,10 @@ services:
         value: 3.10.14
       - key: FLASK_DEBUG
         value: "false"
+      - key: MAX_APRIORI_ROWS
+        value: "50"
+      - key: MAX_UPLOAD_BYTES
+        value: "2097152"
       - key: TENNIS_MODEL_URL
         sync: false
       - key: TENNIS_MODEL_SHA256

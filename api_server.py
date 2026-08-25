@@ -1,7 +1,9 @@
 from pathlib import Path
+import gc
 import io
 import os
 import re
+import threading
 import unicodedata
 import pickle
 
@@ -12,10 +14,11 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from catboost import CatBoostClassifier
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from werkzeug.exceptions import RequestEntityTooLarge
 
 from Apriori.apriori_core import load_rules_csv
 from Apriori.clean_dual import MODEL_DIR as APRIORI_ABSA_MODEL_DIR
-from Apriori.clean_dual import analyze_upload_via_phobert_apriori
+from Apriori.clean_dual import analyze_upload_via_phobert_apriori, unload_phobert_absa_model
 
 try:
     from underthesea import word_tokenize
@@ -30,6 +33,8 @@ CATBOOST_PATH = BASE_DIR / "catboost_tennis.cbm"
 ENCODER_PATH = BASE_DIR / "tennis_label_encoder.pkl"
 APRIORI_DIR = BASE_DIR / "Apriori"
 APRIORI_RULES_PATH = APRIORI_DIR / "apriori_rules.csv"
+MAX_APRIORI_ROWS = int(os.getenv("MAX_APRIORI_ROWS", "50"))
+MAX_UPLOAD_BYTES = int(os.getenv("MAX_UPLOAD_BYTES", str(2 * 1024 * 1024)))
 
 
 def has_huggingface_weights(model_dir: Path) -> bool:
@@ -59,10 +64,19 @@ EMPTY_FEATURES = {
 }
 
 app = Flask(__name__)
+app.config["MAX_CONTENT_LENGTH"] = MAX_UPLOAD_BYTES
 CORS(app)
 
 catboost_model = None
 phobert_bundle = None
+model_runtime_lock = threading.RLock()
+
+
+@app.errorhandler(RequestEntityTooLarge)
+def request_too_large(_error):
+    return jsonify({
+        "error": f"CSV exceeds the {MAX_UPLOAD_BYTES // 1024 // 1024} MB upload limit.",
+    }), 413
 
 
 def preprocess_text(text: str) -> str:
@@ -111,7 +125,10 @@ def load_phobert_bundle():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     tokenizer = AutoTokenizer.from_pretrained(str(PHOBERT_DIR))
-    phobert_model = AutoModelForSequenceClassification.from_pretrained(str(PHOBERT_DIR))
+    phobert_model = AutoModelForSequenceClassification.from_pretrained(
+        str(PHOBERT_DIR),
+        low_cpu_mem_usage=True,
+    )
     phobert_model.to(device)
     phobert_model.eval()
 
@@ -126,6 +143,21 @@ def load_phobert_bundle():
     }
 
     return phobert_bundle
+
+
+def unload_phobert_bundle() -> bool:
+    """Release the Tennis PhoBERT bundle before activating the ABSA model."""
+    global phobert_bundle
+    if phobert_bundle is None:
+        return False
+
+    bundle = phobert_bundle
+    phobert_bundle = None
+    del bundle
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    return True
 
 
 def extract_aspects(segmented_text: str) -> dict:
@@ -186,7 +218,12 @@ def read_uploaded_csv(file_storage) -> pd.DataFrame:
     errors = []
     for encoding in ("utf-8-sig", "utf-8", "cp1258", "latin1"):
         try:
-            return pd.read_csv(io.BytesIO(raw), encoding=encoding)
+            dataframe = pd.read_csv(io.BytesIO(raw), encoding=encoding)
+            if len(dataframe) > MAX_APRIORI_ROWS:
+                raise ValueError(
+                    f"CSV exceeds the {MAX_APRIORI_ROWS}-row limit for the memory-optimized deployment."
+                )
+            return dataframe
         except UnicodeDecodeError as exc:
             errors.append(f"{encoding}: {exc}")
         except pd.errors.ParserError as exc:
@@ -250,8 +287,10 @@ def api_predict():
         source = "none"
 
         if text:
-            segmented_text = preprocess_text(text)
-            final_features = extract_aspects(segmented_text)
+            with model_runtime_lock:
+                unload_phobert_absa_model()
+                segmented_text = preprocess_text(text)
+                final_features = extract_aspects(segmented_text)
             source = "phobert"
 
         for key, value in manual_features.items():
@@ -311,14 +350,20 @@ def api_apriori_analyze():
         min_confidence = float(request.form.get("min_confidence", 0.6))
 
         df = read_uploaded_csv(uploaded_file)
-        result = analyze_upload_via_phobert_apriori(
-            df,
-            min_support=min_support,
-            min_confidence=min_confidence,
-        )
+        with model_runtime_lock:
+            unload_phobert_bundle()
+            result = analyze_upload_via_phobert_apriori(
+                df,
+                min_support=min_support,
+                min_confidence=min_confidence,
+            )
 
         return jsonify(result)
 
+    except ValueError as exc:
+        return jsonify({
+            "error": str(exc),
+        }), 400
     except Exception as exc:
         return jsonify({
             "error": str(exc),

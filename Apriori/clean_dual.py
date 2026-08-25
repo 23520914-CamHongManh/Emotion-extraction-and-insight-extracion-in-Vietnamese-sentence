@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import gc
 import json
 from datetime import datetime
 from pathlib import Path
@@ -36,7 +37,6 @@ BASE_DIR = Path(__file__).resolve().parent
 MODEL_ZIP_PATH = BASE_DIR / "phobert_absa_model.zip"
 MODEL_DIR = BASE_DIR / "phobert_absa_model"
 TEENCODE_DICT_PATH = BASE_DIR / "teencode.json" # Đảm bảo bạn có file này trong thư mục Apriori
-LATEST_PREDICTIONS_PATH = BASE_DIR / "phobert_predictions.csv"
 
 NLI_ASPECTS = [
     ("Giao_Hang", "giao hàng"),
@@ -74,7 +74,7 @@ def load_teencode_dictionary(path: Path | None) -> dict[str, str]:
                 data = json.load(f)
             teencode_dict.update(data.get("normalization_map_safe", data))
         except Exception as e:
-            print(f"Lỗi đọc teencode json: {e}")
+            print(f"Could not read teencode JSON: {e}")
             
     teencode_dict.update(SAFE_MANUAL_OVERRIDES)
     return teencode_dict
@@ -193,13 +193,16 @@ def load_phobert_absa_model():
     if not MODEL_DIR.exists():
         if not MODEL_ZIP_PATH.exists():
             raise FileNotFoundError(f"Không tìm thấy model tại {MODEL_ZIP_PATH}")
-        print("Đang giải nén mô hình PhoBERT ABSA...")
+        print("Extracting PhoBERT ABSA model...")
         with ZipFile(MODEL_ZIP_PATH, 'r') as zip_ref:
             zip_ref.extractall(MODEL_DIR)
 
-    print("Đang tải mô hình PhoBERT vào bộ nhớ...")
+    print("Loading PhoBERT ABSA model into memory...")
     tokenizer = AutoTokenizer.from_pretrained(MODEL_DIR)
-    model = AutoModelForSequenceClassification.from_pretrained(MODEL_DIR)
+    model = AutoModelForSequenceClassification.from_pretrained(
+        MODEL_DIR,
+        low_cpu_mem_usage=True,
+    )
     
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)
@@ -212,6 +215,21 @@ def load_phobert_absa_model():
     }
     return phobert_bundle
 
+
+def unload_phobert_absa_model() -> bool:
+    """Release the ABSA PhoBERT bundle before activating the Tennis model."""
+    global phobert_bundle
+    if phobert_bundle is None:
+        return False
+
+    bundle = phobert_bundle
+    phobert_bundle = None
+    del bundle
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    return True
+
 def predict_nli_dataframe(df: pd.DataFrame, output_path: Path | None = None) -> pd.DataFrame:
     """
     Bước 3: Chạy Inference trên tập NLI. Ghi ra file CSV cuối cùng nếu được yêu cầu.
@@ -222,7 +240,7 @@ def predict_nli_dataframe(df: pd.DataFrame, output_path: Path | None = None) -> 
     device = bundle["device"]
 
     predictions = []
-    batch_size = 16  # Có thể tăng/giảm tùy cấu hình máy
+    batch_size = 4  # Limit activation memory for the Render Standard instance.
     
     texts = df["nli_text"].tolist()
     
@@ -268,7 +286,7 @@ def make_job_id() -> str:
 
 def build_phobert_prediction_csv(df: pd.DataFrame, job_id: str | None = None) -> dict:
     """
-    Thực hiện luồng Pipeline trên RAM, chỉ ghi đĩa file cuối cùng.
+    Thực hiện luồng Pipeline hoàn toàn trong RAM.
     """
     job_id = job_id or make_job_id()
     
@@ -278,12 +296,11 @@ def build_phobert_prediction_csv(df: pd.DataFrame, job_id: str | None = None) ->
     # 2. Split sang NLI in-memory
     nli_df = split_clean_to_nli(clean_df)
     
-    # 3. Predict và lưu đĩa file duy nhất tại LATEST_PREDICTIONS_PATH
-    prediction_df = predict_nli_dataframe(nli_df, LATEST_PREDICTIONS_PATH)
+    # 3. Predict in-memory; do not share a CSV file between requests.
+    prediction_df = predict_nli_dataframe(nli_df)
 
     return {
         "job_id": job_id,
-        "prediction_path": LATEST_PREDICTIONS_PATH,
         "prediction_df": prediction_df,
     }
 
@@ -311,7 +328,6 @@ def analyze_upload_via_phobert_apriori(
     result["columns"] = list(prediction_df.columns)
     result["artifacts"] = {
         "job_id": artifacts["job_id"],
-        "prediction_csv": str(artifacts["prediction_path"].relative_to(BASE_DIR)),
     }
 
     return result

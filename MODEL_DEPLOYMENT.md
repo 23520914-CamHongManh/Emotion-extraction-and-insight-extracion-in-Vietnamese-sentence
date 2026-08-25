@@ -28,7 +28,13 @@ use Render secret environment variables for private download URLs or tokens.
 
 The repository includes `render.yaml`. Import it as a Render Blueprint and
 provide the four variables above when prompted. It intentionally starts with a
-single Gunicorn worker so the model weights are not duplicated in memory.
+single Gunicorn worker so the model weights are not duplicated in memory. The
+backend unloads the inactive PhoBERT model before it loads the other one, which
+is intended to fit the Render Standard 2 GB instance. The first request after
+switching between Predict and Apriori will take longer while the next model
+loads. To keep runtime memory bounded, the deployment accepts CSV files up to
+2 MB and 50 rows by default; adjust `MAX_UPLOAD_BYTES` and
+`MAX_APRIORI_ROWS` only after reviewing Render memory metrics.
 
 ## Vercel frontend
 
