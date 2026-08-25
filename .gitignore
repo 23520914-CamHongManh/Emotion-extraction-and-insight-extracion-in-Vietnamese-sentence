@@ -67,6 +67,7 @@ env/
 *.bin
 *.pkl
 *.cbm
+!catboost_tennis.cbm
 *.zip
 
 # Chặn trực tiếp các thư mục chứa model của bạn
