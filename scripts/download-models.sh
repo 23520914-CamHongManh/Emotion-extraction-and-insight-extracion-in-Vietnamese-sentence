@@ -5,6 +5,11 @@
 
 set -euo pipefail
 
+if [[ "${FREE_DEMO_MODE:-false}" == "true" ]]; then
+  echo "FREE_DEMO_MODE is enabled; skipping PhoBERT model downloads."
+  exit 0
+fi
+
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 download_model() {

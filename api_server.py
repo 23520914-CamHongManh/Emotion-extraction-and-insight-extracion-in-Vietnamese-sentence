@@ -9,21 +9,12 @@ import pickle
 
 import numpy as np
 import pandas as pd
-import torch
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from catboost import CatBoostClassifier
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from werkzeug.exceptions import RequestEntityTooLarge
 
 from Apriori.apriori_core import load_rules_csv
-from Apriori.clean_dual import MODEL_DIR as APRIORI_ABSA_MODEL_DIR
-from Apriori.clean_dual import analyze_upload_via_phobert_apriori, unload_phobert_absa_model
-
-try:
-    from underthesea import word_tokenize
-except ImportError as exc:
-    raise ImportError("Thiếu underthesea. Cài bằng: pip install underthesea") from exc
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -33,8 +24,16 @@ CATBOOST_PATH = BASE_DIR / "catboost_tennis.cbm"
 ENCODER_PATH = BASE_DIR / "tennis_label_encoder.pkl"
 APRIORI_DIR = BASE_DIR / "Apriori"
 APRIORI_RULES_PATH = APRIORI_DIR / "apriori_rules.csv"
+APRIORI_ABSA_MODEL_DIR = APRIORI_DIR / "phobert_absa_model"
+FREE_DEMO_MODE = os.getenv("FREE_DEMO_MODE", "false").lower() in {"1", "true", "yes"}
 MAX_APRIORI_ROWS = int(os.getenv("MAX_APRIORI_ROWS", "50"))
 MAX_UPLOAD_BYTES = int(os.getenv("MAX_UPLOAD_BYTES", str(2 * 1024 * 1024)))
+
+if not FREE_DEMO_MODE:
+    from Apriori.clean_dual import analyze_upload_via_phobert_apriori, unload_phobert_absa_model
+else:
+    def unload_phobert_absa_model() -> bool:
+        return False
 
 
 def has_huggingface_weights(model_dir: Path) -> bool:
@@ -89,6 +88,7 @@ def preprocess_text(text: str) -> str:
     text = re.sub(r"(.)\1{2,}", r"\1", text)
 
     try:
+        from underthesea import word_tokenize
         return word_tokenize(text.strip(), format="text")
     except Exception:
         return text.strip()
@@ -113,6 +113,9 @@ def load_catboost_model():
 def load_phobert_bundle():
     global phobert_bundle
 
+    if FREE_DEMO_MODE:
+        raise RuntimeError("PhoBERT is disabled in FREE_DEMO_MODE.")
+
     if phobert_bundle is not None:
         return phobert_bundle
 
@@ -121,6 +124,9 @@ def load_phobert_bundle():
 
     if not ENCODER_PATH.exists():
         raise FileNotFoundError(f"Không tìm thấy label encoder: {ENCODER_PATH}")
+
+    import torch
+    from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -155,12 +161,15 @@ def unload_phobert_bundle() -> bool:
     phobert_bundle = None
     del bundle
     gc.collect()
+    import torch
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
     return True
 
 
 def extract_aspects(segmented_text: str) -> dict:
+    import torch
+
     bundle = load_phobert_bundle()
 
     tokenizer = bundle["tokenizer"]
@@ -264,6 +273,7 @@ def predict_decision(features: dict) -> dict:
 def health():
     return jsonify({
         "status": "ok",
+        "free_demo_mode": FREE_DEMO_MODE,
         "catboost_exists": CATBOOST_PATH.exists(),
         "phobert_dir_exists": PHOBERT_DIR.exists(),
         "phobert_weights_exists": has_huggingface_weights(PHOBERT_DIR),
@@ -287,6 +297,10 @@ def api_predict():
         source = "none"
 
         if text:
+            if FREE_DEMO_MODE:
+                return jsonify({
+                    "error": "PhoBERT text analysis is unavailable in the free demo. Use manual feature selectors.",
+                }), 503
             with model_runtime_lock:
                 unload_phobert_absa_model()
                 segmented_text = preprocess_text(text)
@@ -340,6 +354,11 @@ def api_apriori_sample():
 @app.post("/api/apriori/analyze")
 def api_apriori_analyze():
     try:
+        if FREE_DEMO_MODE:
+            return jsonify({
+                "error": "Apriori and PhoBERT ABSA are unavailable in the free demo.",
+            }), 503
+
         uploaded_file = request.files.get("file")
         if uploaded_file is None:
             return jsonify({

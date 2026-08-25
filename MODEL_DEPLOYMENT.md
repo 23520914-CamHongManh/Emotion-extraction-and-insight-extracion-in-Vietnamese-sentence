@@ -29,12 +29,21 @@ use Render secret environment variables for private download URLs or tokens.
 The repository includes `render.yaml`. Import it as a Render Blueprint and
 provide the four variables above when prompted. It intentionally starts with a
 single Gunicorn worker so the model weights are not duplicated in memory. The
-backend unloads the inactive PhoBERT model before it loads the other one, which
-is intended to fit the Render Standard 2 GB instance. The first request after
-switching between Predict and Apriori will take longer while the next model
-loads. To keep runtime memory bounded, the deployment accepts CSV files up to
-2 MB and 50 rows by default; adjust `MAX_UPLOAD_BYTES` and
-`MAX_APRIORI_ROWS` only after reviewing Render memory metrics.
+backend unloads the inactive PhoBERT model before it loads the other one when
+full mode is enabled. The full configuration requires Render Standard 2 GB or
+higher. To keep runtime memory bounded, it accepts CSV files up to 2 MB and 50
+rows by default; adjust `MAX_UPLOAD_BYTES` and `MAX_APRIORI_ROWS` only after
+reviewing Render memory metrics.
+
+## Render Free demo
+
+The committed `render.yaml` is configured for Render Free. It starts in
+`FREE_DEMO_MODE`, skips model downloads, and supports CatBoost predictions from
+manual feature selectors only. Text-driven PhoBERT extraction and Apriori/ABSA
+return HTTP 503 by design, so the 512 MB instance is not asked to load models.
+
+To restore the full application, set `FREE_DEMO_MODE=false`, change the plan
+to `standard` or higher, and provide the four model URL/checksum variables.
 
 ## Vercel frontend
 

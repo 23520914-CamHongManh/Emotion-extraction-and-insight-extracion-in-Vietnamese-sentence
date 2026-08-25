@@ -2,9 +2,8 @@ services:
   - type: web
     name: tennis-ai-api
     runtime: python
-    # One PhoBERT model is retained at a time; 2 GB remains subject to the
-    # deployment memory smoke test documented in MODEL_DEPLOYMENT.md.
-    plan: standard
+    # Free demo: CatBoost manual selectors only; PhoBERT and Apriori are off.
+    plan: free
     buildCommand: bash scripts/download-models.sh && pip install -r requirements.txt
     startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 1 --timeout 300 --access-logfile - --error-logfile - api_server:app
     healthCheckPath: /api/health
@@ -14,6 +13,8 @@ services:
         value: 3.10.14
       - key: FLASK_DEBUG
         value: "false"
+      - key: FREE_DEMO_MODE
+        value: "true"
       - key: MAX_APRIORI_ROWS
         value: "50"
       - key: MAX_UPLOAD_BYTES
